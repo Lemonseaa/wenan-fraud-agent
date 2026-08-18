@@ -1,0 +1,17 @@
+{
+  "case_id": "C0005-F01",
+  "real_case_id": "RC0005",
+  "text": "我在家接到一个陌生电话，对方自称是广东深圳的民警，称我涉嫌拐卖小孩、贩卖器官，需要对涉案资金进行查询。我按照对方要求添加了QQ，并下载了一款手机远程控制软件。现在，对方要求我向其提供的账户转账，以配合资金查询。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "我在家接到一个陌生电话，对方自称是广东深圳的民警",
+    "称我涉嫌拐卖小孩、贩卖器官，需要对涉案资金进行查询",
+    "我按照对方要求添加了QQ，并下载了一款手机远程控制软件",
+    "对方要求我向其提供的账户转账，以配合资金查询"
+  ],
+  "source_id": "SRC0005",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

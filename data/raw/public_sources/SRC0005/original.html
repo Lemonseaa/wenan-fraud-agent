@@ -1,0 +1,709 @@
+<html>
+<head>
+  
+    <meta charset="UTF-8">
+    
+    
+    <link href="/resources/images/favicon.ico" rel="icon" type="image/x-icon"/>
+    <title>【典型案例】“冒充公检法”的诈骗剧本又更新了！</title>
+    <!--reset-->
+    <link rel="stylesheet" href="/resources/css/lib/reset.css">
+    <link rel="stylesheet" href="/resources/css/lib/flex-auto-prefixer.css">
+    <!--element-ui-->
+    <link rel="stylesheet" href="/resources/elm_ui/index.css">
+
+    <!--custom-->
+    <link rel="stylesheet" href="/resources/css/base.css">
+    <link rel="stylesheet" href="/resources/css/header.css">
+    <link rel="stylesheet" href="/resources/css/footer.css">
+    <link rel="stylesheet" href="/resources/css/icon-font/iconfont.css">
+    <!-- robot-->
+    <link rel="stylesheet" href="/resources/css/robot.css">
+
+    <link rel="stylesheet" href="/resources/js/layui/css/layui.css">
+    <script src="/resources/js/layui/layui.js"></script>
+
+
+    <!--js-->
+    <script src="/resources/js/lib/vue.min.js"></script>
+    <script src="/resources/js/lib/velocity.min.js"></script>
+    <script src="/resources/js/lib/es6-promise.auto.min.js"></script>
+    <script src="/resources/js/lib/axios.min.js"></script>
+    <script src="/resources/js/mixin.js"></script>
+    <script src="/resources/elm_ui/index.js"></script>
+
+    <script src="/resources/js/jQuery.min.js"></script>
+    <script src="/resources/js/grayscale.js"></script>
+    <link rel="stylesheet" href="/resources/js/lib/slider-captcha/style.css">
+    <script src="/resources/js/lib/slider-captcha/longbow.js"></script>
+    <link rel="stylesheet" href="/resources/css/lib/animations.css">
+
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+        }
+
+        #app {
+            position: relative;
+            /*padding-bottom: 160px;*/
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .footer {
+            position: absolute;
+            max-width: 1920px;
+            /*bottom: 0;*/
+        }
+
+        .layui-menu {
+            display: flex;
+            flex-wrap: wrap;
+            width: 290px;
+        }
+        .layui-menu li{
+            width: 25%;
+        }
+        .layui-menu li:first-child{
+            width:100%;
+        }
+        .emblem {
+            display: inline-block;
+            vertical-align: top;
+            width: 75px;
+            height: 75px;
+            background: url(/resources/images/emblem.png) no-repeat;
+            background-size: 100%;
+        }
+        .oldinfo {
+            display: flex;
+            float: right;
+            position: inherit;
+            right: 95px;
+            top:10px
+        }
+
+        .oldinfo .right_wza {
+            float: right;
+        }
+        .right_wza a {
+            display: block;
+            height: 38px;
+            line-height: 38px;
+            padding: 0 16px;
+            font-size: 18px;
+            letter-spacing: 0.32px;
+            background: #fff;
+            color: #F76B00;
+            border: 1px solid #FC740D;
+            border-radius: 2px 0px 0px 2px;
+        }
+
+        .right_slh a {
+            background: #F79600;
+            color: #fff;
+            border: 1px solid #F79600;
+            border-radius: 0px 2px 2px 0px;
+            display: block;
+            float: right;
+            height: 38px;
+            line-height: 38px;
+            padding: 0 16px;
+            font-size: 18px;
+            letter-spacing: 0.32px;
+        }
+    </style>
+    <script>
+        var CTX_ROOT = '/';
+    </script>
+
+  <link rel="stylesheet" href="/resources/css/body-part.css">
+</head>
+
+<body>
+
+<div id="app" v-cloak>
+    <div class="app-wrapper">
+        <!--header-->
+        <div id="header" class="header">
+            <div class="banner">
+                <div class="inner">
+                    <div  class="welcome-wrapper">
+                        <span>欢迎访问信用三门峡官方网站 今天是<span id="curtime"></span></span>
+                    </div>
+                    
+    <a class="logo" rel="noopener noreferrer">
+        
+
+    <div class="label">
+        <p class="title">信用中国
+            <span>(河南三门峡)</span>
+            
+            <img class="site" src="/resources/images/site_1.png">
+        </p>
+        <p class="small"></p>
+    </div>
+
+
+    </a>
+    
+
+                    <div class="login-wrapper">
+                        <a href="/login_reg/login_page.html" rel="noopener noreferrer">登录</a>
+                        <a href="/login_reg/reg_page.html" rel="noopener noreferrer">注册</a>
+                    </div>
+                    
+                    <div class="oldinfo">
+                        <div class="right_wza">
+                            <a id="navSwitch" href="javascript:void(0);" title="无障碍浏览" class="cmsHBG CMSAssetsTextCon" tabindex="0">无障碍浏览</a>
+                        </div>
+                        <div class="right_slh">
+                            <a onclick="headTool.switchOld()" id="toolbarOldman" class="oldman" href="javascript:void(0);" title="进入适老模式">进入适老模式</a>
+                        </div>
+                    </div>
+                    <div class="search-wrapper">
+                        <div class="tab">
+                            <span :class="{'active':searchType===0}" @click="setSearchType(0)">全国一体化信用查询</span>
+                            <span :class="{'active':searchType===2}" @click="setSearchType(2)">站内文章</span>
+                        </div>
+                        <div v-for="(item,idx) in topSearchQuery" :key="idx" class="search-input"
+                             v-show="searchType===item.type">
+                            <div class="search">
+                                <input type="text" v-model="item.query" @keyup.enter="handleSearchBase(item)"
+                                       :placeholder="item.placeholder">
+                                <span class="btn-search" @click="handleSearchBase(item)">查询</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <div class="nav-wrapper">
+                <ul class="nav">
+    <!-- 首页 -->
+    <li class="item">
+        <img src="/resources/images/nav/1.png">
+        <a href="/wcm/site/home.html?id=__private_site_00000000000000000" rel="noopener noreferrer">首页</a>
+    </li>
+    <!-- 根栏目 -->
+    
+        <li class="item">
+            <img  src="/wcm/column/thumbnail/_precast_column_0000000000000000.png">
+            <a href="/wcm/column/xydt.html" rel="noopener noreferrer">信用动态</a>
+        </li>
+        <li class="item">
+            <img  src="/wcm/column/thumbnail/_precast_column_0000000000000001.png">
+            <a href="/wcm/column/zcfg.html" rel="noopener noreferrer">政策法规</a>
+        </li>
+        <li class="item">
+            <img  src="/wcm/column/thumbnail/_precast_column_0000000000000003.png">
+            <a href="/wcm/column/xxgs.html" rel="noopener noreferrer">信息公示</a>
+        </li>
+        <li class="item">
+            <img  src="/wcm/column/thumbnail/_precast_column_0000000000000005.png">
+            <a href="/wcm/column/lhjc.html" rel="noopener noreferrer">联合奖惩</a>
+        </li>
+        <li class="item">
+            <img  src="/wcm/column/thumbnail/_precast_column_0000000000000004.png">
+            <a href="/wcm/column/xyfw.html" rel="noopener noreferrer">信用服务</a>
+        </li>
+        <li class="item">
+            <img  src="/wcm/column/thumbnail/28b2ebf62082400aa4f8324290ec8bb9.png">
+            <a href="/wcm/credit/promise/credit_list_page.html" rel="noopener noreferrer">信用承诺</a>
+        </li>
+        <li class="item">
+            <img  src="/wcm/column/thumbnail/8577b532962843b886e5c8fd63e6a52f.png">
+            <a href="/wcm/credit/red_black/credit_list_page.html" rel="noopener noreferrer">红黑榜</a>
+        </li>
+        <li class="item">
+            <img  src="/wcm/column/thumbnail/9b0e8e5b1730436387fc46e88450cb15.png">
+            <a href="/wcm/column/xinyijia.html" rel="noopener noreferrer">信用+创新</a>
+        </li>
+        <li class="item">
+            <img  src="/wcm/column/thumbnail/696217736a3e4119b984cfbb03853200.png">
+            <a href="/wcm/column/zxzl.html" rel="noopener noreferrer">专项治理</a>
+        </li>
+        <li class="item">
+            <img  src="/wcm/column/thumbnail/_precast_column_0000000000000010.png">
+            <a href="/wcm/column/csxy.html" rel="noopener noreferrer">城市信用</a>
+        </li>
+        <li class="item">
+            <img  src="/wcm/column/thumbnail/d3d2ca785dd24d4c8ca6af2e90eaa6f1.png">
+            <a href="/opinion/index.html" rel="noopener noreferrer">互动交流</a>
+        </li>
+    
+</ul>
+            </div>
+            
+        </div>
+        <div class="main" style="min-width: 1200px;">
+  <div class="main-wrapper">
+    <ul class="breadcrumb">
+      <li><a href="/wcm/site/home.html?id=__private_site_00000000000000000" rel="noopener noreferrer">首页</a><i
+          class="el-icon-arrow-right"></i></li>
+      
+      <li><a href="/wcm/column/home.html?id=_precast_column_0000000000000019" rel="noopener noreferrer">典型案例</a></li>
+    </ul>
+    <div class="body-part top0 new-content">
+      <div class="body-part-left">
+        <div class="content-wrapper">
+          <div class="title-box">
+            <h2>【典型案例】“冒充公检法”的诈骗剧本又更新了！</h2>
+            <div class="label">
+              <span>发布时间：2023-09-05&nbsp;</span>
+              <span title="渑池县公安局">来源：渑池县公安局</span>&nbsp;
+              &nbsp;
+              <span>浏览次数：2638</span>
+              <span class="share-link">
+                  <!--<a href="javascript:;">-->
+                      <!--<img class="wb-icon" th:src="@{/resources/images/xinlang.png}">-->
+                      <!--<i>新浪微博</i>-->
+                  <!--</a>-->
+                  <a style="margin-right: 30px;" href="javascript:;" @click="showQr=!showQr">
+                      <img class="wx-icon" src="/resources/images/weixin/weixin.png">
+                      <i >微信分享</i>
+                  </a>
+                  <div class="qr-inner" v-show="showQr" @click="showQr=!showQr">
+                      <img src="/weixin/generateCode.jpg?contentId=20230911114112_100149">
+                      <div style="font-size: 14px;text-align: center">请用微信扫码分享</div>
+                  </div>
+              </span>
+            </div>
+            <!--<div class="content-box" th:utext="${content.contentDetail.detail}" @click="showQr=false"></div>-->
+            <div class="content-box" @click="showQr=false" v-loading="loading"><p style="text-indent: 2em; font-size: 12pt; line-height: 2em;"><strong>案情回顾</strong></p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">2023年9月1日，杨某报警称在家中接到一个陌生电话，对方自称是广东深圳的民警，称杨某涉嫌拐卖小孩、贩卖器官，涉案资金需要进行资金查询，杨某添加对方QQ并按照对方要求下载一手机远程控制软件，后在对方的提示下向对方提供的账号转账20万元，后发现被骗报警。 &nbsp; &nbsp; &nbsp;</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;"><strong>什么是冒充公检法诈骗？</strong></p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">冒充公检法诈骗是指诈骗分子冒充公安、检察院、法院的工作人员，以被害人的银行卡、社保卡、医保卡等信用支付工具被冒用，或被害人身份信息泄露，涉嫌洗钱、贩毒、拐卖儿童、贩卖器官等犯罪，要求被害人配合调查，并发送虚假“通缉令”“逮捕令”等法律文书，使被害人陷入恐惧，再让被害人进行“资金清查”或者将钱转入公检法指定“安全账户”，以自证清白，从而实施诈骗。</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;"><strong>冒充公检法诈骗流程</strong></p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">1、冒充公检法等开场</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">诈骗分子通过非法渠道获取受害人的个人信息，冒充公安民警与受害人联系，以其涉嫌拐卖儿童配合调查为由，添加受害人联系方式，并发送伪造的警官证、通缉令、逮捕令等法律文书，恐吓受害人，使其相信</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">2、通缉令、警官证齐上场</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">受害人添加“警察”QQ或微信，对方发来虚假的警官证和逮捕令或者通缉令等文书，使受害人陷入恐慌，进一步相信骗子的说法。&nbsp;&nbsp;&nbsp;</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">3、诱导开启屏幕共享</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">&nbsp;诈骗分子诱导受害人下载虚假APP，并打开屏幕共享功能，声称要对其银行账户进行逐一核查、帮助受害人洗脱罪名为由，引导受害人将账户里的钱款转账至安全账户。</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">&nbsp;4、下载软件配合资金清查</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">要求受害人下载指定软件进行“资金清查”，让其将所有钱转入一个银行卡内，并在软件内填写银行卡号、密码、验证码等。填写完毕，受害人卡上的资金已被全部转走，对方称是转至了“安全账户”。</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;"><strong>教您识别冒充公检法类诈骗</strong></p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">一、要求你绝对不能挂掉电话，并为你转接电话的</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">没有谁有权利让某人绝对不能挂电话，转接的电话通常都是串通好的另一个骗子的电话。</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">二、要求你必须开通网银或重新办一张银行卡</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">同样，没有人会强制性要求你去办某一张银行卡，遇到此类情况，请千万不要去所谓的网站上透露自己的银行卡信息。</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">三、要求你绝对不能和别人（尤其是警察）透露通话内容的</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">警察蜀黍是最能帮你的人，如果连警察蜀黍都不能知道的事，那这件事肯定是坏事，就是骗子正在对你做的这件坏事！</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">四、要求你寻找隐蔽的地方进行通话</p> 
+<p style="text-indent: 2em; font-size: 12pt; line-height: 2em;">如果是警察蜀黍给你打电话，绝对不可能会有此类要求，找隐蔽的地方只是方便骗子行骗，以免被人“多管闲事”，提醒了受害人。</p></div>
+          </div>
+
+          
+        </div>
+        <!-- 相关文章列表 -->
+        <div class="native_artical_wrap">
+    <div class="native_artical_title">
+        <span><em></em>相关文章</span>
+    </div>
+    <ul class="native_artical_column_list">
+        
+            <li>
+                <p><a href="/wcm/content/detail/20260817085443_100008.html" rel="noopener noreferrer">【典型案例】揭示个人信息泄露套路</a></p>
+                <span>发布时间：<em>2026/08/17</em></span>
+            </li>
+            <li>
+                <p><a href="/wcm/content/detail/20260811085411_100395.html" rel="noopener noreferrer">【典型案例】最高法发布规范平台经营保护消费者合法权益案例</a></p>
+                <span>发布时间：<em>2026/08/04</em></span>
+            </li>
+            <li>
+                <p><a href="/wcm/content/detail/20260702102000_100293.html" rel="noopener noreferrer">【典型案例】最高检发布检察机关惩治知识产权恶意诉讼案例</a></p>
+                <span>发布时间：<em>2026/07/01</em></span>
+            </li>
+            <li>
+                <p><a href="/wcm/content/detail/20260529160818_100055.html" rel="noopener noreferrer">【典型案例】国家医保局公布定点零售药店违法违规使用医保基金案例</a></p>
+                <span>发布时间：<em>2026/05/29</em></span>
+            </li>
+            <li>
+                <p><a href="/wcm/content/detail/20260519092344_100006.html" rel="noopener noreferrer">【典型案例】2026年第二批旅游市场强制消费问题</a></p>
+                <span>发布时间：<em>2026/05/15</em></span>
+            </li>
+            <li>
+                <p><a href="/wcm/content/detail/20260415080713_100143.html" rel="noopener noreferrer">【典型案例】税务部门曝光4起骗取出口退税违法案件</a></p>
+                <span>发布时间：<em>2026/03/03</em></span>
+            </li>
+        
+    </ul>
+</div>
+      </div>
+      <div class="body-part-right">
+    <!--文章搜索-->
+    <div class="search-box">
+        <p class="search-artical-title">文章搜索</p>
+        <div class="search_artical_input">
+            <form target="_blank">
+                <div class="input_content">
+                    <input name="keywords" v-model="articleKeyword" class="search_text" type="text" autocomplete="off" id="search_text" placeholder="请输入关键词">
+                </div>
+                <div class="input_content">
+                    <input class="btn scearchBtn articalSearchBtn" value="" @click="searchArticle">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--大家关注模块-->
+    <div class="special_column_style people_interest_wrap">
+        <div class="column_title">
+            <span><em></em>大家关注</span>
+        </div>
+        <ul class="column_list_interest">
+            
+                <li>
+                    <span class="bd_radius">头条新闻</span>
+                    <a href="/wcm/content/detail/20260402162247_100133.html" target="_blank">一图读懂 | 如何提请信用修复？</a>
+                </li>
+                <li>
+                    <span class="bd_radius">头条新闻</span>
+                    <a href="/wcm/content/detail/20251217112623_100085.html" target="_blank">三门峡市建立省际交界城市信用修复跨省联动机制</a>
+                </li>
+                <li>
+                    <span class="bd_radius">头条新闻</span>
+                    <a href="/wcm/content/detail/20251217112733_100086.html" target="_blank">三门峡市2项信用案例荣获第七届全国信用应用场景优秀实践称号</a>
+                </li>
+                <li>
+                    <span class="bd_radius">头条新闻</span>
+                    <a href="/wcm/content/detail/20260402162531_100134.html" target="_blank">《信用修复管理办法》 2025年第36号令</a>
+                </li>
+                <li>
+                    <span class="bd_radius">头条新闻</span>
+                    <a href="/wcm/content/detail/20250909164635_100170.html" target="_blank">国家发展改革委：失信信息实行分类管理</a>
+                </li>
+                <li>
+                    <span class="bd_radius">头条新闻</span>
+                    <a href="/wcm/content/detail/20250709085246_100421.html" target="_blank">国办：明确完善信用修复制度十项重点任务</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+    </div>
+  </div>
+</div>
+
+        <div class="footer" style="padding-top: 10px">
+    
+        <script>
+            var a = "<p><a href=\"https:\/\/zfwzgl.www.gov.cn\/exposure\/jiucuo.html?site_code=4112000048\u0026amp;url={?2}\"> <img src=\"\/resources\/images\/jiucuo.png\" width=\"134\" height=\"66\"> <\/a> <a href=\"\/\/bszs.conac.cn\/sitename?method=show\u0026amp;id=BC10DB10C47C59B5E05310291AACCEC0\" target=\"_blank\" rel=\"noopener\"> <img id=\"imgConac\" src=\"\/resources\/images\/blue_error.png\" width=\"75\" height=\"75\" border=\"0\" hspace=\"0\" vspace=\"0\" data-bd-imgshare-binded=\"1\"> <\/a><\/p> \n<p>\u7248\u6743\u6240\u6709\uFF1A\u4FE1\u7528\u4E2D\u56FD\uFF08\u6CB3\u5357\u4E09\u95E8\u5CE1\uFF09| <a href=\"\/wcm\/content\/detail\/_precast_content_000000000000001.html\">\u5173\u4E8E\u6211\u4EEC<\/a> | <a href=\"\/route.html\">\u7F51\u7AD9\u5730\u56FE<\/a> <br>\u4E3B\u529E\u5355\u4F4D\uFF1A\u4E09\u95E8\u5CE1\u5E02\u4F18\u5316\u8425\u5546\u73AF\u5883\u670D\u52A1\u4E2D\u5FC3 <label>\u6307\u5BFC\u5355\u4F4D\uFF1A\u4E09\u95E8\u5CE1\u5E02\u53D1\u5C55\u548C\u6539\u9769\u59D4\u5458\u4F1A<\/label> <label>\u0026nbsp;\u7535\u8BDD\uFF1A0398-2938506<\/label> <br>\u7F51\u7AD9\u6807\u8BC6\u7801\uFF1A4112000048\u0026nbsp;\u0026nbsp;<a href=\"https:\/\/beian.miit.gov.cn\/#\/Integrated\/index\" target=\"_blank\" rel=\"noopener\">\u5907\u6848\u53F7\uFF1A\u8C6BICP\u59072021015802\u53F7<\/a> <a href=\"http:\/\/www.beian.gov.cn\/portal\/registerSystemInfo?recordcode=41120202000077\" target=\"_blank\" rel=\"noopener\"> <img src=\"\/resources\/images\/beianImg.png\">\u8C6B\u516C\u7F51\u5B89\u5907\uFF1A41120202000077\u53F7 <\/a> \u0026nbsp; \u6280\u672F\u652F\u6301\uFF1A<span class=\"text\" title=\"\u95E8\u6237\uFF1A\u9996\u9875\u5E95\u90E8\u6280\u672F\u652F\u6301\u5E94\u4E3A\u201C\u6C5F\u82CF\u65B0\u8776\u6570\u5B57\u79D1\u6280\u6709\u9650\u516C\u53F8\u201D\">\u6C5F\u82CF\u65B0\u8776\u6570\u5B57\u79D1\u6280\u6709\u9650\u516C\u53F8<\/span><\/p>"
+            var siteName = "\u4E09\u95E8\u5CE1"
+            a = a.replace("{?1}", siteName);
+            a = a.replace("{?2}", encodeURIComponent(window.location.href));
+            document.write(a)
+        </script>
+    
+</div>
+        <div>
+    <!--  机器人  窗口-->
+    <transition name="el-zoom-in-bottom">
+        <div class="robot-window" v-show="robotOpened">
+            <div class="top-bar">
+                <div class="title">
+                    <h2>信用服务客服</h2>
+                    <p>智能机器人客服，24小时为您服务</p>
+                </div>
+                <div class="close">
+                         <span class="close-btn" @click="minusRobot">
+                            <i class="el-icon-minus"></i>
+                        </span>
+                    <span class="close-btn" @click="closeRobot">
+                            <i class="el-icon-close"></i>
+                        </span>
+                </div>
+            </div>
+            <div class="content flex">
+                <div class="left">
+                    <div class="message-box" id="content">
+                        <div class="item" v-for="(item,index) in messageList" :key="index"
+                             :class="{'robot': item.robot}">
+                            <div v-if="item.robot" class="avatar">
+                                <img src="/resources/images/right-fiexd/girl.png"
+                                     height="54" width="54"/>
+                            </div>
+                            <div class="inner">
+                                <p class="timer" v-if="item.time">{{ item.time }}</p>
+                                <div class="value" v-if="item.value">
+                                    {{ item.value }}
+                                </div>
+                                <div class="value html" v-if="item.html" v-html="item.html">
+                                </div>
+                            </div>
+                            <div v-if="!item.robot" class="avatar">
+                                <img src="/resources/images/right-fiexd/boy.png"
+                                     height="54" width="54"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <textarea type="text" placeholder="请输入..." v-model="msg"
+                                  @keyup.enter.prevent="sendMessage('')"></textarea>
+                        <button class="send" @click="sendMessage('')">发送</button>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="tip">
+                        <div class="news-title">常见问题</div>
+                        <div class="news">
+                            <a rel="noopener noreferrer" v-for="item in questions" :key="item.id" @click="sendMessage(item.question)" href="javascript:;">{{ item.question }}</a>
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <div class="news-title">信用知识</div>
+                        <div class="news">
+                            <a rel="noopener noreferrer" v-for="item in knowledge" :key="item.id" @click="sendMessage(item.question)" href="javascript:;">{{ item.question }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </transition>
+
+    <!--  机器人 右侧 菜单栏-->
+    <div class="right-fixed floatrightbox">
+            <dl>
+
+                <dt class="xybg"><a target="_blank" href="/xybg.html"><span>信用报告</span></a></dt>
+                <dt class="xyxf"><a target="_blank" href="https://www.creditchina.gov.cn/xyxf/lczy/"><span>信用修复</span></a></dt>
+                <dt class="yyss"><a target="_blank" href="/credit_service/credit_objection.html"><span>异议申诉</span></a></dt>
+                <dt class="hdjl"><a target="_blank" href="/opinion/index.html"><span>互动交流</span></a></dt>
+
+
+
+            </dl>
+    </div>
+</div>
+    </div>
+
+    <div class="valid-box">
+        <div class="mask"></div>
+        <div class="col-12">
+            <div class="slidercaptcha card" style="width: 340px">
+                <div class="card-header"><span>请完成安全验证</span></div>
+                <div class="card-body">
+                    <div id="captcha"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var path = "url(\"/wcm/site/image/" + "home_site" + ".png\")"
+    // $(".header .banner").css("background", "url(\"/wcm/site/image/xzxy.png\")");
+    $(".header .banner").css("background", path);
+
+    $(function () {
+        var WEEK_DAYS = ['日', '一', '二', '三', '四', '五', '六'];
+
+        function format(v, w, c) {
+            c = c || '0';
+            w = w || 2;
+            v = v == null ? "" : v.toString();
+            w = w - v.length;
+            return c.repeat(w < 0 ? 0 : w) + v;
+        }
+
+        function update(time) {
+            var dateStr = "" + time.getFullYear()
+                + "-" + format(time.getMonth() + 1)
+                + "-" + format(time.getDate())
+
+
+                + " 星期" + WEEK_DAYS[time.getDay()];
+            $(document.getElementById("curtime")).text(dateStr);
+        }
+        var lastTime = new Date();
+        update(lastTime);
+        $.ajax({
+            type: "GET",
+            url: CTX_ROOT + "cache/getBlackStatus.do",
+            async: false,
+            success: function (response) {
+                if (response) {
+                    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+                    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+                    var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+                    var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+
+                    if (isIE || isEdge || isIE11) {
+                        $(".header .banner").css("background", "none");
+                        grayscale(document.getElementsByClassName("label"));
+                        grayscale(document.getElementsByClassName("nav-wrapper"));
+                        grayscale(document.getElementsByClassName("search-wrapper"));
+                        grayscale(document.getElementsByClassName("login-wrapper"));
+                        grayscale(document.getElementsByClassName("main"));
+                        grayscale(document.getElementsByClassName("footer"));
+                    } else {
+                        let innerHTML = document.getElementsByTagName("style")[0].innerHTML;
+                        innerHTML += '#app>div {-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter: gray;}'
+                        document.getElementsByTagName("style")[0].innerHTML = innerHTML
+                        var target = $(".emblem")
+                        target.appendTo($("body"))
+                        $(".banner .logo").css("padding-left", "75px")
+                        target.css("left", $(".banner .logo").offset().left + "px").css("top", $(".banner .logo").offset().top + "px").css("position", "absolute")
+                    }
+                }
+            }
+        });
+
+        $.ajax({
+            type: "GET",
+            url: CTX_ROOT + "wcm/site/all.json",
+            async: false,
+            success: function (response) {
+                if (response) {
+                    layui.use(['dropdown', 'util', 'layer', 'table'], function () {
+                        var dropdown = layui.dropdown;
+                        dropdown.render({
+                            elem: '.site', trigger: 'hover'
+                            , data: response, click: function (obj) {
+                                window.location.href = CTX_ROOT + "wcm/site/" + obj.id + ".html";
+                            }
+                        });
+                    });
+                }
+            }
+        });
+
+    });
+</script>
+
+<script src="/resources/js/lib/base64.js"></script><script src="/resources/js/jweixin-1.6.0.js"></script><script src="/resources/elm_ui/index.js"></script><script>
+
+
+  function getFile(id) {
+    var refresh = new Date().getTime()
+    var url = CTX_ROOT + 'wcm/attachment/download/' + Base64.encode(id) + '.html?refresh=' + refresh
+    var a = document.createElement('a')
+    a.setAttribute('href', url)
+    a.setAttribute('target', '_blank')
+    a.setAttribute('id', 'v2-link-temp')
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(document.getElementById('v2-link-temp'))
+  }
+  //-------------begin
+  //设置分享内容
+  var title="\u3010\u5178\u578B\u6848\u4F8B\u3011\u201C\u5192\u5145\u516C\u68C0\u6CD5\u201D\u7684\u8BC8\u9A97\u5267\u672C\u53C8\u66F4\u65B0\u4E86\uFF01"
+  var desc = null
+  var thumbnailPath = null
+  var shareLink=window.location.href.split('#')[0];
+  var  shareImgUrl=window.location.href.split('wcm')[0]+"wcm/content/thumbnail/" + thumbnailPath;//分享图片
+  //-------------end
+
+  $(function () {
+    getSgt(shareLink);
+  })
+  function getSgt(currUrl) {
+    $.ajax({
+      type: "GET",
+      url: "/weixin/register.do?url="+encodeURIComponent(currUrl),
+      success: function (response) {
+        var data = response.data
+        initWeChat(data.sgture,data.appid,data.timestamp,data.noncestr);
+        ready();
+      }
+    });
+  }
+
+  function ready() {
+    wx.ready(function () {
+      //分享到---朋友圈，微信好友
+      onMenuShareAppMessage(title, desc, shareLink, shareImgUrl);
+      onMenuShareTimeline(title, desc, shareLink, shareImgUrl);
+    });
+
+  }
+
+  function initWeChat(signature, appId,timestamp,noncestr) {
+    wx.config({
+      debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+      appId: appId, // 必填，公众号的唯一标识
+      timestamp: timestamp, // 必填，生成签名的时间戳
+      nonceStr: noncestr, // 必填，生成签名的随机串
+      signature:signature,//必填，签名
+      jsApiList: [// 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        'checkJsApi',
+        'onMenuShareTimeline',//-----------------我们这里用了分享朋友圈
+        'onMenuShareAppMessage',//----------------好友
+      ]
+    })
+  }
+
+  //分享给朋友
+  function onMenuShareAppMessage(title, desc, shareLink, imgUrl) {
+    wx.onMenuShareAppMessage({
+      title: title,
+      desc: desc,
+      link: shareLink,
+      imgUrl: imgUrl,
+      // trigger: function (res) {
+      //   // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+      //   wechatActionCallback('SHARE_FRIEND', 'CLICK');
+      // },
+      success: function (res) {
+        wechatActionCallback('SHARE_FRIEND', 'SUCESS');
+      },
+      cancel: function (res) {
+        alert('已取消'+JSON.stringify(res));
+      },
+      fail: function (res) {
+        alert(JSON.stringify(res));
+      }
+    });
+  }
+
+  //分享到朋友圈
+  function onMenuShareTimeline(title, desc, shareLink, imgUrl) {
+    wx.onMenuShareTimeline({
+      title: title, // 分享标题
+      link: shareLink,// 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+      imgUrl: imgUrl,// 分享图标
+      desc: desc,
+      // trigger: function (res) {
+      //   // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+      //   //  alert('用户点击分享到朋友圈'+JSON.stringify(res));
+      //   wechatActionCallback('SHARE_TIME_LINE', 'CLICK');
+      // },
+      success: function (res) {
+        wechatActionCallback('SHARE_TIME_LINE', 'SUCESS');
+      },
+      cancel: function (res) {
+        wechatActionCallback('SHARE_TIME_LINE', 'CANCEL');
+      },
+      fail: function (res) {
+        wechatActionCallback('SHARE_TIME_LINE', 'FAIL');
+      }
+    });
+  }
+
+
+  new Vue({
+    mixins: [commonMixin],
+    data: function () {
+      return {
+        showQr: false,
+        loading: false
+      }
+    },
+    mounted: function () {
+
+    },
+    methods: {
+      // 调用方法
+
+    }
+  });
+</script>
+<script src="/resources/static/cmsToolsInit.js"></script>
+<script src="/resources/js/common.js"></script>
+</body>
+</html>

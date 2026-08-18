@@ -1,0 +1,17 @@
+{
+  "case_id": "C0003-F01",
+  "real_case_id": "RC0003",
+  "text": "我接到一个自称淘宝客服的电话。对方称我曾在其店铺购买婴儿纸尿裤，该商品被发现甲醛超标，需要按公司规定为我退款；但因为系统问题导致公司财务账目不平，需要我配合操作才能完成退款。对方准备继续指导我操作，我正考虑是否按其要求办理贷款和转账。",
+  "label": "fraud",
+  "fraud_type": "impersonated_customer_service",
+  "evidence": [
+    "我接到一个自称淘宝客服的电话",
+    "对方称我曾在其店铺购买婴儿纸尿裤，该商品被发现甲醛超标，需要按公司规定为我退款",
+    "因为系统问题导致公司财务账目不平，需要我配合操作才能完成退款",
+    "我正考虑是否按其要求办理贷款和转账"
+  ],
+  "source_id": "SRC0003",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}
