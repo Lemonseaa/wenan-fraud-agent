@@ -1,0 +1,17 @@
+{
+  "case_id": "C0002-F01",
+  "real_case_id": "RC0002",
+  "text": "我在短视频平台看到一则招聘做手工的广告，广告称完成任务可以赚取佣金。我随后通过微信与对方联系，对方让我扫码，并称按要求转账完成任务后可以获得佣金。我准备按对方要求进行第一次扫码转账。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "在短视频平台看到一则招聘做手工的广告，广告称完成任务可以赚取佣金",
+    "我随后通过微信与对方联系",
+    "对方让我扫码，并称按要求转账完成任务后可以获得佣金",
+    "我准备按对方要求进行第一次扫码转账"
+  ],
+  "source_id": "SRC0002",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -11,8 +11,8 @@
 - 原始来源文件：保存在 `data/raw/public_sources/SRCxxxx/`，保留下载时的原貌；
 - 来源记录：保存在 `data/sources/source_registry.jsonl`，记录原文从哪里取得；
 - 真实案件记录：保存在 `data/sources/real_case_registry.jsonl`，登记原文中能够独立识别的案件；
-- 人工审批稿：保存在 `data/review/public_cases/cases/Cxxx.md`，记录事实边界、改写过程和审批意见；
-- 结构化记录：保存在 `data/review/public_cases/structured/Cxxx.json`，供程序读取。
+- 人工审批稿：保存在 `data/review/public_cases/cases/Cxxxx-Tnn.md`，记录事实边界、改写过程和审批意见；
+- 结构化记录：保存在 `data/review/public_cases/structured/Cxxxx-Tnn.json`，供程序读取。
 
 五者通过 `source_id`、`real_case_id` 和 `case_id` 连接：
 
@@ -21,10 +21,28 @@
                          ↓
 real_case_registry.jsonl：RCxxxx（原文中的一个真实案件）
                          ↓
-cases/Cxxx.md 和 structured/Cxxx.json：Cxxx（一条加工后的数据）
+cases/Cxxxx-Tnn.md 和 structured/Cxxxx-Tnn.json：Cxxxx-Tnn（一条加工后的数据）
 ```
 
 一份来源可能记载多个独立真实案件，一个真实案件也可能产生忠实改写、合成变体和正常对照。第三步只保存来源，不拆分、不摘要、不改写；第五步才识别并登记独立真实案件。
+
+### 案例命名原则
+
+`case_id` 固定使用 `Cxxxx-Tnn`，由三部分组成：
+
+- `Cxxxx`：案例组编号。四位数字必须与母案例 `RCxxxx` 一致，例如 `RC0001` 只能生成 `C0001-*`；
+- `T`：构造类型。`F` 表示忠实改写，`E` 表示增强欺诈案例，`N` 表示正常对照；
+- `nn`：同一案例组、同一类型内的两位序号，从 `01` 开始递增。例如第二条增强案例使用 `E02`。
+
+因此，`RC0001` 的第一条忠实改写、增强案例和正常对照分别命名为 `C0001-F01`、`C0001-E01` 和 `C0001-N01`。
+
+执行规则：
+
+1. 文件名、Markdown 标题、Markdown 中的 `case_id` 和 JSON 中的 `case_id` 必须完全一致；
+2. 不再使用 `C001`、`C007` 这类无法直接看出案例组和构造类型的全局流水号；
+3. 某类变体不生成时不创建占位编号，其他类型仍从 `01` 开始；
+4. 同一题面在审批前修改可以沿用原编号；审批通过后如形成新的判断场景，必须递增该类型序号，不能覆盖旧案例；
+5. 已经进入版本记录的编号不得转给其他案例重复使用。
 
 ## 二、团队执行原则
 
@@ -293,7 +311,7 @@ AI负责从原文生成三组事实草稿，不能自行将 `boundary_verificati
 
 **输入：** 第6步已经审批的 `decision_point`、`pre_event_facts`、`post_event_facts` 和 `missing_information`。
 
-**操作：** 第7步开始进入加工数据层。AI先分配唯一 `case_id`，创建 `data/review/public_cases/cases/Cxxx.md`，再按以下顺序生成草稿：
+**操作：** 第7步开始进入加工数据层。AI先按案例组和构造类型分配唯一 `case_id`，创建 `data/review/public_cases/cases/Cxxxx-Tnn.md`，再按以下顺序生成草稿：
 
 1. 只使用允许进入题面的事前事实编写 `text`；
 2. 把 `text` 中每个关键事实与来源和事实边界逐项对照；
@@ -307,27 +325,38 @@ AI负责从原文生成三组事实草稿，不能自行将 `boundary_verificati
 `construction_type` 只允许：
 
 - `public_case_rewritten`：题面关键事实都能由公开来源支持，只做脱敏、压缩和事前场景化；
-- `controlled_synthetic`：基于真实机制，但题面新增或改变了来源无法确认的关键情节；
-- `normal_counterfactual`：围绕相似场景构造正常对照，防止模型只凭主题词判断欺诈。
+- `controlled_synthetic`：基于真实机制生成的受控变体。题面新增或改变了来源无法确认的关键情节，用于测试模型能否识别更隐蔽的行为关系；
+- `normal_counterfactual`：围绕相似场景构造正常对照，通过独立核验、正规渠道和正常资金闭环，防止模型只凭主题词判断欺诈。
 
 构造类型必须根据最终 `text` 判定，而不是根据写作计划预先判定。例如原案是现金交付，题面却写成银行转账，就必须标为 `controlled_synthetic`。
+
+`construction_type` 只记录题面如何产生，不预设 `label`；第8步必须只根据最终 `text` 标注答案。省略金额、日期或具体称谓等非决定性信息时，标签可以不变；省略核验方式、收款对象、资金用途或具体操作等决定性信息后无法可靠判断时，必须标为 `insufficient`。简略、口语化变体按需生成，沿用原构造类型并递增该类型序号，不新增构造类型或字段。
+
+具体改写方法：
+
+1. 忠实改写 `public_case_rewritten`：从已经审批的事前事实中选择一个判断时点，删除事后结果，压缩成第一人称或清晰场景。只能删减、脱敏和调整表达，不能增加关键事实；
+2. 受控变体 `controlled_synthetic`：先复制忠实改写，再选择身份包装、接触渠道、资金方式或核验关系中的一个维度进行改变。可以增加合理的可信包装，但题面中必须保留能够被发现的关系异常；
+3. 正常对照 `normal_counterfactual`：保留原案例的主题和部分高混淆表面特征，把决定性风险关系替换为独立核验、主体一致和正常资金闭环。不能只删除风险词，也不能把客观危险行为解释成正常。
+
+“选择理由”统一说明四件事：保留了什么、改变了什么、新增了什么、这条数据测试什么能力。忠实改写没有新增事实时必须明确写明“未新增关键事实”。
 
 案例组规则：
 
 - 同一 `real_case_id` 下的所有 `case_id` 属于同一案例组；
 - 每个可用真实案件至少生成一条 `public_case_rewritten`；
-- 改变组和正常对照按需生成，不强制凑数；
-- 改变组每条只重点改变一个维度，并说明测试目的；删除决定性事实后信息不足的，标签必须改为 `insufficient`；
-- 正常对照必须具有可核验的正常闭环，不能只翻转标签，也不能替代独立收集的真实正常案例；
+- `public_case_rewritten` 保留原案已经审批的事前事实，不补造关键情节；
+- `controlled_synthetic` 只在存在明确训练目标和合理改变维度时生成。每条只重点改变身份包装、接触渠道或资金请求方式等一个维度，不能加入“尚未核验”“看似正规”等直接提示答案的作者判断；
+- `normal_counterfactual` 只在能够形成可信、可独立核验的正常闭环时生成。正常结论必须由题面中的正面核验事实支持，不能只罗列“不转账”“不共享”等安全词，也不能用合成正常对照替代独立收集的真实正常案例；
+- 无法合理生成某类变体时不生成、不占号，不得为了凑齐三条而编造；欺诈、增强和正常数据的数量在整个批次层面检查，不要求每个案例组机械配齐；
 - 同一案例组必须整体进入同一个训练集、验证集或测试集，不得拆分。
 
 审批稿在本步写入：
 
 ```markdown
-# Cxxx｜案例名称
+# Cxxxx-Tnn｜案例名称
 
 ## 关联信息
-- case_id：Cxxx
+- case_id：Cxxxx-Tnn
 - real_case_id：RCxxxx
 - source_id：SRCxxxx
 
@@ -353,7 +382,7 @@ AI负责从原文生成三组事实草稿，不能自行将 `boundary_verificati
 
 **操作：** 填写 `label`、`fraud_type` 和 `evidence`。
 
-AI把结果追加到同一个 `cases/Cxxx.md` 的“参考答案”部分，不创建第二份案例文件：
+AI把结果追加到同一个 `cases/Cxxxx-Tnn.md` 的“参考答案”部分，不创建第二份案例文件：
 
 ```markdown
 ## 参考答案
@@ -367,6 +396,8 @@ AI把结果追加到同一个 `cases/Cxxx.md` 的“参考答案”部分，不�
 - `fraud`：当前事实足以支持欺诈判断；
 - `normal`：当前行为有合理、可核验的正常解释；
 - `insufficient`：现有信息不足以在欺诈和正常之间作出可靠判断。
+
+已知母案例最终发生诈骗或正常结束，不能代替题面证据。只出现“投资”“客服”“贷款”“警察”“恋爱”等主题词，或只知道对方要求“操作一下”，都不足以直接标为 `fraud`；正常题面也必须明确给出能够独立核验的闭环。
 
 `fraud_type` 使用团队统一枚举：
 
@@ -398,10 +429,10 @@ AI把结果追加到同一个 `cases/Cxxx.md` 的“参考答案”部分，不�
 
 **输入：** 来源记录、事实边界、题面和标注结果。
 
-**操作：** 在第7步创建的 `cases/Cxxx.md` 中补齐并整理以下内容，不再另建审批文件：
+**操作：** 在第7步创建的 `cases/Cxxxx-Tnn.md` 中补齐并整理以下内容，不再另建审批文件：
 
 ```markdown
-# Cxxx｜案例名称
+# Cxxxx-Tnn｜案例名称
 
 ## 来源与关联
 - case_id：
@@ -464,11 +495,11 @@ Markdown 用于人工阅读和审批，JSON 用于程序校验、训练和评测
 
 #### 10.2 第一阶段字段
 
-在 `structured/Cxxx.json` 生成第一阶段记录，固定使用以下十个字段：
+在 `structured/Cxxxx-Tnn.json` 生成第一阶段记录，固定使用以下十个字段：
 
 ```json
 {
-  "case_id": "C051",
+  "case_id": "C0001-F01",
   "real_case_id": "RC0001",
   "text": "我在社交平台认识了一名自称投资导师的人。对方发来群内盈利截图，并让我在一个尚未独立核验的平台充值。",
   "label": "fraud",
