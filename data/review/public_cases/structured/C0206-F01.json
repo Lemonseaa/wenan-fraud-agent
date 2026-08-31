@@ -1,0 +1,18 @@
+{
+  "case_id": "C0206-F01",
+  "real_case_id": "RC0206",
+  "text": "一名自称菜鸟驿站工作人员的人添加我微信，并把我拉入刷单返利群。我扫码下载APP后完成第一单，账户显示盈利；随后APP里的“老师”提供一个银行卡号，要求后续任务直接向该卡转账。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "刷单返利群",
+    "扫码下载APP",
+    "第一单，账户显示盈利",
+    "提供一个银行卡号",
+    "直接向该卡转账"
+  ],
+  "source_id": "SRC0031",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

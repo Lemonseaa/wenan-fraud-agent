@@ -1,0 +1,17 @@
+{
+  "case_id": "C0166-F01",
+  "real_case_id": "RC0166",
+  "text": "我收到低息贷款短信，通过其中链接下载APP并填写资料。平台显示贷款申请成功，但提现时提示银行卡错误。客服称账户被冻结，要求我向指定银行账户支付解冻费。",
+  "label": "fraud",
+  "fraud_type": "loan_or_credit",
+  "evidence": [
+    "低息贷款短信",
+    "通过其中链接下载APP",
+    "提现时提示银行卡错误",
+    "向指定银行账户支付解冻费"
+  ],
+  "source_id": "SRC0026",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

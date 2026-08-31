@@ -1,0 +1,18 @@
+{
+  "case_id": "C0099-F01",
+  "real_case_id": "RC0099",
+  "text": "我在QQ群看到网络兼职信息，对方称刷单每100元返利6元。首次支付100元后很快收到106元，随后又连续完成5单。现在对方要求继续加码，并称不完成后续任务，系统就无法返款。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "刷单每100元返利6元",
+    "首次支付100元后很快收到106元",
+    "连续完成5单",
+    "要求继续加码",
+    "不完成后续任务，系统就无法返款"
+  ],
+  "source_id": "SRC0021",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

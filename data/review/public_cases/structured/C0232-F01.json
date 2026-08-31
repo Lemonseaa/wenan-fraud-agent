@@ -1,0 +1,18 @@
+{
+  "case_id": "C0232-F01",
+  "real_case_id": "RC0232",
+  "text": "我在网络平台看到一家已注册农业科技公司的特色农业项目，销售金线莲种苗、灵芝菌包等产品。公司称可提供全程种植技术指导，并愿意签订合同、高价回购种植成品。目前没有种植收益、回购价格依据和实际履约记录的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "已注册农业科技公司",
+    "金线莲种苗、灵芝菌包",
+    "全程种植技术指导",
+    "签订合同、高价回购种植成品",
+    "没有种植收益、回购价格依据和实际履约记录的核验结果"
+  ],
+  "source_id": "SRC0035",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

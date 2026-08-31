@@ -1,0 +1,18 @@
+{
+  "case_id": "C0226-F01",
+  "real_case_id": "RC0226",
+  "text": "一名自称证券期货公司客服或股票分析师的人联系我，宣传指定APP门槛低、杠杆高、风险有限、收益空间大，还展示客户入金和高额回报图片，邀请我在APP购买产品。目前没有其身份、APP资质、交易通道和资金托管的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称证券期货公司客服或股票分析师",
+    "杠杆高、风险有限、收益空间大",
+    "高额回报图片",
+    "邀请我在APP购买产品",
+    "没有其身份、APP资质、交易通道和资金托管的核验结果"
+  ],
+  "source_id": "SRC0034",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

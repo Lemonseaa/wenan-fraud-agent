@@ -1,0 +1,18 @@
+{
+  "case_id": "C0179-F01",
+  "real_case_id": "RC0179",
+  "text": "11岁孩子扫码领取免费游戏皮肤并添加对方微信。对方称孩子操作不当导致账户冻结，会影响母亲银行卡，又提出通过视频指导解除冻结，要求摄像头对准母亲手机并查看银行卡信息和验证码。",
+  "label": "fraud",
+  "fraud_type": "phishing_or_account_takeover",
+  "evidence": [
+    "免费游戏皮肤",
+    "操作不当导致账户冻结",
+    "通过视频指导解除冻结",
+    "摄像头对准母亲手机",
+    "查看银行卡信息和验证码"
+  ],
+  "source_id": "SRC0028",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0205-F01",
+  "real_case_id": "RC0205",
+  "text": "我接到自称天猫客服的电话，对方称因工作人员失误给我开通了代理商，每月会扣500元。对方说取消业务需要转接银行，随后一名自称银行工作人员的人要求我通过转账测试并锁定银行账户。",
+  "label": "fraud",
+  "fraud_type": "impersonated_customer_service",
+  "evidence": [
+    "开通了代理商",
+    "每月会扣500元",
+    "转接银行",
+    "通过转账测试",
+    "锁定银行账户"
+  ],
+  "source_id": "SRC0031",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "case_id": "C0008-F01",
+  "real_case_id": "RC0008",
+  "text": "我接到一个推销电话，对方自称是老年协会或保健品公司的工作人员，说目前有促销或中奖活动，并向我推荐一种保健产品。我表示有购买意愿后，对方安排通过邮政寄送，要求我收货时付款。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称是老年协会或保健品公司的工作人员",
+    "说目前有促销或中奖活动",
+    "安排通过邮政寄送，要求我收货时付款"
+  ],
+  "source_id": "SRC0007",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

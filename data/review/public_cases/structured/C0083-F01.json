@@ -1,0 +1,18 @@
+{
+  "case_id": "C0083-F01",
+  "real_case_id": "RC0083",
+  "text": "我接到自称微信客服的电话，对方称百万保障试用期结束后每月扣费，取消需要配合远程操作。添加企业微信后，对方发来带有我个人信息的保单图片，又要求下载会议软件、打开屏幕共享并验证银行卡。",
+  "label": "fraud",
+  "fraud_type": "impersonated_customer_service",
+  "evidence": [
+    "百万保障试用期结束后每月扣费",
+    "取消需要配合远程操作",
+    "带有我个人信息的保单图片",
+    "下载会议软件",
+    "打开屏幕共享并验证银行卡"
+  ],
+  "source_id": "SRC0019",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

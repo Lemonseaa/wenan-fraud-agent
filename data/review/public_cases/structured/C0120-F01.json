@@ -1,0 +1,18 @@
+{
+  "case_id": "C0120-F01",
+  "real_case_id": "RC0120",
+  "text": "我被拉入股票期货投资交流群，群内讲师直播传授投资技巧，其他群成员以客户身份提问、分享经验并展示丰厚收益。群里称推荐平台预测涨跌较准、收益稳定，要求我注册后投入资金。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "股票期货投资交流群",
+    "讲师直播传授投资技巧",
+    "展示丰厚收益",
+    "预测涨跌较准、收益稳定",
+    "注册后投入资金"
+  ],
+  "source_id": "SRC0023",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

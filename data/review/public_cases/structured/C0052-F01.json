@@ -1,0 +1,18 @@
+{
+  "case_id": "C0052-F01",
+  "real_case_id": "RC0052",
+  "text": "一名陌生人来到老人家中，并当场拨通了一通语音电话。电话中的声音听起来像老人的亲属，对方也以亲属身份说话。现有信息没有说明对方索要现金的理由、金额，也没有说明老人是否通过其他方式联系亲属核实。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "一名陌生人来到老人家中",
+    "当场拨通了一通语音电话",
+    "声音听起来像老人的亲属",
+    "没有说明对方索要现金的理由、金额",
+    "没有说明老人是否通过其他方式联系亲属核实"
+  ],
+  "source_id": "SRC0013",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0082-F01",
+  "real_case_id": "RC0082",
+  "text": "我在微信相亲群添加一名陌生好友，对方自称在证券公司工作，并以交易保密为由让我改用MChat聊天。看到对方展示的投资收益后，我通过其提供的陌生网址注册充值。账户显示盈利却无法提现，客服称因违规操作涉嫌洗钱，要求缴纳10万元保证金。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "相亲群添加一名陌生好友",
+    "以交易保密为由让我改用MChat聊天",
+    "陌生网址注册充值",
+    "账户显示盈利却无法提现",
+    "涉嫌洗钱，要求缴纳10万元保证金"
+  ],
+  "source_id": "SRC0019",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

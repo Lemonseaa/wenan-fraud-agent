@@ -1,0 +1,17 @@
+{
+  "case_id": "C0198-F01",
+  "real_case_id": "RC0198",
+  "text": "我在微店卖东西时，买家发来二维码，称开店需要办理起始资金。我扫码后被客服拉入群聊，对方要求我反复发送9.9元红包，并承诺发满50次就会返还全部资金。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "办理起始资金",
+    "反复发送9.9元红包",
+    "发满50次",
+    "返还全部资金"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

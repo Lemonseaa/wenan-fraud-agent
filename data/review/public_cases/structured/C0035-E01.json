@@ -1,0 +1,1 @@
+{"case_id":"C0035-E01","real_case_id":"RC0035","text":"我接到一个自称网贷平台催贷人员的贷款APP站内消息。对方通过网页链接展示了与我相关的网贷信息，因此看起来了解我的贷款情况。现在，对方要求我把欠款还到其指定的账户。","label":"fraud","fraud_type":"impersonated_customer_service","evidence":["贷款APP站内消息","展示了与我相关的网贷信息","把欠款还到其指定的账户"],"source_id":"SRC0010","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

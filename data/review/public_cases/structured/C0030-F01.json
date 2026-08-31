@@ -1,0 +1,17 @@
+{
+  "case_id": "C0030-F01",
+  "real_case_id": "RC0030",
+  "text": "微信上有一名使用女性头像、并自称在山区支教的女教师添加我为好友。对方通过聊天和发送支教照片逐步取得我的信任，后来称想给山区儿童过生日或购买学习、生活用品，希望我以捐款或资助的名义转账。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称在山区支教的女教师",
+    "发送支教照片逐步取得我的信任",
+    "给山区儿童过生日或购买学习、生活用品",
+    "希望我以捐款或资助的名义转账"
+  ],
+  "source_id": "SRC0009",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

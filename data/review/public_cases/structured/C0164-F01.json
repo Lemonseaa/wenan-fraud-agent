@@ -1,0 +1,18 @@
+{
+  "case_id": "C0164-F01",
+  "real_case_id": "RC0164",
+  "text": "我在网站找到一家测绘仪器公司，报价符合需求。客服称不通过网站、改为私下交易可以节省四分之一费用，并向我提供一份购买合同，要求先支付1.3万余元定金。现有信息没有公司的工商核验、合同签章核验和收款账户关系。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "报价符合需求",
+    "私下交易可以节省四分之一费用",
+    "提供一份购买合同",
+    "支付1.3万余元定金",
+    "没有公司的工商核验、合同签章核验和收款账户关系"
+  ],
+  "source_id": "SRC0026",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0215-F01",
+  "real_case_id": "RC0215",
+  "text": "我接到自称支付公司的工作人员来电，对方称缴押金订购POS机，就能免费办理大额信用卡；POS机达到约定刷卡金额或使用期限后会退还全部押金。对方还展示了营业执照和信用卡审核通过资料。目前这些材料及活动规则尚未独立核验。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "缴押金订购POS机",
+    "免费办理大额信用卡",
+    "退还全部押金",
+    "展示了营业执照和信用卡审核通过资料",
+    "尚未独立核验"
+  ],
+  "source_id": "SRC0032",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

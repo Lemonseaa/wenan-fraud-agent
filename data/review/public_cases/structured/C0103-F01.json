@@ -1,0 +1,18 @@
+{
+  "case_id": "C0103-F01",
+  "real_case_id": "RC0103",
+  "text": "我收到匿名短信，称ETC认证已经失效，不重新认证会影响通行，并附带链接。我的ETC近期确实出现过问题，点击后进入在线认证页面，页面要求填写姓名、银行卡号、银行卡密码、身份证号和手机号。",
+  "label": "fraud",
+  "fraud_type": "phishing_or_account_takeover",
+  "evidence": [
+    "匿名短信",
+    "ETC认证已经失效",
+    "不重新认证会影响通行",
+    "附带链接",
+    "填写姓名、银行卡号、银行卡密码、身份证号和手机号"
+  ],
+  "source_id": "SRC0021",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

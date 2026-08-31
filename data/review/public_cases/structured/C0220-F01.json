@@ -1,0 +1,17 @@
+{
+  "case_id": "C0220-F01",
+  "real_case_id": "RC0220",
+  "text": "公司内部员工群里出现一个以董事长身份联系财务的账号。对方称客户把合同款打入了私人账户，要求公司先向其提供的银行账户垫付款项。目前没有通过董事长原联系方式、合同或收款账户关系进行独立核验。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "董事长身份联系财务",
+    "合同款打入了私人账户",
+    "先向其提供的银行账户垫付款项",
+    "没有通过董事长原联系方式、合同或收款账户关系进行独立核验"
+  ],
+  "source_id": "SRC0032",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

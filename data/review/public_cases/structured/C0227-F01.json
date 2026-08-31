@@ -1,0 +1,17 @@
+{
+  "case_id": "C0227-F01",
+  "real_case_id": "RC0227",
+  "text": "一名自称招联金融工作人员的人通过微信联系我，以办理贷款为由引导我下载一款同名APP，并称贷款审批前需要先缴纳“包装费”。",
+  "label": "fraud",
+  "fraud_type": "loan_or_credit",
+  "evidence": [
+    "自称招联金融工作人员",
+    "下载一款同名APP",
+    "贷款审批前",
+    "缴纳“包装费”"
+  ],
+  "source_id": "SRC0034",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,1 @@
+{"case_id":"C0236-F02","real_case_id":"RC0236","text":"办理前，我确认了三点：在上海证券交易所官网核对开户要求；选择一家上交所会员证券公司；提交本人有效身份证件和本人银行卡。我准备按这些信息继续办理。","label":"normal","fraud_type":"normal","evidence":["在上海证券交易所官网核对开户要求","选择一家上交所会员证券公司","提交本人有效身份证件和本人银行卡"],"source_id":"SRC0039","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

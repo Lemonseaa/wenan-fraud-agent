@@ -1,0 +1,18 @@
+{
+  "case_id": "C0088-F01",
+  "real_case_id": "RC0088",
+  "text": "我接到自称公安局民警的FaceTime视频电话，对方称我名下一张银行卡涉嫌洗钱。得知我无法到办案单位后，电话被转给另一名自称办案民警的人，对方通过视频指导操作，并要求我向其提供的银行卡转款，以验证账户是否正常。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "自称公安局民警的FaceTime视频电话",
+    "银行卡涉嫌洗钱",
+    "转给另一名自称办案民警的人",
+    "通过视频指导操作",
+    "向其提供的银行卡转款，以验证账户是否正常"
+  ],
+  "source_id": "SRC0019",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

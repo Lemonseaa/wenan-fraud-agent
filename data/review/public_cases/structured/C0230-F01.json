@@ -1,0 +1,18 @@
+{
+  "case_id": "C0230-F01",
+  "real_case_id": "RC0230",
+  "text": "我在搜索引擎看到一款产品宣称具有治疗效果，添加销售微信后，对方自称医生助理或健康管理老师，根据聊天描述我的病情，展示成功案例，并推荐购买保健品或食品。目前没有其医疗资质、诊断依据和产品疗效证明的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "宣称具有治疗效果",
+    "自称医生助理或健康管理老师",
+    "展示成功案例",
+    "推荐购买保健品或食品",
+    "没有其医疗资质、诊断依据和产品疗效证明的核验结果"
+  ],
+  "source_id": "SRC0034",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

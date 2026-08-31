@@ -1,0 +1,17 @@
+{
+  "case_id": "C0041-F01",
+  "real_case_id": "RC0041",
+  "text": "我通过社交软件与一名陌生人聊天，逐步建立了信任。对方发来一个二维码链接，要求我通过二维码下载指定的投资软件，并引导我在软件中投入资金。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "与一名陌生人聊天，逐步建立了信任",
+    "发来一个二维码链接",
+    "通过二维码下载指定的投资软件",
+    "引导我在软件中投入资金"
+  ],
+  "source_id": "SRC0011",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

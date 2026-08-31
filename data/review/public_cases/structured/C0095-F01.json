@@ -1,0 +1,18 @@
+{
+  "case_id": "C0095-F01",
+  "real_case_id": "RC0095",
+  "text": "我看到网络炒股广告后，通过广告渠道下载一款名为平安证券的APP。先投入小额资金，账户显示盈利并成功完成小额提现。基于前期体验，我正准备继续加大投资金额。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "通过广告渠道下载一款名为平安证券的APP",
+    "先投入小额资金",
+    "账户显示盈利",
+    "成功完成小额提现",
+    "准备继续加大投资金额"
+  ],
+  "source_id": "SRC0020",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

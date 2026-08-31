@@ -1,0 +1,18 @@
+{
+  "case_id": "C0071-F01",
+  "real_case_id": "RC0071",
+  "text": "有人自称正规券商旗下代理，向我推荐一个高杠杆股票配资平台。业务员发送盈利图片并称掌握内幕消息，荐股老师和助理给出交易指示，现在要求我先在指定平台充值再按指导操作。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "自称正规券商旗下代理",
+    "推荐一个高杠杆股票配资平台",
+    "发送盈利图片并称掌握内幕消息",
+    "荐股老师和助理给出交易指示",
+    "先在指定平台充值再按指导操作"
+  ],
+  "source_id": "SRC0017",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

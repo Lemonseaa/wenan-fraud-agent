@@ -1,0 +1,18 @@
+{
+  "case_id": "C0192-F01",
+  "real_case_id": "RC0192",
+  "text": "我的奶茶店收到一名自称中学主任的人发来的批量订购私信。加微信后，对方又要40盒燕窝并推荐了供应商；供应商要求先付20000元定金。该主任发来一张20000元对公转账截图，称款项两小时后到账，让我先向供应商垫付。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称中学主任",
+    "先付20000元定金",
+    "对公转账截图",
+    "两小时后到账",
+    "先向供应商垫付"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

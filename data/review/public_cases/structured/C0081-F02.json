@@ -1,0 +1,1 @@
+{"case_id":"C0081-F02","real_case_id":"RC0081","text":"我在短视频平台看到兼职信息，添加QQ后按要求发送了花呗额度和芝麻分截图。对方保证任务不用垫资，又让我下载会议软件并点击链接查看任务说明。","label":"insufficient","fraud_type":"insufficient","evidence":["短视频平台看到兼职信息","发送了花呗额度和芝麻分截图","保证任务不用垫资","下载会议软件并点击链接"],"source_id":"SRC0019","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

@@ -1,0 +1,17 @@
+{
+  "case_id": "C0110-F01",
+  "real_case_id": "RC0110",
+  "text": "我从一个色情网站下载APP，充值20元后挑选服务对象。一对一客服称还要测试车费、房费和保证金缴纳通道；40元和400元测试款均已返还，但4000元未返。客服称再缴8000元，就能全额返还12000元。",
+  "label": "fraud",
+  "fraud_type": "other_fraud",
+  "evidence": [
+    "测试车费、房费和保证金缴纳通道",
+    "40元和400元测试款均已返还",
+    "4000元未返",
+    "再缴8000元，就能全额返还12000元"
+  ],
+  "source_id": "SRC0022",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

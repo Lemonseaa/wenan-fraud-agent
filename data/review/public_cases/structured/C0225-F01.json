@@ -1,0 +1,17 @@
+{
+  "case_id": "C0225-F01",
+  "real_case_id": "RC0225",
+  "text": "我接到自称天猫平台工作人员的电话，对方称为回馈老用户，可以进微信群领红包。入群后，群里又称做任务可赚佣金，要求我下载一款名为“天猫精灵”的APP，并向指定银行账户转账参与任务。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "回馈老用户",
+    "做任务可赚佣金",
+    "天猫精灵",
+    "向指定银行账户转账参与任务"
+  ],
+  "source_id": "SRC0033",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

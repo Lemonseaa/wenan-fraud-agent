@@ -1,0 +1,18 @@
+{
+  "case_id": "C0121-F01",
+  "real_case_id": "RC0121",
+  "text": "我在微信认识一名自称女性的网友，聊天后逐渐建立信任。对方称手机电量不足或微信信用积分不足，发来共享充电宝平台二维码，请我代为扫码付款租借充电宝。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称女性的网友",
+    "逐渐建立信任",
+    "手机电量不足或微信信用积分不足",
+    "共享充电宝平台二维码",
+    "代为扫码付款租借充电宝"
+  ],
+  "source_id": "SRC0023",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

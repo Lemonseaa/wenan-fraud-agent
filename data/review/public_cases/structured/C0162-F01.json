@@ -1,0 +1,17 @@
+{
+  "case_id": "C0162-F01",
+  "real_case_id": "RC0162",
+  "text": "我被拉入微信群领取红包，又通过群内链接下载APP加入高级群。群成员不断展示到账截图，我也连续完成多单并把佣金提现到银行卡。随后管理员称下一项是组合单，必须连续完成四单后才能提现。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "群内链接下载APP",
+    "展示到账截图",
+    "连续完成多单并把佣金提现到银行卡",
+    "必须连续完成四单后才能提现"
+  ],
+  "source_id": "SRC0026",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

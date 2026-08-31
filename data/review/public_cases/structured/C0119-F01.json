@@ -1,0 +1,17 @@
+{
+  "case_id": "C0119-F01",
+  "real_case_id": "RC0119",
+  "text": "我在快手直播间看到手机促销，主播称这是粉丝福利、新号拉人气。商品被描述为市场价值数千元的正品iPhone12或iPhone13，售价仅299元或399元，主播和客服催促观众立即下单付款。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "粉丝福利、新号拉人气",
+    "市场价值数千元的正品iPhone12或iPhone13",
+    "售价仅299元或399元",
+    "立即下单付款"
+  ],
+  "source_id": "SRC0023",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0060-F01",
+  "real_case_id": "RC0060",
+  "text": "我在婚恋网站认识一名异性，持续交流后逐步建立恋爱关系和信任。对方最近推荐一个网络博彩平台，并鼓励我在平台充值参与投注。现有信息没有说明对方真实身份、平台运营许可或资金提现规则。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "在婚恋网站认识一名异性",
+    "逐步建立恋爱关系和信任",
+    "推荐一个网络博彩平台",
+    "鼓励我在平台充值参与投注",
+    "没有说明对方真实身份、平台运营许可或资金提现规则"
+  ],
+  "source_id": "SRC0015",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

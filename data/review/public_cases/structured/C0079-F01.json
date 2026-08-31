@@ -1,0 +1,17 @@
+{
+  "case_id": "C0079-F01",
+  "real_case_id": "RC0079",
+  "text": "一名自称贷款公司工作人员的人通过微信联系我，推荐使用招联金融等名称的APP办理贷款。对方称办理网络贷款前必须缴纳会员费或保证金，并要求向指定渠道付款。",
+  "label": "fraud",
+  "fraud_type": "loan_or_credit",
+  "evidence": [
+    "自称贷款公司工作人员的人通过微信联系我",
+    "使用招联金融等名称的APP办理贷款",
+    "办理网络贷款前必须缴纳会员费或保证金",
+    "向指定渠道付款"
+  ],
+  "source_id": "SRC0018",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

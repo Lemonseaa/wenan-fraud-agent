@@ -1,0 +1,17 @@
+{
+  "case_id": "C0191-F01",
+  "real_case_id": "RC0191",
+  "text": "我收到一个陌生快递，里面有一张“淘宝618送豪礼”礼品卡。我扫码联系卡片上的客服后，对方要求提供兑奖码和手机号，又发来链接让我下载刷单APP并转账，称这样才能领取礼品。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "陌生快递",
+    "淘宝618送豪礼",
+    "下载刷单APP并转账",
+    "才能领取礼品"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

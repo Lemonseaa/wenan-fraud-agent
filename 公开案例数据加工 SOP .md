@@ -178,7 +178,7 @@ data/raw/public_sources/
 
 - `source_level` 只允许 `S`、`A`、`B`、`C` 或 `null`；
 - `published_at` 使用页面标注的发布日期，`accessed_at` 使用实际保存原文的日期，格式均为 `YYYY-MM-DD`；无法确认发布日期时 `published_at` 使用 `null`，`accessed_at` 不得为空；
-- `material_types` 只允许包含 `specific_case`、`typical_mechanism`、`risk_warning`；
+- `material_types` 只允许包含 `specific_case`、`typical_mechanism`、`risk_warning`、`normal_process`；
 - `is_usable` 只允许 `true`、`false` 或 `null`；
 - `usable_scope` 和 `limitations` 必须是字符串数组；
 - `verification_status` 只允许 `pending` 或 `approved`；
@@ -201,7 +201,7 @@ data/raw/public_sources/
 **操作：** AI读取原始文件并生成核验草稿，人只核对和修改草稿。AI必须从以下四个角度判断：
 
 1. 谁发布：确认网页实际发布者、内容标注来源和来源等级；
-2. 材料性质：判断资料包含具体案件、典型机制或风险提示，可多选；
+2. 材料性质：判断资料包含具体案件、典型机制、风险提示或正常流程，可多选；
 3. 事实充分性：判断是否存在可以定位的主体、接触方式、信任建立、请求动作和结果；
 4. 使用边界：写清哪些部分可以继续加工，以及哪些事实不能从该来源推出。
 
@@ -209,9 +209,10 @@ data/raw/public_sources/
 
 - 具体案件：描述了能够区分的当事行为、过程或处置结果；
 - 典型机制：说明一种常见套路，但没有独立案件事实；
-- 风险提示：只给防范建议或概括性警告。
+- 风险提示：只给防范建议或概括性警告；
+- 正常流程：由官方或业务主体公开的正常办理流程，具有可核验的渠道、办理主体和完成路径。
 
-三类资料都可以保留，但用途不同。具体案件可以作为公开案例改写的基础；典型机制适合受控合成；风险提示主要用于核对规则，不能冒充独立真实案件。
+四类资料都可以保留，但用途不同。具体案件可以作为公开案例改写的基础；典型机制适合受控合成；风险提示主要用于核对规则，不能冒充独立真实案件；正常流程用于构造和核验正常类数据，不能被改写成真实诈骗案件。
 
 AI在 `source_registry.jsonl` 的原记录中填写 `title`、`published_at`、`publisher`、`content_source`、`source_level`、`material_types`、`is_usable`、`usable_scope`、`limitations` 和 `verification_reason`，并保持 `verification_status` 为 `pending`。
 

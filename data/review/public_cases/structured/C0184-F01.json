@@ -1,0 +1,18 @@
+{
+  "case_id": "C0184-F01",
+  "real_case_id": "RC0184",
+  "text": "我在抖音看到“彩票内幕”视频，扫码添加客服并下载易企讯平台。客服称充值会员可以获得内部号码；我购买98元彩票未中奖后，对方退回了购票款，又展示精准群数据和他人中奖图片，称完成指定任务就能进入精准群并领取红包。题面没有说明任务是否需要付款。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "彩票内幕",
+    "充值会员可以获得内部号码",
+    "退回了购票款",
+    "完成指定任务",
+    "没有说明任务是否需要付款"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

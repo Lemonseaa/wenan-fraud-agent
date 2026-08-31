@@ -1,0 +1,18 @@
+{
+  "case_id": "C0153-F01",
+  "real_case_id": "RC0153",
+  "text": "经朋友介绍，我接到一名自称消防支队柳队长的人的装修业务。他在微信洽谈厨房餐厅装修后，又称需要60架军用上下铺和120个床垫，并推荐宋总作为供应商。联系后，宋总要求我支付共60000元货款。现有沟通中没有消防支队采购授权或正式合同。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称消防支队柳队长",
+    "60架军用上下铺和120个床垫",
+    "推荐宋总作为供应商",
+    "支付共60000元货款",
+    "没有消防支队采购授权或正式合同"
+  ],
+  "source_id": "SRC0025",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0104-F01",
+  "real_case_id": "RC0104",
+  "text": "我通过网络认识一名自称在国外经营珠宝生意的外籍华人，并发展为恋爱关系。数月后，对方称为避税要寄珠宝给我，需要我垫付快递费和税费。随后一家自称承运该珠宝的物流公司发来邮件，要求支付25000美元税费。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "在国外经营珠宝生意的外籍华人",
+    "为避税要寄珠宝给我",
+    "垫付快递费和税费",
+    "自称承运该珠宝的物流公司发来邮件",
+    "支付25000美元税费"
+  ],
+  "source_id": "SRC0021",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

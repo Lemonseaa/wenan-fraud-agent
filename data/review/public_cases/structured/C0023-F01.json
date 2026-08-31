@@ -1,0 +1,16 @@
+{
+  "case_id": "C0023-F01",
+  "real_case_id": "RC0023",
+  "text": "在口罩普遍紧缺时，我在微信或QQ群看到有人发布大量口罩出售信息。因为急需购买，我联系了对方，对方要求我先支付一笔定金。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "在微信或QQ群看到有人发布大量口罩出售信息",
+    "口罩普遍紧缺",
+    "要求我先支付一笔定金"
+  ],
+  "source_id": "SRC0009",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

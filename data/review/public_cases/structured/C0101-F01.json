@@ -1,0 +1,18 @@
+{
+  "case_id": "C0101-F01",
+  "real_case_id": "RC0101",
+  "text": "我接到自称老家县财政局工作人员的电话，对方称二胎补助金已经审批。因路程远，对方同意网络转账并发来申领网站链接。页面要求填写个人和银行卡信息，对方又称提供短信验证码即可受理成功。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称老家县财政局工作人员",
+    "二胎补助金已经审批",
+    "申领网站链接",
+    "填写个人和银行卡信息",
+    "提供短信验证码即可受理成功"
+  ],
+  "source_id": "SRC0021",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

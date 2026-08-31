@@ -1,0 +1,18 @@
+{
+  "case_id": "C0188-F01",
+  "real_case_id": "RC0188",
+  "text": "我在抖音直播间学习兼职开跨境网店，对方称买家下单后需要我先垫付货款，并承诺七日后返还。前期每笔垫付只有几十元，后来任务金额逐步提高到数千元甚至上万元。目前没有订单真实性、回款安排和资金托管的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "先垫付货款",
+    "七日后返还",
+    "前期每笔垫付只有几十元",
+    "任务金额逐步提高到数千元甚至上万元",
+    "没有订单真实性、回款安排和资金托管的核验结果"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

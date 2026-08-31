@@ -1,0 +1,18 @@
+{
+  "case_id": "C0152-F01",
+  "real_case_id": "RC0152",
+  "text": "我接到自称公安局民警的电话，对方称正在调查银行工作人员诈骗案，我名下的一张银行卡涉案。对方要求我提供银行卡号、账户余额，并把收到的短信验证码发给他，以便验证账户、洗清嫌疑。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "自称公安局民警",
+    "银行卡涉案",
+    "提供银行卡号、账户余额",
+    "短信验证码发给他",
+    "验证账户、洗清嫌疑"
+  ],
+  "source_id": "SRC0025",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "case_id": "C0172-F01",
+  "real_case_id": "RC0172",
+  "text": "一名微信好友发来领取扶贫款的消息，并推荐我添加一名工作人员。添加后，对方通过微信视频指导我操作农业银行网银和支付宝，又发来二维码要求我扫码支付。",
+  "label": "fraud",
+  "fraud_type": "phishing_or_account_takeover",
+  "evidence": [
+    "领取扶贫款的消息",
+    "微信视频指导我操作农业银行网银和支付宝",
+    "发来二维码要求我扫码支付"
+  ],
+  "source_id": "SRC0027",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

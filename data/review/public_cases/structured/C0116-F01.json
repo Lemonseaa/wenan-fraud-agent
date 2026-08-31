@@ -1,0 +1,18 @@
+{
+  "case_id": "C0116-F01",
+  "real_case_id": "RC0116",
+  "text": "我向网友购买游戏皮肤，扫描对方二维码付款时，页面提示需要解除防沉迷限制。对方称必须使用监护人手机验证，并在视频中要求我修改手机银行密码并进行转账。",
+  "label": "fraud",
+  "fraud_type": "ticket_game_virtual_goods",
+  "evidence": [
+    "向网友购买游戏皮肤",
+    "扫描对方二维码付款",
+    "解除防沉迷限制",
+    "使用监护人手机验证",
+    "修改手机银行密码并进行转账"
+  ],
+  "source_id": "SRC0022",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

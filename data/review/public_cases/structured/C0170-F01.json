@@ -1,0 +1,18 @@
+{
+  "case_id": "C0170-F01",
+  "real_case_id": "RC0170",
+  "text": "我与一名网络恋爱对象保持联系。对方称母亲重病、家庭遇到困难，第一次请求我转账帮助。我们没有线下见面，题面也没有提供其身份、医疗材料或收款账户关系的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "网络恋爱对象",
+    "母亲重病、家庭遇到困难",
+    "第一次请求我转账帮助",
+    "没有线下见面",
+    "没有提供其身份、医疗材料或收款账户关系的核验结果"
+  ],
+  "source_id": "SRC0026",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

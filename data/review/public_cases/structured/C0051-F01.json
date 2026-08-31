@@ -1,0 +1,18 @@
+{
+  "case_id": "C0051-F01",
+  "real_case_id": "RC0051",
+  "text": "我在网上接触到一家声称能够提供稳定兼职的公司。业务员称公司与知名平台企业有合作，还发来兼职盈利图片，承诺可以边学边赚钱、收入覆盖学费并获得固定兼职收入，但要求我先购买在线课程参加所谓入职培训。",
+  "label": "fraud",
+  "fraud_type": "other_fraud",
+  "evidence": [
+    "声称能够提供稳定兼职的公司",
+    "称公司与知名平台企业有合作",
+    "发来兼职盈利图片",
+    "收入覆盖学费并获得固定兼职收入",
+    "先购买在线课程参加所谓入职培训"
+  ],
+  "source_id": "SRC0013",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

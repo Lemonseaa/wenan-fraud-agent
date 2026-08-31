@@ -1,0 +1,17 @@
+{
+  "case_id": "C0193-F01",
+  "real_case_id": "RC0193",
+  "text": "我在闲鱼购买演唱会门票，卖家让我下载一款陌生软件并按要求转账。付款后软件提示身份信息错误，对方又要求我打开视频会议软件共享屏幕来处理问题。",
+  "label": "fraud",
+  "fraud_type": "ticket_game_virtual_goods",
+  "evidence": [
+    "下载一款陌生软件",
+    "按要求转账",
+    "身份信息错误",
+    "视频会议软件共享屏幕"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

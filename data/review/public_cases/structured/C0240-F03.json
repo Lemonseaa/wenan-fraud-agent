@@ -1,0 +1,1 @@
+{"case_id":"C0240-F03","real_case_id":"RC0240","text":"我准备按这个流程办理，目前已经核对：登录国家社会保险公共服务平台；全国统一的社会保险公共服务总门户；使用掌上12333或电子社保卡办理。后续只按上述流程操作。","label":"normal","fraud_type":"normal","evidence":["登录国家社会保险公共服务平台","全国统一的社会保险公共服务总门户","使用掌上12333或电子社保卡办理"],"source_id":"SRC0043","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

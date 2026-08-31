@@ -1,0 +1,1 @@
+{"case_id":"C0016-E01","real_case_id":"RC0016","text":"我收到一条消息，说我中了某品牌线上活动的奖品。对方让我登录指定网站填写个人信息认领奖品；填写后又告诉我，兑奖前需要先缴纳保证金、公证费或税款。","label":"fraud","fraud_type":"other_fraud","evidence":["某品牌线上活动的奖品","登录指定网站填写个人信息","先缴纳保证金、公证费或税款"],"source_id":"SRC0008","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

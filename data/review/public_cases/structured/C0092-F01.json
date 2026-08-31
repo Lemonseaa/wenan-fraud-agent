@@ -1,0 +1,17 @@
+{
+  "case_id": "C0092-F01",
+  "real_case_id": "RC0092",
+  "text": "我下载两款APP参加高额任务返现活动。平台提示出现连单任务或信誉不足，要求我先充值，之后才能重启任务并继续返现。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "高额任务返现活动",
+    "连单任务或信誉不足",
+    "先充值",
+    "重启任务并继续返现"
+  ],
+  "source_id": "SRC0020",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

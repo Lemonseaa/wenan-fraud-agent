@@ -1,0 +1,17 @@
+{
+  "case_id": "C0118-F01",
+  "real_case_id": "RC0118",
+  "text": "我在网络上看到全国诗词大赛宣传，举办方使用艺术中心、国韵组委会等名称并设置现金大奖。报名后得知名次按网络投票数决定，每名用户每日票数有限，平台提供购买虚拟礼物为自己增加票数的方式。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "全国诗词大赛宣传",
+    "设置现金大奖",
+    "名次按网络投票数决定",
+    "购买虚拟礼物为自己增加票数"
+  ],
+  "source_id": "SRC0023",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

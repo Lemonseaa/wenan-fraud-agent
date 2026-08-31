@@ -1,0 +1,18 @@
+{
+  "case_id": "C0187-F01",
+  "real_case_id": "RC0187",
+  "text": "我在网页看到帮助电诈受害人追回损失的信息，便联系了一名自称黑客的人。对方称凭转账记录可以追回家人损失的20余万元，收费为追回金额的10%，并要求我先支付20000元。现有信息没有其身份、服务合同或追回能力的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称黑客",
+    "凭转账记录可以追回",
+    "收费为追回金额的10%",
+    "先支付20000元",
+    "没有其身份、服务合同或追回能力的核验结果"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

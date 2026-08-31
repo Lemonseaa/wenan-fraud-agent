@@ -1,0 +1,1 @@
+{"case_id":"C0243-F02","real_case_id":"RC0243","text":"办理前，我确认了三点：官方个人所得税年度汇算；系统计算出的应退税额；税务机关和国库按规定审核。我准备按这些信息继续办理。","label":"normal","fraud_type":"normal","evidence":["官方个人所得税年度汇算","系统计算出的应退税额","税务机关和国库按规定审核"],"source_id":"SRC0046","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

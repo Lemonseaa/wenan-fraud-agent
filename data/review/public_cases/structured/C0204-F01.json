@@ -1,0 +1,18 @@
+{
+  "case_id": "C0204-F01",
+  "real_case_id": "RC0204",
+  "text": "我接到自称公安局警察的电话，对方称我名下一张银行卡涉及异地诈骗案；我表示没有办过该卡后，电话又被转给一名自称异地公安的人。对方通过QQ联系，要求我把银行卡资金转入“安全账户”，并按其提供的网址操作。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "自称公安局警察",
+    "异地诈骗案",
+    "通过QQ联系",
+    "银行卡资金转入“安全账户”",
+    "提供的网址操作"
+  ],
+  "source_id": "SRC0031",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

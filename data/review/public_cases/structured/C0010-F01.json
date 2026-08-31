@@ -1,0 +1,16 @@
+{
+  "case_id": "C0010-F01",
+  "real_case_id": "RC0010",
+  "text": "我接到一个自称商店工作人员的电话，对方说我之前购物时发生了错误付款，需要取消。之后又有一名自称银行客服的人接续处理，说可以帮我取消分期付款业务，并要求我到ATM按指示操作，把存款转入其提供的银行账户。",
+  "label": "fraud",
+  "fraud_type": "impersonated_customer_service",
+  "evidence": [
+    "自称银行客服的人接续处理",
+    "要求我到ATM按指示操作",
+    "把存款转入其提供的银行账户"
+  ],
+  "source_id": "SRC0007",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

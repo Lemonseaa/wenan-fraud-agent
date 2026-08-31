@@ -1,0 +1,16 @@
+{
+  "case_id": "C0197-F01",
+  "real_case_id": "RC0197",
+  "text": "一名QQ好友发来链接，请我帮孩子投票。我点击后进入投票页面，页面要求填写电话号码和微信密码才能提交投票。",
+  "label": "fraud",
+  "fraud_type": "phishing_or_account_takeover",
+  "evidence": [
+    "帮孩子投票",
+    "投票页面",
+    "电话号码和微信密码"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

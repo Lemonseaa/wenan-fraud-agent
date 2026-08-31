@@ -1,0 +1,18 @@
+{
+  "case_id": "C0158-F01",
+  "real_case_id": "RC0158",
+  "text": "我接到自称南方航空客服的陌生电话，对方能说出我次日铜仁至贵阳的行程，称航班延误需要改签并可退还300元。对方要求我先把支付宝中的50000元提现到银行卡，再在手机银行输入支付密码并进行人脸识别。",
+  "label": "fraud",
+  "fraud_type": "impersonated_customer_service",
+  "evidence": [
+    "自称南方航空客服",
+    "能说出我次日铜仁至贵阳的行程",
+    "改签并可退还300元",
+    "把支付宝中的50000元提现到银行卡",
+    "输入支付密码并进行人脸识别"
+  ],
+  "source_id": "SRC0025",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

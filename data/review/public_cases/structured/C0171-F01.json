@@ -1,0 +1,16 @@
+{
+  "case_id": "C0171-F01",
+  "real_case_id": "RC0171",
+  "text": "我在游戏交易APP出售手游账号，一名陌生买家私聊并同意以830元购买。对方发来一张带二维码的付款成功截图，我扫码进入页面后，页面客服要求我先缴交易保证金。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "游戏交易APP出售手游账号",
+    "带二维码的付款成功截图",
+    "页面客服要求我先缴交易保证金"
+  ],
+  "source_id": "SRC0026",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

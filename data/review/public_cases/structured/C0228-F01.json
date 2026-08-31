@@ -1,0 +1,18 @@
+{
+  "case_id": "C0228-F01",
+  "real_case_id": "RC0228",
+  "text": "一个自称炒币玩家的微信好友向我发送平台盈利截图，并把我拉入投资群。群内一名自称炒币老师的人指导我购买指定虚拟货币，我按指导操作后获得过小额盈利。目前没有平台资质、行情来源、资金托管和老师身份的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "平台盈利截图",
+    "自称炒币老师",
+    "指定虚拟货币",
+    "获得过小额盈利",
+    "没有平台资质、行情来源、资金托管和老师身份的核验结果"
+  ],
+  "source_id": "SRC0034",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

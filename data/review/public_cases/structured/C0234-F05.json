@@ -1,0 +1,1 @@
+{"case_id":"C0234-F05","real_case_id":"RC0234","text":"简要情况是：在12306本人订单中核对了车票日期、车次和开车时间；12306公开规程；应退票款按购票时的支付方式退还。我想确认这是否属于正常办理方式。","label":"normal","fraud_type":"normal","evidence":["在12306本人订单中核对了车票日期、车次和开车时间","12306公开规程","应退票款按购票时的支付方式退还"],"source_id":"SRC0037","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

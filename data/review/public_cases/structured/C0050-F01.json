@@ -1,0 +1,18 @@
+{
+  "case_id": "C0050-F01",
+  "real_case_id": "RC0050",
+  "text": "一名自称资深投资者的人在社交平台添加我为好友，并把我拉进投资群和直播间。群内有人发送盈利截图，称跟随指导人员投资黄金可以赚钱，现在引导我在他们指定的黄金交易平台投入资金。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "自称资深投资者的人在社交平台添加我为好友",
+    "把我拉进投资群和直播间",
+    "群内有人发送盈利截图",
+    "跟随指导人员投资黄金可以赚钱",
+    "在他们指定的黄金交易平台投入资金"
+  ],
+  "source_id": "SRC0013",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

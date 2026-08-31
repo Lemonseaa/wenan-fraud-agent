@@ -1,0 +1,18 @@
+{
+  "case_id": "C0054-F01",
+  "real_case_id": "RC0054",
+  "text": "销售人员以免费吃饭和赠送礼品邀请老人参加活动，并安排专车接到饭店。现场讲师讲解案例，经销商参与砍价并带动气氛，宣称一种保健产品能够防癌抗癌、治疗多种慢性疾病，随后推动老人现场购买。",
+  "label": "fraud",
+  "fraud_type": "other_fraud",
+  "evidence": [
+    "以免费吃饭和赠送礼品邀请老人参加活动",
+    "安排专车接到饭店",
+    "经销商参与砍价并带动气氛",
+    "能够防癌抗癌、治疗多种慢性疾病",
+    "推动老人现场购买"
+  ],
+  "source_id": "SRC0014",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

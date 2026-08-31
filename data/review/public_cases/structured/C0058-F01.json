@@ -1,0 +1,18 @@
+{
+  "case_id": "C0058-F01",
+  "real_case_id": "RC0058",
+  "text": "我在海外留学生社交媒体群看到私人外币兑换人民币的信息，并与发布者协商换汇。对方称已经完成转账，还发来一张转账截图。现有信息没有说明截图中的款项是否实际到账，也没有说明下一步如何交付外币。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "私人外币兑换人民币的信息",
+    "对方称已经完成转账",
+    "发来一张转账截图",
+    "没有说明截图中的款项是否实际到账",
+    "没有说明下一步如何交付外币"
+  ],
+  "source_id": "SRC0015",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

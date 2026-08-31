@@ -1,0 +1,17 @@
+{
+  "case_id": "C0114-F01",
+  "real_case_id": "RC0114",
+  "text": "我在游戏内看到高薪代练广告并联系发布者。对方要求避开官方渠道私下交易，随后称交易存在洗钱风险或账号异常，让我添加一个自称警察的账号处理。该账号要求通过视频远程指导我操作家长手机。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "避开官方渠道私下交易",
+    "交易存在洗钱风险或账号异常",
+    "自称警察的账号",
+    "视频远程指导我操作家长手机"
+  ],
+  "source_id": "SRC0022",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

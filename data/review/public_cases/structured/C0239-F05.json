@@ -1,0 +1,1 @@
+{"case_id":"C0239-F05","real_case_id":"RC0239","text":"简要情况是：登录南航官方网站的本人会员账户；核对订票详细信息；退票款将划拨到原用户付款账户。我想确认这是否属于正常办理方式。","label":"normal","fraud_type":"normal","evidence":["登录南航官方网站的本人会员账户","核对订票详细信息","退票款将划拨到原用户付款账户"],"source_id":"SRC0042","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0061-F01",
+  "real_case_id": "RC0061",
+  "text": "一名自称基金经理或投资顾问的人通过微信联系我，推荐一个同时提供基金买卖、支付提现和客服功能的平台。对方发送投资盈利截图，称基金回报丰厚，并要求我在该平台注册、充值和交易。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "自称基金经理或投资顾问的人通过微信联系我",
+    "推荐一个同时提供基金买卖、支付提现和客服功能的平台",
+    "发送投资盈利截图",
+    "称基金回报丰厚",
+    "要求我在该平台注册、充值和交易"
+  ],
+  "source_id": "SRC0016",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

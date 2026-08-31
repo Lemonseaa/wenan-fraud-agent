@@ -1,0 +1,1 @@
+{"case_id":"C0075-F02","real_case_id":"RC0075","text":"我因免费炒股课程进入微信群，群内有讲师、助理和普通股民账号。讲师持续讲解市场，其他账号互动并发布交易记录，最近助理推荐了一个股票投资平台。","label":"insufficient","fraud_type":"insufficient","evidence":["免费炒股课程进入微信群","讲师、助理和普通股民账号","发布交易记录","推荐了一个股票投资平台"],"source_id":"SRC0018","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

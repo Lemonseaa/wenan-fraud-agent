@@ -1,0 +1,18 @@
+{
+  "case_id": "C0111-F01",
+  "real_case_id": "RC0111",
+  "text": "我在闲鱼标价300元出售游戏账号，一名买家愿出1000元，并称私下微信交易可以省手续费。我发送账号、密码和绑定手机号后，对方称需支付500元解除绑定费并承诺返还；500元确实返还。随后对方又要求支付安全认证费、过户费，并称账户冻结，需要再次转账解冻。",
+  "label": "fraud",
+  "fraud_type": "ticket_game_virtual_goods",
+  "evidence": [
+    "私下微信交易可以省手续费",
+    "发送账号、密码和绑定手机号",
+    "500元解除绑定费并承诺返还",
+    "安全认证费、过户费",
+    "再次转账解冻"
+  ],
+  "source_id": "SRC0022",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

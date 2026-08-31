@@ -1,0 +1,17 @@
+{
+  "case_id": "C0009-F01",
+  "real_case_id": "RC0009",
+  "text": "我家的固定电话收到语音提示，说医保卡出现异常并要求回拨。回拨后，一名自称医保中心工作人员的人说我的医保卡涉嫌盗刷违禁药品，随后把电话转给自称公安人员的人，来电显示也像公安局号码。对方询问了我的个人信息，又转给自称检察院工作人员的人。最后，对方说我的银行账户存在安全问题，要求我把存款转入指定账户进行资金清查比对。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "电话转给自称公安人员的人",
+    "又转给自称检察院工作人员的人",
+    "对方说我的银行账户存在安全问题",
+    "要求我把存款转入指定账户进行资金清查比对"
+  ],
+  "source_id": "SRC0007",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

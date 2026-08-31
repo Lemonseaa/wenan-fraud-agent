@@ -1,0 +1,18 @@
+{
+  "case_id": "C0209-F01",
+  "real_case_id": "RC0209",
+  "text": "一个QQ账号自称是我儿子，称学校正在组织清华大学培训，名额有限，需要立即向其提供的银行账户支付39200元培训费。目前我没有通过儿子的原联系方式或学校正式渠道核验。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称是我儿子",
+    "清华大学培训",
+    "名额有限",
+    "支付39200元培训费",
+    "没有通过儿子的原联系方式或学校正式渠道核验"
+  ],
+  "source_id": "SRC0031",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

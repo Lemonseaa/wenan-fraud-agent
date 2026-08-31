@@ -1,0 +1,18 @@
+{
+  "case_id": "C0221-F01",
+  "real_case_id": "RC0221",
+  "text": "一名业务员通过电话和微信联系我，引导我进入配资炒股平台。平台里一名自称专业老师的人推荐股票，并发送盈利截图，要求我充值后按指导频繁交易。目前没有平台资质、资金托管和老师身份的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "配资炒股平台",
+    "自称专业老师",
+    "发送盈利截图",
+    "充值后按指导频繁交易",
+    "没有平台资质、资金托管和老师身份的核验结果"
+  ],
+  "source_id": "SRC0032",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

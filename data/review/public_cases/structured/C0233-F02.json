@@ -1,0 +1,1 @@
+{"case_id":"C0233-F02","real_case_id":"RC0233","text":"办理前，我确认了三点：从中国工商银行官网进入手机银行贷款栏目；申请前查看并确认个人信用贷款合同；经银行审批通过后才会正式发放。我准备按这些信息继续办理。","label":"normal","fraud_type":"normal","evidence":["从中国工商银行官网进入手机银行贷款栏目","申请前查看并确认个人信用贷款合同","经银行审批通过后才会正式发放"],"source_id":"SRC0036","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

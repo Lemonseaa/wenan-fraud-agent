@@ -1,0 +1,16 @@
+{
+  "case_id": "C0031-F01",
+  "real_case_id": "RC0031",
+  "text": "我在网上和一个销售账号聊天，对方讲述自己到贫困山区支教、到福利院看望老人的经历，希望获得我的支持，随后邀请我购买茶叶、手串等物品。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "和一个销售账号聊天",
+    "讲述自己到贫困山区支教、到福利院看望老人的经历",
+    "邀请我购买茶叶、手串等物品"
+  ],
+  "source_id": "SRC0010",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

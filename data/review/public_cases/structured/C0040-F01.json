@@ -1,0 +1,18 @@
+{
+  "case_id": "C0040-F01",
+  "real_case_id": "RC0040",
+  "text": "我在网络社交平台认识一名自称美女主播的人并开始聊天。对方说要送我礼物，询问了收货地址并展示发货信息，之后又让我在其指定的微店购买商品回赠。此后，对方把我引向一个直播平台，以直播打赏PK为由要求我充值打赏。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称美女主播的人",
+    "说要送我礼物",
+    "让我在其指定的微店购买商品回赠",
+    "把我引向一个直播平台",
+    "要求我充值打赏"
+  ],
+  "source_id": "SRC0011",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

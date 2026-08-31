@@ -1,0 +1,1 @@
+{"case_id":"C0250-F02","real_case_id":"RC0250","text":"办理前，我确认了三点：套卡因质量问题无法正常使用；携带身份证；到就近营业厅办理换卡。我准备按这些信息继续办理。","label":"normal","fraud_type":"normal","evidence":["套卡因质量问题无法正常使用","携带身份证","到就近营业厅办理换卡"],"source_id":"SRC0053","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

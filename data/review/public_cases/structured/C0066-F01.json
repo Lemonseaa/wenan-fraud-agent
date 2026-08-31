@@ -1,0 +1,18 @@
+{
+  "case_id": "C0066-F01",
+  "real_case_id": "RC0066",
+  "text": "有人推荐一个可投资国际股票、期货和基金的网络平台，并承诺百分之百获利。群内一名自称海外金融博士的老师授课，助理和投资者账号发布盈利图片、吹捧老师。现在老师要求我在15秒内抢购指定产品，否则无法领取红利，并让我向指定账户投入资金。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "承诺百分之百获利",
+    "自称海外金融博士的老师",
+    "助理和投资者账号发布盈利图片、吹捧老师",
+    "在15秒内抢购指定产品",
+    "向指定账户投入资金"
+  ],
+  "source_id": "SRC0016",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

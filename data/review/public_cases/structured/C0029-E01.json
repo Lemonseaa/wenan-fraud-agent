@@ -1,0 +1,1 @@
+{"case_id":"C0029-E01","real_case_id":"RC0029","text":"我此前因网络刷信誉遭受了损失，于是在网上搜索追回钱款的方法。我看到一条论坛留言，称一个固定电话号码是网络纠纷调解中心维权电话，可以帮助追回被骗钱款。拨打后，对方以帮助维权和追款为由，要求我先付款。","label":"fraud","fraud_type":"other_fraud","evidence":["网络纠纷调解中心维权电话","帮助追回被骗钱款","要求我先付款"],"source_id":"SRC0009","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

@@ -1,0 +1,1 @@
+{"case_id":"C0013-E01","real_case_id":"RC0013","text":"我在网上看到一条品牌积分活动的中奖信息和相关咨询问答，页面还留下了栏目组客服或法院的联系电话。我拨打后，对方自称客服或法院工作人员，确认中奖信息真实，并称领奖前需要先向指定账户支付手续费或风险基金。","label":"fraud","fraud_type":"other_fraud","evidence":["品牌积分活动的中奖信息","自称客服或法院工作人员","领奖前需要先向指定账户支付手续费或风险基金"],"source_id":"SRC0007","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

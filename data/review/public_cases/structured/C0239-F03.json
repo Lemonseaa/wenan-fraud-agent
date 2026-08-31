@@ -1,0 +1,1 @@
+{"case_id":"C0239-F03","real_case_id":"RC0239","text":"我准备按这个流程办理，目前已经核对：登录南航官方网站的本人会员账户；点击“确定退票”完成网上操作；退票款将划拨到原用户付款账户。后续只按上述流程操作。","label":"normal","fraud_type":"normal","evidence":["登录南航官方网站的本人会员账户","点击“确定退票”完成网上操作","退票款将划拨到原用户付款账户"],"source_id":"SRC0042","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

@@ -1,0 +1,16 @@
+{
+  "case_id": "C0027-F01",
+  "real_case_id": "RC0027",
+  "text": "我接到一个自称来自科研或医药单位工作人员的电话，对方向我推荐一名专家进行问诊。随后有人以知名专家或教授的身份与我交流，说可以帮助排毒、修复和巩固身体，并推荐我购买一种特效药。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称来自科研或医药单位工作人员",
+    "以知名专家或教授的身份与我交流",
+    "推荐我购买一种特效药"
+  ],
+  "source_id": "SRC0009",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

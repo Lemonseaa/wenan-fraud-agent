@@ -1,0 +1,1 @@
+{"case_id":"C0073-F02","real_case_id":"RC0073","text":"我通过搜索引擎置顶结果进入一个虚拟币交易平台，留下联系方式后有人添加微信，称可以安排分析人员介绍交易功能。对方邀请我注册账户。","label":"insufficient","fraud_type":"insufficient","evidence":["搜索引擎置顶结果","有人添加微信","邀请我注册账户"],"source_id":"SRC0017","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

@@ -1,0 +1,12 @@
+{
+  "case_id": "C0044-F01",
+  "real_case_id": "RC0044",
+  "text": "有人以免费讲课和推荐股票为由把我拉进微信群。群里有讲师、助理和普通股民账号，讲师授课，其他账号发言、发收益截图并称赞讲师。对方推荐我在一个股票平台投资，平台显示资金升值且可以提现，之后又推动我追加投资。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": ["免费讲课和推荐股票", "群里有讲师、助理和普通股民账号", "发收益截图并称赞讲师", "平台显示资金升值且可以提现", "推动我追加投资"],
+  "source_id": "SRC0012",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

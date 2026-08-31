@@ -1,0 +1,16 @@
+{
+  "case_id": "C0007-F01",
+  "real_case_id": "RC0007",
+  "text": "我先收到一条声称某只股票将上涨的短信，之后有人打电话回访，自称所在公司能够调动大量资金影响股票交易，并有专业人员分析行情。对方保证其推荐的股票会上涨、客户能够获益，现在要求我先缴纳会员费或提成费。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "自称所在公司能够调动大量资金影响股票交易",
+    "保证其推荐的股票会上涨、客户能够获益",
+    "要求我先缴纳会员费或提成费"
+  ],
+  "source_id": "SRC0007",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

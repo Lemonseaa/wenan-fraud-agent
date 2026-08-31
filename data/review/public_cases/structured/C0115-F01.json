@@ -1,0 +1,18 @@
+{
+  "case_id": "C0115-F01",
+  "real_case_id": "RC0115",
+  "text": "我看到免费领取游戏礼品的广告，扫码进入陌生小程序。对方称未成年人操作导致企业账户被冻结，需要支付巨额赔偿，并要求我添加一个自称警官的账号，由其远程指导操作家长银行账户。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "陌生小程序",
+    "未成年人操作导致企业账户被冻结",
+    "支付巨额赔偿",
+    "自称警官的账号",
+    "远程指导操作家长银行账户"
+  ],
+  "source_id": "SRC0022",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

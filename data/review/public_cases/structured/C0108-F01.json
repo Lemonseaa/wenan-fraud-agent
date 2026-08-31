@@ -1,0 +1,18 @@
+{
+  "case_id": "C0108-F01",
+  "real_case_id": "RC0108",
+  "text": "我在社交平台看到热门演唱会余票，对方报价比官方低200元，承诺先付定金、现场取票。随后对方发来陌生购票链接，并要求下载会议APP、开启屏幕共享，还让我脱离票务平台完成对方所称的刷单任务。",
+  "label": "fraud",
+  "fraud_type": "ticket_game_virtual_goods",
+  "evidence": [
+    "报价比官方低200元",
+    "先付定金、现场取票",
+    "陌生购票链接",
+    "开启屏幕共享",
+    "脱离票务平台完成对方所称的刷单任务"
+  ],
+  "source_id": "SRC0022",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

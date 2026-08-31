@@ -1,0 +1,18 @@
+{
+  "case_id": "C0057-F01",
+  "real_case_id": "RC0057",
+  "text": "我在网上看到一则购物平台兼职广告。对方要求我花588元购买一个箱包，收货后发布指定好评文案，承诺再按粉丝数量支付150元至1000元稿费，并退还购买箱包的588元。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "购物平台兼职广告",
+    "花588元购买一个箱包",
+    "发布指定好评文案",
+    "支付150元至1000元稿费",
+    "退还购买箱包的588元"
+  ],
+  "source_id": "SRC0015",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

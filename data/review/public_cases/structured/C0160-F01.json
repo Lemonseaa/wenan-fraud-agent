@@ -1,0 +1,18 @@
+{
+  "case_id": "C0160-F01",
+  "real_case_id": "RC0160",
+  "text": "我通过网络下载软件加入聊天群，群内每20分钟发布关注电商账号的任务。完成后，我被称符合升级条件，29元和105元福利单都获得了更高金额返现。随后对方发布一个投入3015元、到账4188元的竞抢单，要求我付款参与。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "加入聊天群",
+    "关注电商账号的任务",
+    "29元和105元福利单都获得了更高金额返现",
+    "投入3015元、到账4188元的竞抢单",
+    "要求我付款参与"
+  ],
+  "source_id": "SRC0025",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0200-F01",
+  "real_case_id": "RC0200",
+  "text": "父亲把一名在微信相亲群认识的好友推荐给我。对方自称证券公司数据分析师，我们开始交往后，她称公司有内部消息，购买“央行数字币”可以赚钱，并发来指定APP下载链接询问我是否愿意投资。目前没有其身份、平台资质和资金托管的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称证券公司数据分析师",
+    "公司有内部消息",
+    "央行数字币",
+    "指定APP下载链接",
+    "没有其身份、平台资质和资金托管的核验结果"
+  ],
+  "source_id": "SRC0030",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

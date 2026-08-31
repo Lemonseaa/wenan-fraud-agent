@@ -1,0 +1,17 @@
+{
+  "case_id": "C0203-F01",
+  "real_case_id": "RC0203",
+  "text": "我在珍爱网认识一名网友，后来转到聚朋友APP聊天。对方向我推荐其老班长正在做的中药材理财项目。目前没有项目主体、收益规则、资质和资金托管信息。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "珍爱网认识一名网友",
+    "聚朋友APP聊天",
+    "中药材理财项目",
+    "没有项目主体、收益规则、资质和资金托管信息"
+  ],
+  "source_id": "SRC0030",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

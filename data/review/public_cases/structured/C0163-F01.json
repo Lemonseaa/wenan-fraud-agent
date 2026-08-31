@@ -1,0 +1,18 @@
+{
+  "case_id": "C0163-F01",
+  "real_case_id": "RC0163",
+  "text": "我在相亲网站认识一名恋爱对象，对方自称外汇机构员工，向我展示内部数据，并让我代为操作一个投资平台，平台多次显示盈利。对方随后邀请我自行注册，为未来共同生活投入资金。题面没有提供平台资质、交易通道或资金托管信息。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "相亲网站认识一名恋爱对象",
+    "自称外汇机构员工",
+    "平台多次显示盈利",
+    "为未来共同生活投入资金",
+    "没有提供平台资质、交易通道或资金托管信息"
+  ],
+  "source_id": "SRC0026",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

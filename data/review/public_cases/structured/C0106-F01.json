@@ -1,0 +1,18 @@
+{
+  "case_id": "C0106-F01",
+  "real_case_id": "RC0106",
+  "text": "我收到裸聊私信后添加QQ，并按对方指导安装聊天APP，使用手机号和邀请码注册。视频裸聊后，对方发来我的裸聊截图和手机通讯录截图，威胁只有转账才会删除视频。",
+  "label": "fraud",
+  "fraud_type": "other_fraud",
+  "evidence": [
+    "安装聊天APP",
+    "使用手机号和邀请码注册",
+    "裸聊截图",
+    "手机通讯录截图",
+    "只有转账才会删除视频"
+  ],
+  "source_id": "SRC0021",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "C0004-E01",
+  "real_case_id": "RC0004",
+  "text": "我最近需要资金周转，接到一个自称贷款审核专员的电话。对方让我下载一款贷款APP，APP显示申请已经初审通过，并注明不收会员费和手续费。随后，专员称合作银行还需要核验资产状况，让我打开他单独发来的认证页面，选择本人银行卡并授权查询账户余额和近期交易，完成后就会放款。我准备授权。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "接到一个自称贷款审核专员的电话",
+    "对方让我下载一款贷款APP",
+    "让我打开他单独发来的认证页面",
+    "选择本人银行卡并授权查询账户余额和近期交易"
+  ],
+  "source_id": "SRC0004",
+  "construction_type": "controlled_synthetic",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

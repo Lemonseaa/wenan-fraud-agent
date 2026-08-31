@@ -1,0 +1,15 @@
+{
+  "case_id": "C0016-F01",
+  "real_case_id": "RC0016",
+  "text": "我收到一条消息，说我中了某综艺节目的奖品。对方让我登录指定网站填写个人信息认领奖品；填写后又告诉我，兑奖前需要先缴纳保证金、公证费或税款。",
+  "label": "fraud",
+  "fraud_type": "phishing_or_account_takeover",
+  "evidence": [
+    "让我登录指定网站填写个人信息认领奖品",
+    "兑奖前需要先缴纳保证金、公证费或税款"
+  ],
+  "source_id": "SRC0008",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

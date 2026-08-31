@@ -1,0 +1,18 @@
+{
+  "case_id": "C0180-F01",
+  "real_case_id": "RC0180",
+  "text": "一个QQ账号自称是我的女儿，称教育局联合名校在学校开培训班，并推荐我联系负责报名的李主任。李主任称名额有限，需要尽快支付49500元，一周后学校会补贴50%。目前我没有通过原联系方式向女儿或学校独立核验。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称是我的女儿",
+    "教育局联合名校在学校开培训班",
+    "尽快支付49500元",
+    "学校会补贴50%",
+    "没有通过原联系方式向女儿或学校独立核验"
+  ],
+  "source_id": "SRC0028",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

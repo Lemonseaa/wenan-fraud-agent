@@ -1,0 +1,18 @@
+{
+  "case_id": "C0073-F01",
+  "real_case_id": "RC0073",
+  "text": "我通过搜索引擎置顶结果进入一个自称正规中介的虚拟币交易平台。平台人员取得联系方式后添加微信，称可以提供分析导师并帮助获得高额收益，要求我在指定平台注册账户并充值。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "搜索引擎置顶结果",
+    "自称正规中介的虚拟币交易平台",
+    "添加微信",
+    "提供分析导师并帮助获得高额收益",
+    "在指定平台注册账户并充值"
+  ],
+  "source_id": "SRC0017",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

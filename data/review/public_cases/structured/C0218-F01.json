@@ -1,0 +1,16 @@
+{
+  "case_id": "C0218-F01",
+  "real_case_id": "RC0218",
+  "text": "我被拉进一个以明星名义建立的QQ粉丝群，群主通过文字互动和红包取得信任，随后发布周年回馈活动，宣称转100元可返300元，并称领取返利还需支付手续费或激活费。",
+  "label": "fraud",
+  "fraud_type": "other_fraud",
+  "evidence": [
+    "明星名义建立的QQ粉丝群",
+    "转100元可返300元",
+    "支付手续费或激活费"
+  ],
+  "source_id": "SRC0032",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

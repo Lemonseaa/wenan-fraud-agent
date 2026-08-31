@@ -1,0 +1,18 @@
+{
+  "case_id": "C0159-F01",
+  "real_case_id": "RC0159",
+  "text": "一个微信学习号自称是我的女儿，称教育局与某大学在学校开培训班并想报名，还发来教导处陈主任的微信。陈主任称名额有限，需要立即支付49500元培训费，一周后学校补贴50%，可凭票据办理。现有信息没有学校正式通知或独立向女儿核验的记录。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称是我的女儿",
+    "教导处陈主任的微信",
+    "立即支付49500元培训费",
+    "一周后学校补贴50%",
+    "没有学校正式通知或独立向女儿核验的记录"
+  ],
+  "source_id": "SRC0025",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

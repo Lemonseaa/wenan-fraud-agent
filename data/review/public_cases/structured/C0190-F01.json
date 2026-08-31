@@ -1,0 +1,18 @@
+{
+  "case_id": "C0190-F01",
+  "real_case_id": "RC0190",
+  "text": "我曾有投资亏损，后来关注了一名短视频投资达人，并下载其推荐的理财APP。小额投入后，账户很快显示盈利；当我准备加大金额时，平台称现金充值排队更快，安排工作人员线下收取20万元现金。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "投资达人",
+    "理财APP",
+    "小额投入后，账户很快显示盈利",
+    "现金充值排队更快",
+    "线下收取20万元现金"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

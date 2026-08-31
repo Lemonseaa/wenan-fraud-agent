@@ -1,0 +1,16 @@
+{
+  "case_id": "C0037-F01",
+  "real_case_id": "RC0037",
+  "text": "我通过微信聊天接触到一个投资项目。对方介绍了一个交易平台，建议我到该平台投资，并要求我向平台投入资金。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "通过微信聊天接触到一个投资项目",
+    "介绍了一个交易平台",
+    "要求我向平台投入资金"
+  ],
+  "source_id": "SRC0011",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

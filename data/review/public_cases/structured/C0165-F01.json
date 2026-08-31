@@ -1,0 +1,18 @@
+{
+  "case_id": "C0165-F01",
+  "real_case_id": "RC0165",
+  "text": "我有一笔网购订单的物流一直没有更新，随后接到自称物流客服的陌生电话。对方称包裹丢失可以理赔，要求我添加客服微信，再点击其发送的链接下载聊天软件和银行APP办理理赔。",
+  "label": "fraud",
+  "fraud_type": "impersonated_customer_service",
+  "evidence": [
+    "物流一直没有更新",
+    "自称物流客服的陌生电话",
+    "包裹丢失可以理赔",
+    "添加客服微信",
+    "点击其发送的链接下载聊天软件和银行APP"
+  ],
+  "source_id": "SRC0026",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

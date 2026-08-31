@@ -1,0 +1,12 @@
+{
+  "case_id": "C0045-F01",
+  "real_case_id": "RC0045",
+  "text": "一名陌生人添加我的微信，通过持续聊天和我培养感情。取得信任后，对方向我介绍一个投资APP，称可以获得高额返利，并推动我在APP里投入资金。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": ["一名陌生人添加我的微信", "通过持续聊天和我培养感情", "介绍一个投资APP", "可以获得高额返利", "推动我在APP里投入资金"],
+  "source_id": "SRC0012",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

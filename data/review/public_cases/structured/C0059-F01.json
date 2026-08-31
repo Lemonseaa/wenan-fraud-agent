@@ -1,0 +1,16 @@
+{
+  "case_id": "C0059-F01",
+  "real_case_id": "RC0059",
+  "text": "有人向我介绍一款网络博彩平台，并持续引导我在平台充值后参与投注。现在我只知道平台提供充值和投注功能，不清楚运营主体、许可、游戏规则、资金托管或提现条件。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "介绍一款网络博彩平台",
+    "持续引导我在平台充值后参与投注",
+    "不清楚运营主体、许可、游戏规则、资金托管或提现条件"
+  ],
+  "source_id": "SRC0015",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

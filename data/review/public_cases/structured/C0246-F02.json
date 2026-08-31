@@ -1,0 +1,1 @@
+{"case_id":"C0246-F02","real_case_id":"RC0246","text":"办理前，我确认了三点：国家税务总局全国增值税发票查验平台；单位和个人都可以在该平台查验；按要求安装根证书。我准备按这些信息继续办理。","label":"normal","fraud_type":"normal","evidence":["国家税务总局全国增值税发票查验平台","单位和个人都可以在该平台查验","按要求安装根证书"],"source_id":"SRC0049","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0024-F01",
+  "real_case_id": "RC0024",
+  "text": "我在微信上认识了一名自称离异单身的成功男士，聊天一段时间后逐渐信任了他。对方称掌握可以盈利的内幕消息，引导我进入一个指定电子交易平台投资。前期几次投资在平台上显示少量盈利，现在他正推动我追加大额资金。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "逐渐信任了他",
+    "称掌握可以盈利的内幕消息",
+    "进入一个指定电子交易平台投资",
+    "平台上显示少量盈利",
+    "推动我追加大额资金"
+  ],
+  "source_id": "SRC0009",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

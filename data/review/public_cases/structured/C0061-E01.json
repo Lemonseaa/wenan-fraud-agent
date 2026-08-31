@@ -1,0 +1,1 @@
+{"case_id":"C0061-E01","real_case_id":"RC0061","text":"一名自称私人财富管理顾问的人通过微信联系我，推荐一个同时提供基金买卖、支付提现和客服功能的平台。对方发送投资盈利截图，称基金回报丰厚，并要求我在该平台注册、充值和交易。","label":"fraud","fraud_type":"fake_investment","evidence":["私人财富管理顾问","发送投资盈利截图","基金回报丰厚","平台注册、充值和交易"],"source_id":"SRC0016","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

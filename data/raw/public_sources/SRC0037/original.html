@@ -1,0 +1,803 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+	<link th:href="${#httpServletRequest.contextPath}+'/resources/css/validation.css'" href="../resources/css/validation.css" rel="stylesheet"></link>
+
+	<link utils:merger="common_css" th:href="${#httpServletRequest.contextPath}+'/resources/js/rich/calendar/dhtmlxcalendar.css'"
+		  href="../resources/js/rich/calendar/dhtmlxcalendar.css" rel="stylesheet"></link>
+
+	<link utils:merger="common_css" th:href="${#httpServletRequest.contextPath}+'/resources/js/rich/calendar/skins/dhtmlxcalendar_dhx_terrace.css'"
+		  href="../resources/js/rich/calendar/skins/dhtmlxcalendar_dhx_terrace.css" rel="stylesheet"></link>
+	<link utils:merger="common_css" th:href="${#httpServletRequest.contextPath}+'/resources/js/rich/message/skins/dhtmlxmessage_dhx_terrace.css'"
+		  href="../resources/js/rich/message/skins/dhtmlxmessage_dhx_terrace.css" rel="stylesheet"></link>
+	<link utils:merger="common_css" th:href="${#httpServletRequest.contextPath}+'/resources/js/rich/dhtmlxCombo/dhtmlxcombo.css'"
+		  href="../resources/js/rich/dhtmlxCombo/dhtmlxcombo.css" rel="stylesheet"></link>
+	<link rel="icon" href="../resources/images/ots/favicon.ico" th:href="${#httpServletRequest.contextPath}+'/resources/images/ots/favicon.ico'" type="image/x-icon" />
+	<link rel="shortcut icon" href="../resources/images/ots/favicon.ico" th:href="${#httpServletRequest.contextPath}+'/resources/images/ots/favicon.ico'" type="image/x-icon" />
+
+	<script utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/framework/jquery-1.9.1.js'"
+			src="../resources/js/framework/jquery-1.9.1.js" type="text/javascript"></script>
+
+	<script utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/framework/jquery.chromatable.js'"
+			src="../resources/js/framework/jquery.chromatable.js" type="text/javascript"></script>
+
+	<script utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/framework/jquery.jqpagination.js'" type="text/javascript"
+			src="../resources/js/framework/jquery.jqpagination.js">
+	</script>
+
+	<script utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/framework/jquery.form.js'"
+			src="../resources/js/framework/jquery.form.js" type="text/javascript"></script>
+
+	<script utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/framework/jquery.validate.js'"
+			src="../resources/js/framework/jquery.validate.js" type="text/javascript"></script>
+
+	<!-- js i18n -->
+	<script utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/i18n/messages_zh_CN.js'"
+			src="../resources/js/i18n/messages_zh_CN.js" type="text/javascript">
+	</script>
+	<!-- jquery validation i18n -->
+	<script utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/i18n/validation_messages_zh_CN.js'"
+			type="text/javascript" src="../resources/js/i18n/validation_messages_zh_CN.js">
+	</script>
+
+
+
+	<script type="text/javascript" utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/framework/jsrender.js'"
+			src="../resources/js/framework/jsrender.js">
+	</script>
+
+	<script utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/rich/dhtmlxcommon.js'" type="text/javascript"
+			src="../resources/js/rich/dhtmlxcommon.js">
+	</script>
+	<link utils:merger="common_css" th:href="${#httpServletRequest.contextPath}+'/resources/js/rich/windows/dhtmlxwindows.css'"
+		  href="../resources/js/rich/windows/dhtmlxwindows.css" type="text/css" rel="stylesheet"></link>
+	<link utils:merger="common_css" th:href="${#httpServletRequest.contextPath}+'/resources/js/rich/windows/skins/dhtmlxwindows_dhx_terrace.css'"
+		  href="../resources/js/rich/windows/skins/dhtmlxwindows_dhx_terrace.css" type="text/css" rel="stylesheet"></link>
+
+	<script utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/rich/windows/dhtmlxwindows.js'"
+			src="../resources/js/rich/windows/dhtmlxwindows.js" type="text/javascript"></script>
+	<script utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/rich/dhtmlxcontainer.js'"
+			src="../resources/js/rich/dhtmlxcontainer.js" type="text/javascript">
+	</script>
+	<script type="text/javascript" utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/rich/dhtmlxCombo/dhtmlxcombo.js'"
+			src="../resources/js/rich/dhtmlxCombo/dhtmlxcombo.js">
+	</script>
+	<script type="text/javascript" utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/rich/dhtmlxCombo/dhtmlxcombo_whp.js'"
+			src="../resources/js/rich/dhtmlxCombo/dhtmlxcombo_whp.js">
+	</script>
+	<script type="text/javascript" utils:merger="common_js"
+			th:src="${#httpServletRequest.contextPath}+'/resources/js/rich/dhtmlxCombo/dhtmlxcombo_extra_html.js'"
+			src="../resources/js/rich/dhtmlxCombo/dhtmlxcombo_extra_html.js">
+	</script>
+	<script type="text/javascript" utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/rich/message/dhtmlxmessage.js'"
+			src="../resources/js/rich/message/dhtmlxmessage.js">
+	</script>
+	<script script="javascript">
+		/*<![CDATA[*/
+		var ctx="";
+		/*]]>*/
+	</script>
+	<script src="../resources/js/help/header_footer.js"></script>
+	<script utils:merger="common_js" th:src="${#httpServletRequest.contextPath}+'/resources/js/framework/baseInit.js'" type="text/javascript"
+			src="../resources/js/framework/baseInit.js">
+	</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" ></meta>
+	<title>中国铁路12306网站</title>
+	<link th:href="${#httpServletRequest.contextPath}+'/resources/css/common.css'" href="../resources/css/common.css" rel="stylesheet" th:remove="all"></link>
+	<link th:href="${#httpServletRequest.contextPath}+'/resources/css/help.css'" href="../resources/css/help.css"  rel="stylesheet" rev="stylesheet" type="text/css" />
+	<script th:src="${#httpServletRequest.contextPath}+'/resources/js/framework/jquery-1.9.1.js'" src="../resources/js/framework/jquery-1.9.1.js" type="text/javascript" th:remove="all"></script>
+	<script th:src="${#httpServletRequest.contextPath}+'/resources/js/common.js'" src="../resources/js/common.js" type="text/javascript" th:remove="all"></script>
+
+</head>
+<body>
+<input id="linktype" type="hidden" th:value="${linktype}" ></input>
+<!--header start-->
+<div class="header">
+</div>
+<!--header end-->
+
+<!--页面主体  开始-->
+<div class="content clearfix">
+	<!--当前位置 开始-->
+	<div class="crumbs">
+		您现在的位置：<a href="../gonggao/help.html">出行指南</a>&nbsp;>&nbsp;<a href="#nogo">相关规章</a>&nbsp;>&nbsp;<strong><label id="daohang"></label></strong>
+	</div>
+	<!--当前位置 结束-->
+	<!--左侧导航 开始-->
+	<div class="sidebar">
+		<div class="layout my">
+			<div class="lay-hd">相关规章</div>
+			<div class="lay-bd">
+				<div class="nav-label" id="nav-label" ><span></span></div>
+				<dl class="on">
+					<dt class="hide">&nbsp;</dt>
+					<dd id="means_fiv" onclick="$.displaydiv('5')"><a href="javascript:" id="means5" onclick="$.displaydiv(id)">铁路互联网购票身份核验须知</a></dd>
+					<dd id="means_six" onclick="$.displaydiv('6')"><a href="javascript:" id="means6" onclick="$.displaydiv(id)">铁路旅客禁止、限制携带和托运物品目录</a></dd>
+					<dd id="means_two" onclick="$.displaydiv('2')"><a href="javascript:" id="means2" onclick="$.displaydiv(id)">铁路旅客运输规程</a></dd>
+					<dd id="means_sev" onclick="$.displaydiv('7')"><a href="javascript:" id="means7" onclick="$.displaydiv(id)">广深港高速铁路跨境旅客运输组织规则</a></dd>
+				</dl>
+
+
+				<!--点击后DL添加样式on后下拉项DD会自动下限-->
+			</div>
+		</div>
+	</div>
+	<!--左侧导航 结束-->
+
+	<!--右侧主体 开始-->
+	<div class="main" id="main">
+		<div id="means2-box" class="txt-box" style="display: none;">
+			<h1>中国国家铁路集团有限公司<br/>
+				铁路旅客运输规程</h1>
+			<h2 style="font-weight: bold;">第一章　总则</h2>
+			<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一条　为维护铁路旅客运输正常秩序，保护铁路旅客运输合同各方当事人的合法权益，依据《中华人民共和国民法典》《中华人民共和国铁路法》《铁路安全管理条例》等法律、行政法规和《铁路旅客运输规程》《铁路旅客车票实名制管理办法》等有关规定，制定本规程。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二条　本规程适用于中国国家铁路集团有限公司（以下简称国铁集团）所属铁路运输企业和控股合资铁路公司在境内的铁路旅客运输。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三条　下列用语在本规程内的含义： </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客：持有铁路有效乘车凭证的乘车人。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 购票人：通过中国铁路12306网站（含铁路12306移动端，以下简称12306网站）、车站售票窗口、自动售票机、订票电话或铁路车票销售代理人的售票处购买车票，完成车票票款支付行为的个人或组织。购票人代旅客购买车票的，视为旅客已授权购票人为其办理铁路车票购买、铁路客运电子发票开具和领取等事宜。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 儿童：本规程所指的儿童是指符合购买铁路儿童优惠票条件和免费乘车条件的未成年人。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 车票实名制管理：车票实名购买和实名查验统称为车票实名制管理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 车票实名购买，是指购票人凭旅客的有效身份证件购买车票，铁路运输企业凭旅客的有效身份证件销售车票，并记录旅客身份信息和购票信息的行为；车票实名查验，是指铁路运输企业对实行车票实名购买的车票记载的身份信息与旅客及其有效身份证件进行一致性核对，并记录旅客乘车信息的行为。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 联程车票：旅客分段购买的，出发地至目的地间可联程接续的多段车票；前段车票到站与后段车票发站应为同一或同城铁路客运营业站（以下简称车站）。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 铁路客运电子发票：铁路运输企业在提供售票、改签、退票等服务后，开具的电子形式的收付款凭证（以下简称铁路电子发票）。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 铁路车票销售代理人：与铁路运输企业签有代售合同，办理铁路车票销售经营业务的独立法人组织。 </p>
+			<!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 报销凭证：铁路运输企业在提供售票、改签、退票等服务后开具的收付款凭证。报销凭证仅可开具一次，不能重复领取。 </p> -->
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 席位：车票载明的车厢，以及座位或铺位位置。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 席别：旅客列车席位的类别，包括硬座、软座、二等座、一等座、特等座、商务座、硬卧、软卧、高级软卧、二等卧、一等卧等。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 改签：旅客变更乘车日期、时间、车次、席位、席别和到站时需办理的签证手续。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 客运记录：在旅客或行李运输过程中因特殊情况，铁路运输企业与旅客之间需记载某种事项或车站与列车之间办理业务交接的纸质或电子凭证。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 时间：以北京时间为准，从零时起计算，实行24小时制。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 以上、以下、以前、以后、以内、以外均含本数，超过、未满、不足均不含本数。 </p>
+			<h2 style="font-weight: bold;">第二章　旅客运输 </h2>
+			<p><strong>第一节　铁路旅客运输合同</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四条　铁路旅客运输合同是明确铁路运输企业与旅客之间权利义务关系的协议。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五条　铁路旅客运输合同从售出车票时起成立，至按车票规定运输结束旅客出站时止，为合同履行完毕。旅客运输的运送期间自检票起至到站出站时止计算。旅客自行中途下车，出站时铁路旅客运输合同履行终止。 </p>
+			<p><strong>第二节　车票</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六条　车票是铁路旅客运输合同的凭证，可采用电子数据形式或者纸质形式。本规程车票是以电子数据形式体现的铁路旅客运输合同的凭证，并实施车票实名制管理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七条　车票（特殊票种除外）主要信息应包含： </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）发站和到站站名； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）车厢号、席位号、席别；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）票价； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）车次； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）乘车日期和开车时间； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）有效期； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （七）旅客身份证件信息。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八条　车票票价为旅客购票时的执行票价。铁路运输企业调整票价时，已售出的车票不再补收或退还票价差额。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九条　除有效期有其他规定的车票外，车票当日当次有效。旅客自行中途上车、下车的，未乘区间的票款不予退还。 </p>
+			<p><strong>第三节　售票与购票</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十条　车票应通过铁路运输企业提供的车站售票窗口、自动售票机、12306网站、订票电话或铁路车票销售代理人的售票处购买。旅客应按约定支付运输费用，购票后应核对票、款，妥善保管车票信息及购票时所使用的有效身份证件。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 铁路运输企业开办定期票、计次票、乘车卡等多种业务时，具体售票、改签、退票、检票和行李托运等业务规则由开办业务的铁路运输企业另行规定。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十一条　通过车站售票窗口、铁路车票销售代理人的售票处购票或列车上购票、补票时，可使用的有效身份证件包括：中华人民共和国居民身份证（含中华人民共和国临时居民身份证），居民户口簿，中华人民共和国护照，中华人民共和国出入境通行证，中华人民共和国旅行证，新生儿出生医学证明，军官证、警官证、文职干部证、义务兵证、士官证、军士证、警士证、文职人员证，海员证，以及公安机关出具的临时乘车身份证明，中华人民共和国港澳居民居住证，中华人民共和国台湾居民居住证，港澳居民来往内地通行证，往来港澳通行证，大陆居民往来台湾通行证，台湾居民来往大陆通行证，外国人永久居留身份证，外国人护照，外国人出入境证，公安机关出具的外国人签证证件受理回执、护照报失证明，各国驻华使领馆签发的临时性国际旅行证件（应当附具公安机关签发的有效签证或者停留证件）。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 通过12306网站、订票电话购票时，可使用的有效身份证件包括：中华人民共和国居民身份证（含中华人民共和国临时居民身份证），中华人民共和国护照，中华人民共和国港澳居民居住证，中华人民共和国台湾居民居住证，港澳居民来往内地通行证，台湾居民来往大陆通行证，外国人永久居留身份证，外国人护照。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 通过自动售票机购票时，可使用的有效身份证件包括：中华人民共和国居民身份证，中华人民共和国护照，中华人民共和国港澳居民居住证，中华人民共和国台湾居民居住证，港澳居民来往内地通行证，台湾居民来往大陆通行证，外国人永久居留身份证。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十二条　旅客应向铁路运输企业提供真实有效的联系方式。发售实名制车票时，铁路运输企业可以记录、保存并在铁路服务过程中使用旅客信息、联系方式，按国家规定承担相应的保密义务。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十三条　铁路运输企业发售车票时，根据旅客需要提供载有车票主要信息的“行程信息提示”。通过12306网站购票的，“行程信息提示”可通过网站自行打印或下载。“行程信息提示”不能作为乘车凭证使用。 </p>
+			<!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 购票后如需报销凭证的，应在开车前或乘车日期之日起180日以内，凭购票时所使用的有效身份证件到车站售票窗口、自动售票机开具。 </p> -->
+			<p><strong>第四节　售票条件</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十四条　车票最远发售至本次列车终到站。铁路运输企业另有规定的票种除外。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十五条　除需要乘坐旅客列车通勤上学的学生和铁路运输企业同意在旅途中监护的儿童外，未满14周岁的儿童应随同成年人旅客旅行。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）随同成年人乘车的儿童，年满6周岁且未满14周岁的应购买儿童优惠票；年满14周岁，应购买全价票。每1名持票成年人旅客可免费携带1名未满6周岁且不单独占用席位的儿童乘车，超过1名时，超过人数应购买儿童优惠票。儿童年龄按乘车日期计算。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）旅客携带免费乘车儿童时，应在购票时向铁路运输企业提前申明，购票申明时使用的免费乘车儿童有效身份证件为其乘车凭证。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）免费乘车的儿童单独使用席位时应购买儿童优惠票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）儿童优惠票的乘车日期、车次及席别应与同行成年人所持车票相同，到站不得远于成年人车票的到站。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十六条　在全日制高等学校（含国务院教育行政部门、省级人民政府审批设置的实施高等学历教育的民办学校），承担研究生教育任务的科学研究机构，军事院校，普通中、小学和中等职业学校（含有实施学历教育资格的公办及民办中等专业学校、职业高中、技工学校），国务院或国家宗教事务局批准的正式宗教院校就读的学生、研究生，家庭居住地和学校所在地不在同一城市时，凭附有标注减价优惠区间和火车票学生优惠卡的学生证（中、小学生凭加盖学校公章的书面证明），优惠区间应加盖院校公章，每学年（10月1日至次年9月30日）可购买家庭居住地至院校（实习地点）所在地之间四次单程的学生优惠票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 新生凭录取通知书当年开学前可购买1次从家庭居住地到学校所在地学生优惠票；毕业生凭盖有院校公章的学校书面证明当年可购买1次从学校所在地出发的学生优惠票。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学生优惠票限于使用普通旅客列车硬座、硬卧和动车组列车二等座、二等包座、多功能座、一等座和动车组卧铺各席别。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学生每学年乘车前应通过12306网站或到车站指定售票窗口、自动售票机办理1次学生优惠资质核验手续。通过车站指定售票窗口或自动售票机办理学生优惠资质核验手续时，应出具本人有效身份证件和学生证（附有火车票学生优惠卡），没有火车票学生优惠卡，火车票学生优惠卡所载信息不全、不能识别或者与学生证记载不一致的，无法通过学生优惠资质核验。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 未办理或未通过优惠资质核验购买学生优惠票乘车时，列车应先办理补收票价差额手续，开具客运记录。旅客到站后可凭车补车票、学生证和购票时所使用的有效身份证件（列车如开具纸质客运记录，还应携带纸质客运记录），30日以内到车站售票窗口办理资质核验和退票手续。车站核实学生所购学生优惠票符合有关规定后，为其办理资质核验，扣减火车票学生优惠卡次数，退还车补车票票款，不收退票费。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 华侨学生和港澳台学生可购买学校所在地车站至口岸城市车站间的学生优惠票。铁路运输企业另有规定的除外。 </p>
+			<!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学生证的减价优惠区间更改时，应重新加盖院校公章，并修改火车票学生优惠卡内相关信息。 </p> -->
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学生优惠票根据减价优惠区间按相对近径路或合理径路发售。在减价优惠区间内购买联程车票时，开车时间在5天以内的扣减1次优惠乘车次数。超过减价优惠区间的，不发售学生优惠票。优惠乘车次数按学年使用有效，当学年不能使用下学年的次数，当学年未使用的不能留作下学年使用。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十七条　持中华人民共和国残疾军人证、中华人民共和国伤残人民警察证、国家综合性消防救援队伍残疾人员证的人员凭证可购买优待票。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十八条　在无人售票的乘降所上车的人员，可在列车内购票。 </p>
+			<p><strong>第五节　车票查验和安全检查</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十九条　铁路运输企业按照国家有关规定对旅客所持车票和有效身份证件进行车票实名制查验。车站对进、出站的旅客和人员应当检票，列车对乘车旅客应验票。对应持证购买的优惠票、优待票，铁路运输企业还须查验旅客相应优惠、优待证件。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客检票后在车票发站开车前取消旅行，需办理改签、退票手续的，应在开车前主动向车站声明。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十条　 旅客应配合铁路运输企业实施的车票实名制查验工作，携带免费乘车儿童应提供其购票申明时使用的儿童有效身份证件；使用持证购买的优惠票、优待票应出示相应优惠、优待证件（通过学生优惠资质核验的学生除外）。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十一条　铁路运输企业应依照法律、行政法规和有关规定，对旅客及其携带品进行安全检查。旅客携带品应遵守国家禁止或限制运输的相关规定。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十二条　车站在开车前提前停止检票，应在本站营业场所公告提前停止检票时间。旅客可通过乘车站营业场所公告查询。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十三条　铁路稽查人员凭稽查证件、佩戴稽查标识可在车内验票。 </p>
+			<p><strong>第六节　乘车条件</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十四条　旅客的乘车凭证是购票时使用的有效身份证件；随行免费乘车儿童的乘车凭证是其购票申明时所使用的儿童有效身份证件。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十五条　旅客应按有效车票载明的日期、时间、车次、车厢号、席位号和席别乘车。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十六条　持低票价席别车票的旅客不能在高票价席别的车厢（区域）滞留。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十七条　视力残疾旅客可携带取得导盲犬工作证（载有导盲犬使用者信息，盖有公安部门或残疾人联合会公章，或带有国际导盲犬联盟“IGDF”标识），用于辅助视力残疾人工作、生活的导盲犬进站乘车。旅客进站、乘车时，需主动出示残疾人证、导盲犬工作证、动物健康免疫证明等证件，携带的导盲犬接受安全检查。</p>
+			<p><strong>第七节　变更</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十八条　旅客可办理1次改签，在铁路运输企业有运输能力的前提下，按下列规定办理：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）开车前48小时以上，可免费改签预售期内的列车。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）开车前不足48小时，可免费改签车票载明的乘车日期以前的列车。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）开车前不足48小时，可改签车票载明的乘车日期之后预售期内列车，核收改签费。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）开车后，在当日24时之前，可免费改签当日其他列车。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）开车后，在当日24时之前，可改签车票载明的乘车日期之后预售期内列车，核收改签费。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）办理变更到站的改签时，应在开车前48小时以上，原车票已托运行李的，还应办理行李变更或取消业务。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十九条　旅客可在车站售票窗口、12306网站和具备改签功能的自动售票机办理改签。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 凭各种有效身份证件购买的车票均可在车站售票窗口办理改签，但使用现金支付方式购买的车票，仅可在车站售票窗口办理改签；凭12306网站购票证件且使用电子支付方式购买的车票，可通过12306网站办理改签；在具备改签功能的自动售票机办理改签时，应按系统提示办理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 改签后如需改签费报销凭证的，可在办理之日起180日以内，凭改签时所使用的有效身份证件到车站售票窗口、自动售票机开具。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十条　在车站售票窗口办理改签时，旅客须出具购票时使用有效身份证件；他人代办时应出具代办人有效身份证件及旅客购票时使用的有效身份证件。</p>
+			<!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十一条　旅客办理已开具报销凭证的车票改签时，须交回报销凭证。报销凭证无法交回或不可识别、不完整时，铁路运输企业不予办理改签。 </p> -->
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十一条　旅客办理改签时，改签后的车票票价高于原票价时，核收票价差额；改签后的车票票价低于原票价时，退还票价差额，核收票价差额的退票费。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十二条　旅客在列车上办理席位变更时，变更后的票价高于原票价时，核收票价差额；变更后的票价低于原票价时，票价差额部分不予退还。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十三条　因铁路运输企业责任或自然灾害等特殊情况使旅客不能按车票载明的日期、时间、车次、车厢号、席位号、席别乘车时，铁路运输企业应采取必要的安置措施，旅客要求退票的，按本规程第五十条办理退票，不收退票费。铁路运输企业安排其他车次或席位运送旅客，重新安排的席位票价高于原票价时，超过部分不予补收；低于原票价时，应退还票价差额，不收退票费。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十四条　旅客要求越过车票到站继续乘车时，须在原车票到站前提出，在有运输能力的情况下列车可予以办理，核收越站区间的票款；无运输能力时，列车有权拒绝旅客补票和继续乘车。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十五条　必要时，铁路运输企业可临时调整改签办法。 </p>
+			<p><strong>第八节　误售、误购、误乘和误降的处理</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十六条　在车站售票窗口发生旅客车票误售、误购时，旅客当场提出的，车站换发新票，需退还票价差额时，不收退票费。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 铁路运输企业责任导致的误售应为旅客免费办理退票或换发新票。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十七条　发生误乘、误降时，旅客应向站、车工作人员提出。列车长应编制客运记录交前方停车站；车站对本站发现或列车移交的误乘、误降旅客，应指定最近列车免费送回至车票到站或原票乘车站（当日无列车送回到站或原票乘车站时，经旅客同意可送至到站或原票乘车站的同城车站），对出站后提出的不予受理。如误乘旅客提出乘坐本趟列车直接去原票到站时，所乘列车票价高于原票价时，核收票价差额；所乘列车票价低于原票价时，票价差额部分不予退还。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客拒绝铁路运输企业安排时，根据实际乘车区间补收相应票款，未使用部分票款不予退还。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十八条　在免费送回区间，旅客不得中途下车。如中途下车，对往返乘车的免费区间，按返程所乘列车等级分别核收往返区间的票款。免费送回区间，旅客应按照铁路运输企业指定的席别乘坐，旅客如提出乘坐高票价席别时，应重新支付高票价席别票款。 </p>
+			<p><strong>第九节　丢失乘车凭证的处理</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十九条　旅客购买车票后，丢失购票身份证件的，按以下方式处理： </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）旅客在乘车前丢失证件的，应到该有效身份证件的发证机构办理临时身份证明，凭临时身份证明进出站乘车。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  （二）旅客在列车上、出站前丢失证件的，须先办理补票手续，凭后补车票检票出站。在列车上办理时，列车核验席位使用正常的，开具客运记录；在车站办理时，车站核验车票无出站检票记录的，开具客运记录。旅客应在乘车日期之日起30日以内，凭该有效身份证件发证机构办理的临时身份证明和后补车票（如开具纸质客运记录，还应携带纸质客运记录），到列车的经停站退票窗口办理后补车票与原票乘车区间一致部分的退票手续。办理退票手续时，如核查丢失证件所购原票有出站记录的，后补车票不予退票；无出站记录的，办理退票时，不收退票费。</p>
+			<p><strong>第十节　不符合乘车条件的处理</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四十条　有下列行为时，铁路运输企业按规定补票，并加收已乘区间应补票价50%的票款： </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）无票乘车且未主动补票时，补收自乘车站（不能判明时自始发站）起至到站止的车票票款。持失效车票乘车或在车票到站后不下车继续乘车的，按无票处理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）持用变造、伪造或涂改的乘车凭证乘车时，除按无票处理外并送交公安部门处理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）票、证、人不一致的，按无票处理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）持用低票价席别车票乘坐高票价席别时，补收所乘区间的票价差额。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）旅客持优惠票、优待票，没有规定的减价凭证或不符合减价条件时，按照全价票价补收票价差额。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四十一条　有下列情况时应补收票款：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）应购买儿童优惠票而未买票的儿童，补收儿童优惠票票款。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）应购买全价票而购买儿童优惠票乘车的未成年人，应补收儿童优惠票票价与全价票价的差额。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）主动补票或者经站、车同意上车补票的。 </p>
+			<p><strong>第十一节　拒绝运送和运输合同的终止</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四十二条　对无票乘车而又拒绝补票的人，列车长可责令其下车并应编制客运记录交前方三等以上车站或县、市所在地车站处理（其到站近于上述车站时应交到站处理）。车站对列车移交或本站发现的上述人员应追补应收和加收的票款。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四十三条　旅客存在本规程第四十条情形且拒不补票的，铁路运输企业可拒绝其再次购买车票；旅客补票完成后，铁路运输企业解除购票限制。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四十四条　对下列旅客，站、车均可拒绝其进站、上车或责令其下车；对责令其下车的，其未使用至到站的票款不予退还，运输合同即行终止。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）有本规程第四十条规定的情况之一，拒不支付应补票款和加收票款的； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）不接受安全检查的，坚持携带或夹带禁止、限制物品的； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）不接受车票实名制查验的； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）在站、车内寻衅滋事、扰乱公共秩序，患有烈性传染病、严重精神障碍和醉酒等有可能危及列车安全或其他旅客以及铁路站、车工作人员人身安全的； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）告知列车无运输能力后，无票继续越站乘车的； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）国家规定的其他情况。 </p>
+			<p><strong>第十二节　退票</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四十五条　旅客要求退票时，须在车票载明的日期、车次开车时间前办理。已办理行李托运的车票退票时，应先办理取消行李托运业务。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 退票核收退票费，应退票款按购票时的支付方式退还。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 退票后如需退票费报销凭证的，可在办理之日起180日以内到车站售票窗口、自动售票机凭购票时使用的有效身份证件开具。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四十六条　下列情况不办理退票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）车票发站开车后； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）开车后改签的车票； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）加收的票款；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）车补车票（因未通过或未办理学生资质核验和丢失购票时使用的有效身份证件，而办理的补票除外）。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四十七条　旅客可在车站售票窗口、12306网站和具备退票功能的自动售票机办理退票。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 凭各种有效身份证件购买的车票均可在车站售票窗口办理退票；凭12306网站购票证件购买的车票可在12306网站办理退票；在具备退票功能的自动售票机办理退票时，应按系统提示办理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客使用12306网站购票证件，通过现金方式购买的车票，可通过12306网站先行办理退票，自网上办理退票成功之日起180日以内，凭旅客有效身份证件到车站指定窗口办理退款手续。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四十八条  在车站售票窗口办理退票时，旅客本人办理的，需出具购票时所使用的有效身份证件；代旅客办理的，需出具代办人的有效身份证件和旅客购票时所使用的有效身份证件。</p>
+			<!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四十九条  旅客办理已开具报销凭证的车票退票或退款手续时，须交回报销凭证。报销凭证无法交回或不可识别、不完整时，铁路运输企业不办理退票或退款。 </p> -->
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四十九条  旅客旅行途中因伤、病不能继续旅行时，经站、车核实，可在下车后30日以内到下车站办理退票，退还已收票价与已乘区间票价差额，核收退票费；同行人同样办理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五十条  因铁路运输企业责任或自然灾害等其他不能正常运输情形导致旅客退票时按下列规定办理，不收退票费：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）在车票发站，退还全部票款；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）在中途站，退还未乘区间票款； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）在到站，退还车票未使用部分票款； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）列车因空调设备故障在运行过程中不能修复时，应退还未使用区间的空调费用。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五十一条　因列车晚点导致未乘车旅客退票时，应在车票发站列车实际开车前办理，退还全部票款，不收退票费。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 晚点列车晚点信息公布前购买的联程车票，可一并办理退票，不收退票费。旅客分别办理联程车票退票的，按本规程第四十五条和第四十六条相关规定处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五十二条　因列车停运导致旅客退票时，旅客可自列车停运信息公布时起至车票乘车日期后30日以内办理退票手续，不收退票费。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 停运列车停运信息公布前购买的联程车票，可在联程车票开车前一并办理退票，不收退票费。旅客分别办理联程车票退票的，按本规程第四十五条和第四十六条相关规定处理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五十三条　必要时，铁路运输企业可临时调整退票办法。 </p>
+			<p><strong>第十三节　铁路客运电子发票</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五十四条　旅客可通过车站售票窗口、自动售票机、12306网站申请开具本人已购车票以及退票费、改签费的铁路电子发票。购票后可在行程结束之日起180日以内开具；退票、改签后可在业务办理之日起180日以内开具。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客开具铁路电子发票后，可通过12306网站或个人所得税APP查询、下载铁路电子发票或通过邮件接收铁路电子发票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五十五条　旅客凭各种有效身份证件购票、退票、改签后，均可在车站售票窗口申请开具铁路电子发票；使用自动售票机购票证件购票、退票、改签的，还可通过自动售票机申请开具铁路电子发票；使用12306网站购票证件办理购票、退票、改签的，还可登录12306网站开具铁路电子发票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五十六条　购票人（代办人）通过12306网站或车站售票窗口替旅客购票以及办理退票、改签后，可在车站售票窗口申请开具已购车票以及退票费、改签费的铁路电子发票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 购票人通过12306网站购票或办理退票、改签的，可凭旅客购票时使用的有效身份证件到车站售票窗口申请开具铁路电子发票；无法提供旅客有效身份证件时，也可凭订单号、购票人有效身份证件到车站售票窗口提出申请。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 购票人通过车站售票窗口购票且需开具发票的，应当场凭旅客有效身份证件申请开具；无法提供旅客有效身份证件时，应当场凭购票人有效身份证件申请开具。代办人通过车站售票窗口退票、改签后需开具发票的，应当场凭旅客有效身份证件申请开具退票费、改签费的铁路电子发票。</p>
+			<p><strong>第十四节　携带品</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五十七条　旅客携带品由自己负责看管。旅客需妥善放置携带品，不得影响公共空间使用和安全。每人免费携带品的重量和规格是： </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 儿童10千克，外交人员35千克，其他旅客20千克。每件物品外部尺寸长、宽、高之和不超过160厘米，杆状物品不超过200厘米；但乘坐动车组列车均不超过130厘米；每件重量不超过20千克。平衡车、滑行器等轮式代步工具须使用硬质包装物妥善包装。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 依靠辅助器具才能行动的老、幼、病、残、孕等特殊重点旅客旅行时代步的折叠式轮椅，以及随行婴儿使用的折叠婴儿车，可免费携带并不计入上述范围。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五十八条　为保障车站、旅客列车等公共场所内外整洁、空气清新，妨碍公共卫生的物品，能够损坏或污染车辆的物品，以及活动物（导盲犬和作为食品且经封闭箱体包装的鱼、虾、蟹、贝、软体类水产动物除外）不得随身携带乘车。 </p>
+			<!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 为保障车站、旅客列车等公共场所内外整洁、空气清新，妨碍公共卫生的物品，能够损坏或污染车辆的物品，以及活动物（导盲犬和作为食品且经封闭箱体包装的鱼、虾、蟹、贝、软体类水产动物除外）不得随身携带乘车。</p> -->
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五十九条　旅客违规携带物品按下列规定处理： </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）在乘车站禁止进站上车。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）在车内或下车站，对超过免费重量的物品，其超重部分应补收上车站至下车站行李运费。对不可分拆的整件超重、超大物品及活动物，按该件全部重量补收上车站至下车站行李运费。列车不具备补收条件时可交前方停车站处理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）发现危险品或禁限物品，妨碍公共卫生的物品，损坏或污染车辆的物品时，列车交前方停车站处理，车站按该件物品全部重量加倍补收上车站至下车站行李运费；涉嫌违法犯罪的送交公安部门处理，对有必要就地销毁的危险品或禁限物品应按有关规定处理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）如旅客携带超重、超大的物品价值低于行李运费时，可按物品价值的50％核收行李运费。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）补收行李运费时，不得超过本次列车的始发站和终到站。不能判明上车站时，自始发站起计算。 </p>
+			<p><strong>第十五节　旅客遗失物品的处理</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六十条　发现旅客遗失物品应积极寻找失主。如旅客已经下车，应编制客运记录，注明品名、件数等移交下车站。不能判明时，移交列车前方站或终到站。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六十一条　车站对本站发现或列车移交的旅客遗失物品，要及时登记、妥善保管，并在12306网站或车站进行公告。车站可设置失物招领处，提供遗失物品保管、查找和快递寄送服务。失主来领取时，应查验有效身份证件，核对时间、地点、车次、品名、件数、重量，确认无误后，由失主签收。			</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 铁路运输企业对旅客遗失物品提供保管和快递服务，并可依据相关法律、行政法规和有关规定对遗失物品核收保管费和快递费。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 鲜活易腐物品和食品不负责保管。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 无人认领的遗失物品按国家有关规定处理。 </p>
+			<h2 style="font-weight: bold;">第三章　行李运输</h2>
+			<p><strong>第一节　行李运输合同</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六十二条　铁路行李运输合同是指铁路运输企业与旅客之间明确行李运输权利义务关系的协议。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 行李运输合同的凭证是行李票。行李票可采用纸质票、电子票等形式。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六十三条　行李票主要信息应包含： </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）承运日期、发站、到站和经由；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）乘坐车次、人数、车票号； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）旅客姓名、电话、地址； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）包装种类、件数、重量；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）声明价格； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）运费； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （七）运到期限、承运站站名戳及经办人员名章； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （八）铁路运输企业名称。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六十四条　行李运输合同自铁路运输企业接收行李并填发行李票时起成立，到行李运至到站交付给旅客止履行完毕。 </p>
+			<p><strong>第二节　行李的范围</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六十五条　行李是旅客凭车票托运的一定限度的旅行必需品。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六十六条　行李中不得夹带的物品： </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）货币：含各币种的纸币和金属辅币；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）有价票证：银行卡、储值卡等； </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）文物；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）金银珠宝；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）档案材料：指人事、技术档案，组织关系，户口簿或户籍关系，各种证件、证书、合同、契约等；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）易碎品、流质物品和骨灰；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （七）妨碍公共卫生和安全的物品；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （八）危险品，铁路运输企业不能判明理化性质的物品按危险品处理；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （九）国家禁止、限制运输物品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六十七条　行李每件的最大重量为50千克，外部尺寸长、宽、高之和最大不超过200厘米，最小不小于60厘米。行李一般随旅客所乘列车运送或提前运送。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 行动不便旅客在旅行中使用的轮椅可按行李托运。 </p>
+			<p><strong>第三节　行李的托运与承运</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六十八条　旅客凭有效车票和有效身份证件可在乘车区间行李办理站间托运1次行李，办理时需出示购票时使用的有效身份证件。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 每张车票允许托运行李的重量为50千克（行李中有轮椅为75千克），超出部分按2倍的行李运费计费。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六十九条　行李托运实行实名制，办理行李托运时，铁路运输企业应核验旅客车票和有效身份证件的一致性，他人代办时还应出示代办人的有效身份证件。铁路运输企业应依照法律、行政法规和有关规定，对旅客托运的行李进行安全检查。对不配合安全检查的，铁路运输企业有权拒绝承运。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七十条　旅客应按约定缴纳运输费用，完整、准确填写托运单。</p>
+			<p><strong>第四节　保价运输</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七十一条　行李分为保价运输和不保价运输，旅客可自主选择。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七十二条　按保价运输时，可分件声明价格，也可按1批全部件数声明价格。按1批办理时，不得只保其中一部分。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七十三条　按保价运输的行李核收保价费。保价的行李发生运输变更时，保价费不补不退。旅客在承运后发送前取消托运或因铁路运输企业责任造成的取消托运时，保价费全部退还。行李发生损失并办理赔偿的，保价费不退。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七十四条　铁路运输企业对按保价运输的行李可检查其声明价格与实际价格是否相符；如拒绝检查，铁路运输企业可拒绝按保价运输承运。 </p>
+			<p><strong>第五节　包    装</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七十五条　行李的包装应完整牢固，适合运输。其包装的材料和方法应符合国家或铁路运输企业规定的包装要求。包装不符合要求时，旅客应按照相关规定改善包装。旅客拒绝改善包装的，铁路运输企业可拒绝承运。 </p>
+			<p><strong>第六节　运到期限</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七十六条　行李的运到期限以运输方案里程计算。从承运日起，行李600千米以内为3日，超过600千米时，每增加600千米增加1日，不足600千米也按1日计算。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 因不可抗力等非铁路运输企业责任发生的停留时间加算在运到期限内。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七十七条　行李超过规定的运到期限运到时，铁路运输企业应按逾期日数及所收行李运费的百分比向旅客支付违约金。行李变更运输时，逾期运到不支付违约金。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客要求支付违约金时，凭行李票在行李到达日起10日以内提出。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七十八条　旅客要求将逾期运到的行李运至新到站时，可分别按下述办理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）行李逾期到达或逾期尚未到达，旅客需继续旅行，凭新购车票及原行李票号要求转运至新到站时，铁路运输企业开具新行李票，免费转运。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）行李未到，当时又未超过运到期限，旅客需继续旅行并凭行李票票号及新购车票办理转运新到站的手续，交付行李运费之后，发现行李逾期到达原到站，由新到站凭原到站开具的客运记录退还已收转运区间行李运费，保价费不退。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）逾期行李办理免费转运的，不再支付违约金。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七十九条　行李超过运到期限30日以上仍未到达时，旅客可以认为行李已灭失而向铁路运输企业提出赔偿。 </p>
+			<p><strong>第七节　到达保管、通知和查询</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八十条　行李运到后从通知之日起，铁路运输企业免费保管3日，逾期到达的行李免费保管10日。因铁路运输企业责任和不可抗力等原因导致旅客行李延迟到达时，按延迟日数增加免费保管日数。超过免费保管期限时，按日核收保管费。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八十一条　行李到达后，铁路运输企业应及时通知旅客，最晚不得超过到达次日12时。旅客询问逾期行李是否到达时，铁路运输企业应及时予以查找。</p>
+			<p><strong>第八节　装卸、交付</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八十二条　将行李从行包房的收货地点至装上行李车，或从行李车卸下至规定的交付地点，各为1次作业。由发站收取装卸费。	</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八十三条　旅客凭本人购票时使用的有效身份证件领取行李。他人代领时凭旅客购票时使用的有效身份证件和代领人有效身份证件领取。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八十四条　旅客领取行李时，如发现有短少或异状应在领取时及时提出。铁路运输企业应认真检查、检斤复磅，必要时可会同公安人员开包检查。检查发现有损失时，应编制行包记录交旅客作为要求赔偿的依据。</p>
+			<p><strong>第九节　变更运输</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八十五条　旅客在办理行李托运手续后，可按如下规定办理一次行李变更手续；办理行李变更的到站、中止站必须是行李办理站：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）在发站装运前取消托运时，退还全部行李运费，核收保管费；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）在发站装运后取消托运时，行李由到站运回发站，已收行李运费不退，补收到站至发站间行李运费；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）旅客办理车票变更到站后，在装运前办理行李到站变更时，补收或退还已收行李运费与发站至新到站行李运费的差额；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）旅客办理车票变更到站后，在装运后办理行李到站变更时，已收行李运费不退，另补收原到站至新到站的行李运费；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）旅客中止旅行后，要求将行李运回旅行中止站时，补收原到站至中止站间的行李运费。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八十六条　办理变更运输后产生的杂费按实际产生的核收。如应退行李运费低于已产生的杂费时，则不补收杂费也不退还行李运费。误售、误购车票时，如旅客同时办理行李托运业务，补收或退还已收行李运费与发站至正当到站间的行李运费差额。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八十七条　旅客办理变更到站或退票后，未同时办理行李变更手续时，由到站另行收取2倍行李运费。 </p>
+			<p><strong>第十节　品名不符的处理</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八十八条　将禁限物品或危险品夹带运输时，在发站取消托运，在中途站停止运送（在列车上发现危险品交前方停车站），均通知有关部门和旅客处理，已收行李运费不退，按该件全部重量另行加倍补收行李运费，核收保管费。 </p>
+			<p><strong>第十一节　无法交付行李的处理</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八十九条　对无法交付的行李，铁路运输企业应登记造册，妥善保管。国家法律、行政法规规定不能买卖的物品应及时交有关部门处理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九十条　行李从运到日起，90日以内仍无人领取时，铁路运输企业应进行公布。公布90日以后仍无人领取时，铁路运输企业可变卖。</p>
+			<h2 style="font-weight: bold;">第四章　特殊情况的处理</h2>
+			<p><strong>第一节　列车运行中断对旅客的安排</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九十一条　运行中断，列车不能继续运行时，应妥善安排被阻旅客，及时告知相关出行信息。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九十二条　运行中断，铁路运输企业可安排旅客返回发站、中途站退票或绕道旅行，退票按照本规程第五十条办理。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九十三条　铁路运输企业组织原列车绕道运输时，旅客原票不补不退，但中途下车铁路旅客运输合同即履行终止。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九十四条　由于运行中断影响旅行，旅客要求出具证明时，车站应开具文字证明。 </p>
+			<p><strong>第二节　运行中断对行李的安排</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九十五条　对发站已承运的行李应妥善保管，铁路运输企业组织绕道运输时，行李运费不补不退。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九十六条　旅客在中途站（行李办理站）要求领取时，应退还未运送部分的行李运费。不足起码运费按起码运费退还。对要求运回发站取消托运的，退还全部行李运费。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九十七条　旅客在发站或中途站办理退票，而托运的行李已运至到站，要求将行李运回发站或中途站，行李运费不补不退。如要求将行李仍运至到站时，需另行支付全程或终止旅行站至到站2倍行李运费。</p>
+			<p><strong>第三节　赔偿责任和免责范围</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九十八条　在铁路运送期间旅客发生急病、分娩、遇险时，铁路运输企业应尽力采取救助措施并做好记录。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 铁路运输企业应对铁路运送期间发生的旅客人身损害承担赔偿责任；旅客自身健康原因造成的或者铁路运输企业证明伤亡是旅客故意、重大过失造成的，铁路运输企业不承担赔偿责任。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在铁路运送期间因第三人原因造成旅客人身损害的，由第三人承担赔偿责任。铁路运输企业有过错的，应在能够防止或者制止损害的范围内承担相应的补充赔偿责任。铁路运输企业承担补充赔偿责任后，有权向第三人追偿。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九十九条　在铁路运送期间发生旅客携带品毁损、灭失时，铁路运输企业过错造成的，应承担赔偿责任。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客证明其确已携带进站乘车，且能够确定携带品价格的，按下列规定赔偿：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）旅客出具发票（或者其他有效证明）证明购买价格时，以扣除物品合理折旧、损耗后的净值予以赔偿；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）以处理单位所在地价格评估机构确定的物品价格予以赔偿。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百条　铁路运输企业应对承运的行李自接受承运时起到交付时止发生的灭失、短少、污染或损坏，承担赔偿责任。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 因下列原因造成的行李损失，铁路运输企业不承担责任：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）不可抗力；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）物品本身的自然属性或合理损耗；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）包装方法或容器不良，从外部观察不能发现时；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）旅客违反铁路规章或其他自身的过错。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百零一条　行李损失赔偿标准：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 按保价运输办理的行李全部灭失时按实际损失赔偿，但最高不超过声明价格。部分损失时，按损失部分所占的比例赔偿。分件保价的行李按所灭失该件的实际损失赔偿，最高不超过该件的声明价格。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 未按保价运输的行李按实际损失赔偿，但最高连同包装重量每千克不超过15元。如由于铁路运输企业故意或重大过失造成的，不受上述赔偿限额的限制，按实际损失赔偿。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百零二条　行李全部或部分灭失时，退还全部行李运费。</p>
+			<p><strong>第四节　事故赔偿、索赔时效及纠纷处理</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百零三条　发生旅客人身损害事故时，旅客可向事故发生站或处理站要求赔偿。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百零四条  旅客在车站发现携带品损失时，应在离开车站前向发生站声明；在列车上发现时，应在下车前声明，由列车长开具客运记录交到站处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客要求赔偿时，应按照本规程第九十九条规定，提交携带品内容、价格、携带进站乘车等有关证明。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百零五条　发生行李损失时，车站应会同有关人员编制行包记录交旅客作为要求赔偿的依据。损失赔偿一般应在到站办理，特殊情况也可由发站办理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百零六条　发生行李损失，旅客要求赔偿时，应在规定的期限内提出并应附下列材料：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）旅客有效身份证件、行李票；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）行包记录；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）证明物品内容和价格的凭证。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百零七条　丢失的旅客行李找到后，铁路运输企业应迅速通知旅客领取，撤销赔偿手续，收回赔款。如旅客不同意领取时，按无法交付物品处理。如发现有欺诈行为不肯退回赔款时，可通过法律等手段追索。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百零八条　铁路运输企业与旅客因合同纠纷产生索赔或互相间要求办理退补费用的有效期为3年。有效期从下列日期起计算：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）身体损害和随身携带品损失时，为发生事故的次日；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）行李全部损失时为运到期限终了的次日，部分损失时为交付的次日；全批未到的为运到期限期满后的第31日；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）给铁路造成损失时，为发生事故的次日；</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）多收或少收运输费用时，为核收该项费用的次日。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 责任方自接到赔偿要求书的次日起，一般应于30日以内向赔偿要求人做出答复，应当赔偿的，尽快办理赔偿。多收或少收时应于30日以内退补完毕。</p>
+			<h2 style="font-weight: bold;">第五章　附    则</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百零九条　本规程是旅客运输合同组成部分，旅客和铁路运输企业应共同遵照执行。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百一十条 委托国铁集团及所属运输企业管理所辖线路的非控股铁路运输企业办理境内旅客运输时，以及地方铁路运输企业与国铁集团办理境内旅客过轨运输时，均应按照约定执行本规程。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百一十一条 车站的启用、封闭和营业范围的变更，于实施前通过车站营业场所或12306网站公布。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百一十二条 车站有关营业处所应有营业时间、列车时刻、铁路旅客购票须知、铁路旅客旅行须知和铁路旅客乘车安全须知等内容，票价、运价和杂费按规定执行明码标价。相关规定遇有变动，须于实施前公布。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百一十三条 中国铁路客户服务中心为国铁集团设立的全国统一客户服务中心，受理旅客投诉、建议和咨询等业务，服务网站为12306网站，服务电话为12306，服务邮箱为kyfw@12306.cn。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百一十四条 本规程授权国铁集团客运部负责具体解释工作。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一百一十五条 本规程自2026年6月1日起施行。</p>
+		</div>
+
+
+
+		<div id="means5-box" class="txt-box" style="display: none;">
+			<h1>铁路互联网购票身份核验须知</h1>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 为了进一步完善铁路实名制购票工作，自2014年3月1日起，中国铁路客户服务中心网站<a href="12306.cn">https://www.12306.cn</a>（以下简称本网站）将对互联网注册用户和乘车人进行身份信息核验。</p>
+			<h2>一、 注册用户和乘车人</h2>
+			<p><strong>1. 身份信息核验</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 注册用户可在“个人信息”中“查看个人信息”中，查看注册用户的身份信息核验状态（以下简称状态）。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 乘车人可在“常用信息管理”中“乘车人”中，查看乘车人的身份信息核验状态（以下简称状态）。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 状态种类及含义：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.1 “已通过”：指注册用户、乘车人的身份信息已经通过国家身份认证权威部门核验或铁路部门人工核验，其中姓名、证件类型、证件号码、国籍等身份信息不可修改。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.2 “待核验”：指注册用户、乘车人的身份信息在核验过程中。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.3 “未通过”：指注册用户、乘车人的身份信息经过核验但未通过，请按照证件原件的身份信息修改。  </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 待核验和未通过的用户无法购票，如需办理业务，需持有效身份证件原件到车站售票窗口办理核验。办理注册人身份核验时，请持在12306.cn网站注册时填写的有效身份证件原件。办理乘车人身份信息核验时，请持乘车人有效身份证件原件及注册人注册时填写的有效身份证件原件，到车站售票窗口办理核验。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 外国护照用户和乘车人还可通过12306网上传证件照片方式核验。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 遇有姓名超长、生僻字、繁体字等情形的，仅可在车站售票窗口办理，还要提供注册手机号后4位或注册邮箱前3位。</p>
+			<p><strong>2. 添加乘车人</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “已通过” 注册用户均可在本网站正常添加乘车人，其中中华人民共和国居民身份证（简称居民身份证）、中华人民共和国港澳居民居住证（简称港澳居民居住证）、中华人民共和国台湾居民居住证（简称台湾居民居住证）、外国人永久居留身份证、港澳居民来往内地通行证（含非中国籍）、台湾居民来往大陆通行证、中华人民共和国护照（简称中国护照）注册用户可添加持居民身份证、港澳居民居住证、台湾居民居住证、外国人永久居留身份证、港澳居民来往内地通行证（含非中国籍）、台湾居民来往大陆通行证、中国护照、外国护照的乘车人；外国护照注册用户可添加持港澳居民来往内地通行证（含非中国籍）、台湾居民来往大陆通行证、中国护照和外国护照的乘车人。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “待核验”、“未通过”注册用户不能添加乘车人。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “已通过”的乘车人在核验通过后30天内不能删除。</p>
+			<p><strong>3. 网上购票、退票、改签</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1 网上购票</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “已通过”注册用户可为“已通过”乘车人购票。“未通过”和“待核验”注册用户和乘车人不可购票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2 网上退票</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 注册用户均可为已购车票正常办理网上退票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.3 网上改签</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 注册用户可为“已通过”的乘车人办理网上改签。</p>
+			<p><strong>4. 车站换取报销凭证、退票、改签</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.1 “已通过”乘车人的所购车票，均可在车站售票窗口换取报销凭证、改签、退票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.2 “已通过”乘车人姓名、证件号码与本网站填写完全一致的，如为可自动识读证件，可在自动售（取）票机换取报销凭证。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.3 “已通过”乘车人，遇有姓名超长、生僻字、繁体字等情形的，所购车票应到车站售票窗口凭证件原件和订单号码办理换取报销凭证、改签、退票。</p>
+			<h2>二、其他相关事项</h2>
+			<p><strong>1．身份证件有效性</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 有效身份证件是指在有效期内的中华人民共和国居民身份证、港澳居民居住证、台湾居民居住证、外国人永久居留身份证、按规定可使用的有效中国护照和外国护照、港澳居民来往内地通行证、台湾居民来往大陆通行证。</p>
+			<p><strong>2．乘车人数量</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 注册用户名下的乘车人累计不超过30人（上限人数会根据春运、暑运等具体情况进行调整）。</p>
+			<p><strong>3. 委托办理核验</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “待核验”、“未通过”的注册用户或乘车人可委托他人到车站售票窗口办理身份信息核验。办理时，需同时携带代办人和委托人的有效身份证件原件。</p>
+			<p><strong>4．网上用户姓名输入</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在本网站上输入用户姓名时，请按其有效身份证件原件上的姓名准确填写，遇有下列情况时，按以下规则填写:</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （1）居民身份证、港澳居民居住证、台湾居民居住证、中国护照按姓名顺序填写中文姓名。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （2）外国人永久居留身份证按姓名顺序填写中文或英文姓名。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （3）港澳居民来往内地通行证、台湾居民来往大陆通行证按姓名顺序输入简体中文姓名。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （4）外国护照按姓名顺序填写英文姓名。姓、名中有空格的应输入空格，姓和名之间也应使用空格分隔。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （5）确认姓名中生僻字无法输入时，可用生僻字拼音或同音字替代。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （6）输入姓名保存后，遇有系统无法正确显示的汉字，可用该汉字的拼音或同音字重新修改后保存。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （7）姓名中有繁体字无法输入时，可用简体替代。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （8）姓名中有“.”或“•”时，请仔细辨析身份证件原件上的“.”或“•”，准确输入。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （9）姓名较长，汉字字符合计超过30个（1个汉字算2个字符）的，需按姓名中第一个汉字开始按顺序连续输入30个字符（空格字符不输入）。外国人永久居留身份证和外国护照使用英文姓名的，应按姓名顺序全部填写。</p>
+			<p><strong>5．居民身份证无法自动识读</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 持居民身份证、港澳居民居住证、台湾居民居住证、外国人永久居留身份证用户在车站售票窗口办理身份信息核验时，居民身份证不能通过自动识读设备自动读取的，不予办理，需到发证机关换证后再予办理。</p>
+			<p><strong>6.注册用户被抢注</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 本网站提示“身份信息重复”的注册用户，须注册用户本人（不可代办）持在网站注册时填写的有效身份证件原件到车站售票窗口办理或注册人通过“手机APP”在线按提示办理。</p>
+
+		</div>
+
+
+		<div id="means6-box" class="txt-box" style="display: none;">
+			<h1>国家铁路局 公安部关于公布 «铁路旅客禁止、
+				限制携带和托运物品目录» 的公告</h1>
+			</br>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 为保障旅客生命财产安全和铁路运输安全，加强和规范铁路旅客运输安全检查工作，根据《中华人民共和国民法典》《中华人民共和国铁路法》《铁路安全管理条例》等法律、行政法规规定，现公布《铁路旅客禁止、限制携带和托运物品目录》。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 铁路运输企业应当在企业网站、铁路旅客车站和列车等服务场所通过多种方式公告《铁路旅客禁止、限制携带和托运物品目录》，履行告知义务。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公益性“慢火车”可以允许旅客随身携带少量家禽家畜和日用工具农具。铁路运输企业与旅客另有约定的，按照其约定。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 军人、武警、公安民警、民兵、射击运动员等人员依法可以携带、托运枪支弹药或者管制器具的，按照国家有关规定办理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在特定区域、特定时间，中央和国家有关部门根据需要依法决定提升铁路旅客禁止、限制携带和托运物品查控标准的，从其规定。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 本公告自2022年7月1日起施行。原《国家铁路局公安部关于发布铁路&lt;禁止携带物品目录&gt;的公告》（国铁运输监〔2015〕3号）同时废止。</p>
+			<p style="text-align: right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 国家铁路局&nbsp;&nbsp; &nbsp; 公安部&nbsp;&nbsp;&nbsp;</p>
+			<p style="text-align: right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022年5月17日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			<h2 style="text-align: center;">铁路旅客禁止、限制携带和托运物品目录</h2>
+			<h2 style="text-align: left;">一、禁止托运和随身携带的物品</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>（一）枪支、子弹类（含主要零部件）</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.军用枪、公务用枪：手枪、冲锋枪、步枪、机枪、防暴枪等以及各类配用子弹。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.民用枪：气枪、猎枪、运动枪、麻醉注射枪等以及各类配用子弹。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.道具枪、发令枪、钢珠枪、催泪枪、电击枪等以及各类配用子弹。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4．上述物品的样品、仿制品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>（二）爆炸物品类</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.弹药：炸弹、照明弹、燃烧弹、烟幕弹、信号弹、催泪弹、毒气弹、手雷、地雷、手榴弹等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. 爆破器材：炸药、雷管、导火索、导爆索、震源弹、爆破剂等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. 烟火制品：礼花弹、烟花（含冷光烟花）、鞭炮、摔炮、拉炮、砸炮等各类烟花爆竹，发令纸、黑火药、烟火药、引火线，以及“钢丝棉烟花”等具有烟花效果的制品等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. 上述物品的仿制品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>（三）管制器具</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1．管制刀具：根据《管制刀具分类与安全要求》（GA1334-2016），认定为管制刀具的专用刀具（匕首、刺刀、佩刀、三棱刮刀、猎刀、加长弹簧折叠刀等）、特殊厨用刀具（加长砍骨刀、加长西瓜刀、加长分刀、剔骨刀、屠宰刀、多用刀等）、开刃的武术与工艺礼品刀具（武术刀、剑等），以及其他管制刀具（超过GA/T1335《日用刀具分类与安全要求》规定的尺寸规格限制要求的各种刀具）。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2．其他器具：警棍、军用或者警用匕首、催泪器、电击器、防卫器、弩、弩箭等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>（四）易燃易爆物品</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1．压缩气体和液化气体：氢气、甲烷、乙烷、环氧乙烷、二甲醚、丁烷、天然气、乙烯、氯乙烯、丙烯、乙炔（溶于介质的）、一氧化碳、液化石油气、氟利昂、氧气（供病人吸氧的袋装医用氧气除外）、水煤气等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.易燃液体：汽油（包括甲醇汽油、乙醇汽油）、煤油、柴油、苯、酒精、酒精体积百分含量大于70%或者标志不清晰的酒类饮品、1,2-环氧丙烷、二硫化碳、甲醇、丙酮、乙醚、油漆、稀料、松香油等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.易燃固体：红磷、闪光粉、固体酒精、赛璐珞、发泡剂H、偶氮二异庚腈等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.自燃物品：黄磷、白磷、硝化纤维（含胶片）、油纸及其制品等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5．遇湿易燃物品：金属钾、钠、锂、碳化钙（电石）、镁铝粉等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.氧化剂和有机过氧化物：高锰酸钾、氯酸钾、过氧化钠、过氧化钾、过氧化铅、过醋酸、双氧水、氯酸钠、硝酸铵等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>（五）毒害品</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 氰化物、砒霜、硒粉、苯酚、氯、氨、异氰酸甲酯、硫酸二甲酯等高毒化学品以及灭鼠药、杀虫剂、除草剂等剧毒农药。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>（六）腐蚀性物品</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 硫酸、盐酸、硝酸、氢氧化钠、氢氧化钾、有液蓄电池（含氢氧化钾固体、注有酸液或碱液的）、汞（水银）等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>（七）放射性物品</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 指含有放射性核素，并且其活度和比活度均高于国家规定豁免值的物品，详见《放射性物品分类和名录（试行）》。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>（八）感染性物质</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 包括可感染人类的高致病性病原微生物菌（毒）种和感染性样本，详见《人间传染的病原微生物名录》中危害程度分类为第一类、第二类的病原微生物。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>（九）其他危害列车运行安全的物品</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.可能干扰列车信号的强磁化物。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.硫化氢及有强烈刺激性气味或者有恶臭等异味的物品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.容易引起旅客恐慌情绪的物品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.不能判明性质但可能具有危险性的物品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>（十）法律、行政法规、规章规定的其他禁止携带、运输的物品。</strong></p>
+			<h2 style="text-align: left;">二、禁止随身携带但可以托运的物品</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）锐器：菜刀、水果刀、剪刀、美工刀、雕刻刀、裁纸刀等日用刀具（刀刃长度超过60毫米）；手术刀、刨刀、铣刀等专业刀具；刀、矛、戟等器械。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）钝器：棍棒、球棒、桌球杆、曲棍球杆等。</strong></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）工具农具：钻机、凿、锥、锯、斧头、焊枪、射钉枪、锤、冰镐、耙、铁锹、镢头、锄头、农用叉、镰刀、铡刀等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）其他：反曲弓、复合弓等非机械弓箭类器材，消防灭火枪，飞镖、弹弓，不超过50毫升的防身喷剂等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）持有检疫证明、装于专门容器内的小型活动物，铁路运输企业应当向旅客说明运输过程中通风、温度条件。但持工作证明的导盲犬和作为食品且经封闭箱体包装的鱼、虾、蟹、贝、软体类水产动物可以随身携带。</p>
+			<h2 style="text-align: left;">三、限制随身携带的物品</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）包装密封完好、标志清晰且酒精体积百分含量大于或者等于24%、小于或者等于70%的酒类饮品累计不超过3000毫升。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）香水、花露水、喷雾、凝胶等含易燃成分的非自喷压力容器日用品，单体容器容积不超过100毫升，每种限带1件。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）指甲油、去光剂累计不超过50毫升。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）冷烫精、染发剂、摩丝、发胶、杀虫剂、空气清新剂等自喷压力容器，单体容器容积不超过150毫升，每种限带1件，累计不超过600毫升。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）安全火柴不超过2小盒，普通打火机不超过2个。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）标志清晰的充电宝、锂电池，单块额定能量不超过100Wh，含有锂电池的电动轮椅除外。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （七）法律、行政法规、规章规定的其他限制携带、运输的物品。</p>
+
+		</div>
+
+
+		<div class="txt-box" id="means7-box" style="display: none;">
+			<h1>广深港高速铁路跨境旅客运输组织规则</h1>
+			<h2 style="text-align: center;">第一章 总 则</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第一条 为确保广深港高速铁路跨境旅客运输正常秩序，保护铁路旅客运输合同各方当事人的合法权益，依据内地及香港有关法律规定，制定本规则。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二条 本规则适用于中国国家铁路集团有限公司 ( 以下简称国铁集团) 管理的各客运站与香港西九龙站间的高速铁路跨境旅客运输，对内地参与广深港高速铁路跨境旅客运输的铁路运输企业、 香港铁路有限公司 (以下简称港铁公司) 和跨境旅客均具有约束力。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三条 国铁集团和港铁公司应根据本规则，各自制定旅客须知，并通过有关营业处所、 网站等渠道向旅客公告。遇有变动须在实施前公告， 旅客也可通过客户服务电话 (内地 86—所在城市区号—12306， 香港 852—21200888) 咨询。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第四条 本规则内所用货币为人民币，另有规定者除外。 如使用港币支付，汇率按上个历月21日 (如为内地法定假日，按之前最近一个工作日) 中国人民银行公布的银行间外汇市场人民币兑港元汇率中间价执行。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第五条 下列用语在本规则内的定义。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 铁路运输企业：内地参与广深港高速铁路跨境旅客运输的铁路运输企业、 港铁公司。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 跨境旅客：持发站或到站为香港西九龙站车票的旅客 ( 含同行的免费乘车儿童)。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 跨境高速铁路列车：国铁集团管理的各客运站与香港西九龙站之间开行的高速铁路列车。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 广深港线路：指广州南站至香港西九龙站间的高铁线路。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 客运记录：在旅客运输过程中因某些特殊情况，铁路运输企业与旅客之间需记载某种事项或列车与车站之间办理业务交接的文字记录凭证。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12306网站：国 铁 集 团 的 售 票 及 服 务 网 站，网 址 为www.12306.cn(含铁路12306移动端)。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 车票: 铁路旅客运输合同的基本凭证,本规则所称车票是以电子数据形式体现的电子客票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 联程车票：旅客分段购买的,出发地至目的地间可联程接续的多张车票;前段车票到站与后段车票发站应为同一或同城车站。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 行程信息提示：载有电子客票信息的提示凭条,购票后可在车站自动售票机、 指定售票窗口或12306网站打印,不作为乘车凭证使用。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 报销凭证：旅客办理购票、 改签、 退票等服务后自行换取的、具有发票属性的有价票据,不作为乘车凭证使用,仅供报销使用。报销凭证仅可换取一次，不能重复领取。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客须知：铁路运输企业向旅客公布的注意事项。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 实名制：旅客在购买车票，办理改签、 退票、 补票、 换取报销凭证等手续和乘车时，均须提供乘车人有效身份证件，铁路运输企业可将部分信息记入车票中，并进行查验的一项制度。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 席位：车票载明的车厢，以及座位或铺位位置。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 席别：列车席位的不同类别。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 发站：车票上所记载的出发站。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 到站：车票上所记载的到达站。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 改签：旅客变更乘车日期、 车次、 席位、 席别时需办理的手续。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 现金支付：指购票或改签时使用人民币现金、 港币现金、 八达通等方式支付票款。在港铁公司代售点购票或改签时，无论使用何种支付方式，均视为现金支付。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 八达通：由香港的八达通卡有限公司运营的电子付款系统。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 儿童票：供年满6周岁且未满14周岁的儿童购买的减价（特惠）车票，年满14周岁的未成年人应购买成年人车票。儿童年龄按乘车日期计算。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 学生票：供符合相关资格的在内地上学的香港学生购买的减价（特惠）车票。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 火车票学生优惠卡：由中华人民共和国教育部及国铁集团监制，供符合相关资格的学生购买学生票使用的优惠卡，须贴在有效的学生证上。卡内需载明学生姓名、 有效身份证件号码、 优惠乘车区间、 入学日期、 优惠乘车次数等信息。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 残疾军人票：供持有中华人民共和国有关部门颁发的中华人民共和国残疾军人证、 中华人民共和国伤残人民警察证、 国家综合性消防救援队伍残疾人员证的人员购买的减价（特惠）车票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 成年人：年满18周岁的人士。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 《香港铁路附例》：港铁公司根据《香港铁路条例》第34条订立的附例。 </p>
+			<h2 style="text-align: center;">第二章 旅客运输</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第六条 车票的发售。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）跨境旅客的车票最远只发售到本次列车的终到站。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）售票方式。车票可通过12306网站、 车站售票窗口、代售点、 自动售票机等购买。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）车票预售期为15天 (含当天)。调整预售期时，铁路运输企业提前公告。 </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）通过12306网站购买发站为香港西九龙站的车票应不晚于开车前30分钟。其他售票方式的截售时间按相应售票方式安排。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）旅客购票后，可于开车前或乘车日期之日起180日以内，凭购票时所使用的有效身份证件到车站指定售票窗口、 自动售票机换取报销凭证。旅客在香港西九龙站或港铁公司代售点购票的，仅限在香港西九龙站换取报销凭证。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）旅客购票时，应向铁路运输企业提供真实有效的联系方式，并须即时核对车票信息和票款。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第七条 儿童票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）每一名持票成年人旅客可免费携带一名未满6周岁且不单独占用席位的儿童乘车，超过一名时，超过人数应购买儿童票。免费乘车的儿童单独使用席位时，应购买儿童票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）成年人旅客携带免费乘车儿童乘车，应当在购票时向铁路运输企业提前申明，购票申明时使用的免费乘车儿童有效身份证件为其乘车凭证。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）免费乘车儿童及符合儿童票使用条件的儿童应随同成年人乘车。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）儿童票的乘车日期、 车次及席别应与同行成年人所持车票相同，其到站不得远于成年人车票的到站。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）儿童票二等座、一等座按照相应列车席别全价执行票价的 50％计算；特等座、商务座按照相应列车席别全价执行票价的 80％计算；动卧票按照相应列车席别全价执行票价的 70％计算；票价尾数按照四舍五入保留至元。全价执行票价不低于公布票价的 40％时，儿童票票价最低为相应列车席别公布票价的40％，全价执行票价低于公布票价的 40％时，儿童票票价按全价执行票价执行。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第八条 学生票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）在内地大专院校就读的学生、研究生，凭附有加盖院校公章的减价优待证的学生证和火车票学生优惠卡（新生凭录取通知书、毕业生凭学校书面证明可购买一次学生票），可购买家庭居住地至学校所在地（实习地点）的跨境学生票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）每学年（10月1日至次年9月30日）仅限购买四次单程学生票，当学年未使用的次数不能留作下学年使用。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）学生票应以相对近径路或合理径路发售。在学生证优惠乘车区间内购买联程车票时，扣减一次优惠乘车次数。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）学生票只发售二等座、一等座和动卧票，按照相应列车席别全价执行票价的75％计算；票价尾数按照四舍五入保留至元。全价执行票价不低于公布票价的40％时，学生票票价最低为相应列车席别公布票价的40％；全价执行票价低于公布票价的40％时，学生票票价按全价执行票价执行。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）超过减价优惠乘车区间的，不发售学生优惠票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）学生证的减价优惠区间更改时，应重新加盖院校公章，并修改火车票学生优惠卡内相关信息。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第九条 残疾军人票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 残疾军人票按照相应列车席别全价执行票价的50％计算；票价尾数按照四舍五入保留至元。全价执行票价不低于公布票价的40％时，残疾军人票票价最低为相应列车席别公布票价的40％；全价执行票价低于公布票价的40％时，残疾军人票票价按全价执行票价执行。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十条 乘车条件。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）旅客的乘车凭证是购票时使用的有效身份证件，随行免费乘车儿童的乘车凭证是其购票申明时所使用的儿童有效身份证件。车票当日当次有效，旅客应按照有效车票载明的日期、 车次、车厢号、席位号乘坐；旅客提前或延后乘车应在规定时间内办理改签，未改签乘车按无票处理；中途下车未乘区间失效。持低票价席别车票的旅客不能在高票价席别的车厢 (区域) 滞留。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）持减价（特惠）车票的旅客，应持减价（优惠/特惠）凭证乘车。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）符合购买学生票条件的旅客，每学年乘车前应通过12306网站或到车站指定售票窗口、自动售票机办理一次本人身份证件与火车票学生优惠卡的资质核验手续。通过车站指定售票窗口或自动售票机办理学生优惠资质核验手续时，应出具本人有效身份证件和学生证（附有火车票学生优惠卡），没有火车票学生优惠卡，火车票学生优惠卡所载信息不全、不能识别或者与学生证记载不一致的，无法通过学生优惠资质核验。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）旅客应妥善保管购票时所使用的有效身份证件和购票信息。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）旅客进出站、乘车时应接受站、车工作人员检（验）票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）旅客进站时要接受车站的安全检查。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （七）旅客应爱护铁路设备设施，听从铁路工作人员指挥，维护公共秩序和运输安全。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十一条 拒绝运输。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对有下列行为的旅客，站、车均可拒绝其上车或责令其下车，并有权登记其身份信息。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）按照有关法律法规规定不适宜乘车的。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）铁路运输企业认为威胁到公共健康和安全的。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）违反相关法律法规，扰乱站、车公共秩序或骚扰他人的。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）违规乘车且拒绝补票的。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）不接受安全检查，坚持携带或夹带禁止、限制物品的。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）不接受车票实名制查验的。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （七）告知列车无运输能力后，无票继续越站乘车的。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;旅客如已购买车票，在发站退还票款核收退票费；在中途站未使用至到站的票款不予退还，运输合同即行终止。情节严重的送交执法部门处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十二条 跨境车票改签。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）在车票预售期内且有运输能力的前提下，旅客仅可办理一次改签手续，不办理发到站变更。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）办理改签应不晚于车票指定的日期、车次开车前，但发站为香港西九龙站的车票应不晚于开车前30分钟。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）办理改签时，改签后的车票票价高于原车票票价时，补收差额；低于原车票票价时，退还差额。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）改签方式。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. 使用非现金支付方式购票且未换取报销凭证的，可自行登录12306网站或在车站指定售票窗口办理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. 使用现金支付方式购票或已换取报销凭证的，应在车站指定售票窗口办理。通过港铁公司代售点购票且未换取报销凭证的，还可在原代售点办理改签。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）改签后的车票不得退票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）已换取报销凭证的，改签时须交回报销凭证。改签后，可换取新票的报销凭证。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十三条 跨境车票退票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）办理退票应不晚于车票指定的日期、车次开车前，但发站为香港西九龙站的车票应不晚于开车前30分钟。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）退票方式。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. 使用非现金支付方式购票且未换取报销凭证的，可自行登录12306网站或在车站指定售票窗口办理，车票退票款按原支付方式退回。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. 使用现金支付方式购票或已换取报销凭证的，应在车站指定售票窗口办理退票；也可先行登录12306网站办理退票手续，并自办理之日起180日以内，凭购票时所使用的乘车人身份证件，到车站指定窗口办理退款手续。通过港铁公司代售点购票且未换取报销凭证的，还可在原代售点办理退票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）已换取报销凭证的，退票时须交回报销凭证。退票后如需退票费报销凭证的，可自办理之日起180日以内，凭购票时所使用的乘车人身份证件到车站指定售票窗口、自动售票机换取。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）退票费核收标准: 在车票开车时间前48小时内办理退票的，按车票票价的50%计算；在车票开车时间前48小时至第7天的，按车票票价的30%计算；在车票开车时间前8天及以上的，按车票票价的5%计算。退票费按元计算，不足一元的部分舍去免收。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十四条 列车设备条件变化的处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 因列车换型等铁路责任或自然灾害导致旅客持高等级席位乘坐低等级席位时，由列车长编制客运记录交旅客下车站，退还票价差额。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十五条 旅客因伤、病不能继续旅行的处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客开始旅行后不能退票。但旅客因伤、病不能继续旅行时，经站、车核实，可在下车后30日以内到下车站办理退票退还已收票款与已乘区间票款差额，并收取应退票款50%的退票费。同行人同样办理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十六条 误售、误购、误乘、误降的处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）在车站售票窗口发生旅客车票误售、误购时，旅客当场提出的，车站换发新票，需退还票价差额时，不收退票费。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 铁路运输企业责任导致的误售应为旅客免费办理退票或换发新票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）发生误乘、误降时，旅客应向站、车工作人员提出。列车长应编制客运记录交前方停车站。车站应开具客运记录指定最近列车免费送至正当到站。免费送回区段，旅客只可乘坐二等座车厢，不得中途下车。如中途下车，对往返乘车的免费区间，按返程列车等级席别核收票款。旅客如在香港西九龙站到站后超过10分钟声称误乘、误降，均按无票处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十七条 车内变更。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）旅客在车内要求变更席别时，变更后的席别票价高于原票价时，核收票价差额；低于原票价时，票价差额不予退还。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）旅客没有在到达其有效车票上所记载的到站前提出越过原到站继续乘车的，按无票处理；到站前提出的按以下规定办理：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. 列车不办理至香港西九龙站的越站；旅客自行越站乘车至香港西九龙站，由香港西九龙站按无票处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. 香港西九龙站出发的旅客，其越站区间涉及广深港线路的，补收自车票发站至正当到站应收票款与已收票款的差额；越站区间未涉及广深港线路的，补收越站区间票款。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十八条 不符合乘车条件的处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客有下列行为时，铁路运输企业按以下规定办理并有权登记其身份信息。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）无票、 持用无效车票乘车时，补收自乘车站（不能判明时自始发站）起至到站止车票票款，加收已乘区间应补票价50%的票款。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）应买儿童票的旅客如未买票，补收儿童票款；年满14周岁的未成年人持儿童票乘车时，应补收儿童票与成年人票票价差额。成年人持儿童票乘车根据本条第（一）项按无票处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）持用低等级车票乘坐高等级席别时，除按规定补收所乘区间的票价差额外，还须加收已乘区间应补票价50%的票款。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）持减价（特惠）车票乘车但不符合减价（特惠）车票使用条件的，补收应收票价与减价（特惠）票价差额，加收已乘区间应补票价50％的票款 。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）在香港西九龙站发现上述 （一）至（四）情形的，按《香港铁路附例》收取附加费，广深港线路各站至香港西九龙站的车票，附加费为1500 港元；其他线路各站至香港西九龙站的车票，附加费为3000港元；不能判明时按其他线路各站至香港西九龙站计算。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第十九条 旅客违规乘车且拒绝支付按本规则可征收款项的处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 遇旅客违规乘车且拒绝支付按本规则可征收款项时，列车长应编制客运记录并将旅客交前方停车站处理。如旅客在香港西九龙站拒绝支付该款项时，港铁公司有权按《香港铁路附例》进行检控。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十条 旅客在香港西九龙站无法完成出入境手续的处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）旅客无法完成内地出境或香港入境手续时，由车站工作人员协助旅客乘坐就近列车返回内地车站，可在香港西九龙站购票或在返程列车办理补票。旅客自行在12306网站购票的，站、车工作人员应予以核查、确认。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）旅客无法完成香港出境或内地入境手续时，未使用的车票按本规则相关规定办理。</p>
+			<p id="point1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十一条 携带品范围。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）旅客携带品由自己负责看管，并妥善放置，不得影响公共空间使用和安全。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）每位旅客免费携带品重量和规格: 成年人20千克；儿童 （含免费乘车儿童）10千克；外交人员35千克。每件物品外部尺寸长、宽、高之和不超过130厘米。不办理行李托运。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 使用行动辅助设备的老人、幼童、病人、残疾人士、孕妇等旅客旅行时代步的折叠式轮椅，以及随行婴儿使用的折叠婴儿车，可免费携带并不计入上述范围。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）旅客可携带导盲犬进站乘车，犬只应系上牵引链，佩戴导盲鞍，接受安全检查。旅客应出示购票时所使用的有效身份证件、残疾人证、导盲犬工作证（载有导盲犬使用者信息，盖有内地公安部门或中国残疾人联合会公章，或带有国际导盲犬联盟 “IGDF”标识,或双方铁路运输企业认可并公布的证件）、动物健康免疫证明。旅客携带导盲犬须符合内地与香港进出口检疫规定和相关铁路规定，并保证其他旅客的安全和车内的清洁卫生。导盲犬的照料、喂养和所需饲料，均由携带人自理。导盲犬对铁路或第三者造成损害时，由携带人负责赔偿。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）下列物品禁止、限制带入车内。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. 本规则禁止和限制携带的物品（见附件1）。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. 未使用纸箱等硬质包装物妥善包装完整的自行车、带有自动力的轮式代步工具（电动轮椅除外）、平衡车。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）除轮椅外，旅客携带的轮式交通工具不得在车站、列车内使用。旅客在站台和车上使用轮椅时，应采取人力助力形式，不得使用自动力。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十二条 携带品超过规定范围的处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）车上发现旅客携带的物品超重、超大时，须指定位置摆放，由列车长编制客运记录交旅客到站处理，对超过免费重量的物品，其超重部分按每千克20元核收运费，不足1千克按1千克计算。对不可分拆的整件超重、超大物品，按该件全部重量核收运费。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）列车发现旅客已将前述第二十一条第（四）项规定的禁止、限制携带的物品带入车内时，均交由前方停车站处理。如前方停车站为香港西九龙站，按港铁公司适用的规定处理；如前方停车站为内地车站，按国铁集团适用的规定处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十三条 旅客遗失物品的处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 车上发现的旅客遗失物品应设法归还失主。如旅客已经下车，列车长应编制客运记录，注明品名、件数等移交下车站；不能判明时，移交列车前方停车站或终到站。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 香港西九龙站按港铁公司适用的规定、内地车站按国铁集团适用的规定妥善保管、正确交付旅客遗失物品，并妥善处理无人认领的旅客遗失物品。鲜活易腐物品和生鲜食品不予保管。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客的遗失物品保管期为30日。旅客可向车站查询遗失物品情况，办理认领手续。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十四条 旅客损坏车内设备或物品的处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客损坏车内设备或物品应负赔偿责任，由列车长编制客运记录连同责任人交旅客到站处理，车站工作人员按照车辆所属方提供的价格向旅客核收赔偿费用。</p>
+			<h2 style="text-align: center;">第三章 实名制管理</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十五条 实名制车票须凭乘车人有效身份证件购买，旅客进站、乘车时，须出示购票时所使用的有效身份证件。票、证、人一致方可进站、乘车。票、证、人不一致按无票处理。乘车人须接受铁路运输企业的查验，并确认出入境证件及签注有效。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十六条 一张有效身份证件仅限购买一张同一乘车日期同一车次的实名制车票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十七条 实名制有效身份证件包括: 中华人民共和国居民身份证、中华人民共和国港澳居民居住证、中华人民共和国台湾居民居住证、中华人民共和国外国人永久居留身份证 港澳居民来往内地通行证、中华人民共和国往来港澳通行证、台湾居民来往大陆通行证、符合中华人民共和国规定可使用的有效护照和上述证件发证机构发放的临时身份证明。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十八条 旅客本人办理退票、改签时应提供本人的有效身份证件；由他人代办退票、改签时，除乘车人有效身份证件外，须出示代办人本人的有效身份证件。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二十九条 通过12306网站购票时，购票人应当提供真实准确的乘车人有效身份证件信息；换取报销凭证应当提供购票时使用的乘车人有效身份证件。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十条 旅客丢失电子客票购票证件的补办流程。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）在乘车前丢失电子客票购票证件。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 旅客须自行到该电子客票购票证件的发证机构办理身份证明，凭身份证明进出站、乘车。错过列车须重新购票。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）在列车上、出站检票前丢失电子客票购票证件。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. 丢失证件的旅客须主动向工作人员声明，并配合工作人员进行查验。旅客须办理补票手续，经列车工作人员核验席位使用正常或车站工作人员核验车票无出站检票记录的，开具客运记录交旅客。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.旅客应在乘车日期之日起30日以内，凭客运记录、该电子客票购票证件发证机构办理的身份证明以及后补车票，到列车的经停站退票窗口由车站工作人员核实旅客身份信息及乘车日期、车次等原票、后补车票信息，以及有购票记录、已购车票有效后，办理后补车票与原票乘车区间一致部分的退票手续。办理退票手续时，如核查丢失证件有出站记录的，后补车票不予退票；无出站记录的，办理退票时，不收退票费。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十一条 旅客应使用有效的身份证件，否则工作人员有权拒绝办理各类业务。</p>
+			<h2 style="text-align: center;">第四章 车票优惠</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十二条 铁路运输企业可推行多种优惠票，优惠票的使用及票务规则另行公布。</p>
+			<h2 style="text-align: center;">第五章 旅客人身伤害处理</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十三条 旅客在车站、列车上发生人身伤害时，应立即通知车站客运人员或列车乘务人员。在列车上发生旅客人身伤害时，由列车长交车站处理；旅客不同意在指定的停车站下车处理时，须填写并签署免责同意书（见附件2）。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十四条 旅客可于发生人身伤害次日起3年内向铁路运输企业提出赔偿请求。铁路运输企业接到赔偿请求后应尽快答复赔偿要求人。</p>
+			<h2 style="text-align: center;">第六章 晚点及运输中断的处理</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十五条 因铁路责任、自然灾害等影响铁路运营导致列车晚点，旅客在车票发站提出取消旅行的，列车实际开车前可退还全部票款，不收退票费。旅客在晚点列车晚点信息公布前已购联程车票，可一并办理退票，不收退票费。旅客分别办理联程车票退票的，按本规则第十三条相关规定处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十六条 因铁路责任、自然灾害等影响铁路运营导致运输中断，列车全程停运、中途停运 中途折返、绕道运输时，在30日以内按以下规定处理。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）在发站。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. 旅客要求退票时，退还全部票款。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. 铁路运输企业利用其他列车或安排原列车折返发站时，退还全部票款。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）旅客在中途站终止旅行时，如乘坐的是终到香港西九龙站的列车，铁路运输企业退还未乘区间票款；如乘坐的是香港西九龙站的始发列车，铁路运输企业退还已收票款与已乘区间票款的差额。但因违规加收的部分和已使用至到站的车票不退。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）在到站，铁路运输企业利用其他列车将旅客运送至到站时，旅客票款不予退还。但重新安排的列车等级、席别高于旅客原票列车等级、席别时，票价差额不再补收；低于旅客原票列车等级、席别时，退还变更区间票价差额。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）旅客在停运列车停运信息公布前已购联程车票，可在联程车票开车前一并办理退票，不收退票费。旅客分别办理联程车票退票的，按本规则第十三条相关规定处理。</p>
+			<h2 style="text-align: center;">第七章 附则</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十七条 本规则授权国铁集团客运部负责具体解释工作。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第三十八条 本规则自2026年4月1日起施行。《国铁集团关于重新公布〔广深港高速铁路跨境旅客运输组织规则〕的通知》（铁客〔2022〕169号）同时废止。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 附件1：1.禁止和限制携带的物品目录</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.免责同意书</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 附件1</p>
+			<h1 style="text-align: center;" id="point2">禁止和限制携带的物品目录</h1>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+			<h2 style="text-align: center;">一、禁止随身携带的物品</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）枪支、子弹类（含主要零部件）。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. 军用枪、公务用枪：手枪、冲锋枪、步枪、机枪、防暴枪等以及各类配用子弹。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. 民用枪：气枪、猎枪、运动枪、麻醉注射枪等以及各类配用子弹。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. 道具枪、发令枪、钢珠枪、催泪枪、电击枪等以及各类配用子弹。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4．上述物品的样品、仿制品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）爆炸物品类。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. 弹药：炸弹、照明弹、燃烧弹、烟幕弹、信号弹、催泪弹、毒气弹、手雷、地雷、手榴弹等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. 爆破器材：炸药、雷管、导火索、导爆索、震源弹、爆破剂等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. 烟火制品：礼花弹、烟花（含冷光烟花）、鞭炮、摔炮、拉炮、砸炮等各类烟花爆竹，发令纸、黑火药、烟火药、引火线，以及“钢丝棉烟花”等具有烟花效果的制品等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. 上述物品的仿制品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）管制器具。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1．管制刀具：根据《管制刀具分类与安全要求》（GA 1334-2016），认定为管制刀具的专用刀具（匕首、刺刀、佩刀、三棱刮刀、猎刀、加长弹簧折叠刀等）、特殊厨用刀具（加长砍骨刀、加长西瓜刀、加长分刀、剔骨刀、屠宰刀、多用刀等）、开刃的武术与工艺礼品刀具（武术刀、剑等），以及其他管制刀具（超过GA/T 1335《日用刀具分类与安全要求》规定的尺寸规格限制要求的各种刀具）。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2．其他器具：警棍、军用或者警用匕首、催泪器、电击器、防卫器、弩、弩箭等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）生活器具。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1．锐器：菜刀、水果刀、剪刀、美工刀、雕刻刀、裁纸刀等日用刀具（刀刃长度超过60毫米）；手术刀、刨刀、铣刀等专业刀具；刀、矛、戟等器械。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2．钝器：棍棒、球棒、桌球杆1．锐器：菜刀、水果刀、剪刀、美工刀、雕刻刀、裁纸刀等日用刀具（刀刃长度超过60毫米）；手术刀、刨刀、铣刀等专业刀具；刀、矛、戟等器械、曲棍球杆等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. 工具农具：钻机、凿、锥、锯、斧头、焊枪、射钉枪、锤、冰镐、耙、铁锹、镢头、锄头、农用叉、镰刀、铡刀等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. 其他：反曲弓、复合弓等非机械弓箭类器材，消防灭火枪，飞镖、弹弓，超过50毫升的防身喷剂等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）易燃易爆物品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1．压缩气体和液化气体：氢气、甲烷、乙烷、环氧乙烷、二甲醚、丁烷、天然气、乙烯、氯乙烯、丙烯、乙炔（溶于介质的）、一氧化碳、液化石油气、氟利昂、氧气（供病人吸氧的袋装医用氧气除外）、水煤气等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. 易燃液体：汽油（包括甲醇汽油、乙醇汽油）、煤油、柴油、苯、酒精、酒精体积百分含量大于70%或者标志不清晰的酒类饮品、1,2-环氧丙烷、二硫化碳、甲醇、丙酮、乙醚、油漆、稀料、松香油等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. 易燃固体：红磷、闪光粉、固体酒精、赛璐珞、发泡剂H、偶氮二异庚腈等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. 自燃物品：黄磷、白磷、硝化纤维（含胶片）、油纸及其制品等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5．遇湿易燃物品：金属钾、钠、锂、碳化钙（电石）、镁铝粉等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6. 氧化剂和有机过氧化物：高锰酸钾、氯酸钾、过氧化钠、过氧化钾、过氧化铅、过醋酸、双氧水、氯酸钠、硝酸铵等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）毒害品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 氰化物、砒霜、硒粉、苯酚、氯、氨、异氰酸甲酯、硫酸二甲酯等高毒化学品以及灭鼠药、杀虫剂、除草剂等剧毒农药。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （七）腐蚀性物品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 硫酸、盐酸、硝酸、氢氧化钠、氢氧化钾、有液蓄电池（含氢氧化钾固体、注有酸液或碱液的）、汞（水银）等。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （八）放射性物品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 指含有放射性核素，并且其活度和比活度均高于国家规定豁免值的物品，详见《放射性物品分类和名录（试行）》。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （九）感染性物质。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 包括可感染人类的高致病性病原微生物菌（毒）种和感染性样本，详见《人间传染的病原微生物名录》中危害程度分类为第一类、第二类的病原微生物。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （十）其他危害列车运行安全的物品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.可能干扰列车信号的强磁化物。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.硫化氢及有强烈刺激性气味或者有恶臭等异味的物。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.容易引起旅客恐慌情绪的物品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.不能判明性质但可能具有危险性的物品。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （十一）法律、行政法规、规章规定的其他禁止携带、运输的物品。</p>
+			<h2 style="text-align: center;">二、限制随身携带的物品</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （一）包装密封完好、标志清晰且酒精体积百分含量大于或者等于24%、小于或者等于70%的酒类饮品累计不超过3000毫升。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （二）香水、花露水、喷雾、凝胶等含易燃成分的非自喷压力容器日用品，单体容器容积不超过100毫升，每种限带1件。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （三）指甲油、去光剂累计不超过50毫升。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （四）冷烫精、染发剂、摩丝、发胶、杀虫剂、空气清新剂等自喷压力容器，单体容器容积不超过150毫升，每种限带1件，累计不超过600毫升。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （五）安全火柴不超过2小盒，普通打火机不超过2个。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （六）标志清晰的充电宝、锂电池，单块额定能量不超过100Wh，含有锂电池的电动轮椅除外。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （七）活动物限持工作证明的导盲犬及作为食品的鱼、虾、蟹、贝、软体类水产动物，后者必须以封闭箱体包装。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （八）法律、行政法规、规章规定的其他限制携带、运输的物品。</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+			<h1 style="text-align: center;">附件2：免责同意书</h1>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 本人______（身份证明文件名称：  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ，证件号码：____________）特此申明，本人/本人为___________（当事人，身份证明文件名称：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     ，证件号码    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ）的监护人（勾选适用者）：</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不接受/不接受让当事人前往___________站／车安排的___________接受救治，选择到___________接受救治
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不接受/不接受让当事人前往___________站／车安排的___________接受救治，选择继续旅程
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不接受/不接受让当事人前往___________站／车安排的___________接受救治，选择终止旅程
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 其他___________________________________________________</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 本人声明，本人清楚作出上述选择可能给本人/当事人带来的全部风险。本人确认本人签署此文件即表示：本人/及当事人同意免除铁路运输企业及其代理人因本人作出上述选择而可能导致的一切义务和责任，放弃向铁路运输企业要求任何损害赔偿或提起其他一切诉讼索赔的权利。</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 当事人/监护人 签名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期：</p>
+		</div>
+
+	</div>
+	<!--右侧主体 结束-->
+</div>
+<!--页面主体  结束-->
+
+<!--页面底部  开始-->
+<div class="footer">
+</div>
+<!--页面底部  结束-->
+</body>
+<script th:src="${#httpServletRequest.contextPath}+'/resources/js/help/saleTicketMeans.js?version=20221231'" type="text/javascript"
+		src="../resources/js/help/saleTicketMeans.js" ></script>
+
+</html>

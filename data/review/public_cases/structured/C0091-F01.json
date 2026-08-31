@@ -1,0 +1,17 @@
+{
+  "case_id": "C0091-F01",
+  "real_case_id": "RC0091",
+  "text": "我下载一款名为京东.J.R的贷款APP，看到额度高、利息低的宣传后注册申请贷款。平台提示贷款账号异常，要求我向对方所称的银保监会账户转账进行验证。",
+  "label": "fraud",
+  "fraud_type": "loan_or_credit",
+  "evidence": [
+    "名为京东.J.R的贷款APP",
+    "额度高、利息低",
+    "贷款账号异常",
+    "向对方所称的银保监会账户转账进行验证"
+  ],
+  "source_id": "SRC0020",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

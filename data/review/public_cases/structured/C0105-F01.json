@@ -1,0 +1,18 @@
+{
+  "case_id": "C0105-F01",
+  "real_case_id": "RC0105",
+  "text": "我在朋友圈看到外汇投资高回报动态，对方称专业技术团队能获取精准涨跌数据，由程序员老师带领操作，可以百分之百盈利，只收取手续费。对方随后发来投资软件，要求我首次充值15万元。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "获取精准涨跌数据",
+    "程序员老师带领操作",
+    "百分之百盈利",
+    "只收取手续费",
+    "首次充值15万元"
+  ],
+  "source_id": "SRC0021",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

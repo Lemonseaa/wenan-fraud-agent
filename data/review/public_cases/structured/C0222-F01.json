@@ -1,0 +1,17 @@
+{
+  "case_id": "C0222-F01",
+  "real_case_id": "RC0222",
+  "text": "我接到自称医保、社保或通信运营商工作人员的电话，对方称我的账户或手机号涉案，又把电话转给自称公安、检察机关的人。对方询问家庭、资金和行踪信息，展示逮捕令样式材料，最后要求我把钱转入指定账户调查资金流向或缴纳保证金。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "账户或手机号涉案",
+    "自称公安、检察机关的人",
+    "逮捕令样式材料",
+    "转入指定账户调查资金流向或缴纳保证金"
+  ],
+  "source_id": "SRC0032",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

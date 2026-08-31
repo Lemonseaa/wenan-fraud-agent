@@ -1,0 +1,17 @@
+{
+  "case_id": "C0194-F01",
+  "real_case_id": "RC0194",
+  "text": "我接到陌生电话，对方称可以退还中级职称评审费，但我从未办理过这项评审。对方随后发来软件下载链接，并称需要通过刷单办理退费，要求我微信扫码或向银行卡转账。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "从未办理过这项评审",
+    "软件下载链接",
+    "通过刷单办理退费",
+    "微信扫码或向银行卡转账"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,1 @@
+{"case_id":"C0240-F02","real_case_id":"RC0240","text":"办理前，我确认了三点：登录国家社会保险公共服务平台；在“待遇资格认证”栏目选择人脸识别认证；使用掌上12333或电子社保卡办理。我准备按这些信息继续办理。","label":"normal","fraud_type":"normal","evidence":["登录国家社会保险公共服务平台","在“待遇资格认证”栏目选择人脸识别认证","使用掌上12333或电子社保卡办理"],"source_id":"SRC0043","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

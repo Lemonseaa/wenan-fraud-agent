@@ -1,0 +1,1 @@
+{"case_id":"C0072-F02","real_case_id":"RC0072","text":"我接到自动语音电话询问贷款需求，表达意愿后有人添加微信并发来一个贷款APP链接。","label":"insufficient","fraud_type":"insufficient","evidence":["自动语音电话询问贷款需求","添加微信并发来一个贷款APP链接"],"source_id":"SRC0017","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

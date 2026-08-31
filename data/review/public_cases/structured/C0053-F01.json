@@ -1,0 +1,18 @@
+{
+  "case_id": "C0053-F01",
+  "real_case_id": "RC0053",
+  "text": "我在肿瘤医院附近遇到一名自称病友的人，对方说在某诊所治疗后病情好转，并介绍我去该诊所就诊。之后有人通过微信自称医生或医生助理，以复诊和跟踪治疗为由，让我继续付款购买价格较高的中药。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "在肿瘤医院附近遇到一名自称病友的人",
+    "说在某诊所治疗后病情好转",
+    "介绍我去该诊所就诊",
+    "通过微信自称医生或医生助理",
+    "继续付款购买价格较高的中药"
+  ],
+  "source_id": "SRC0014",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

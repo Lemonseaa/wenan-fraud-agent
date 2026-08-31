@@ -1,0 +1,18 @@
+{
+  "case_id": "C0210-F01",
+  "real_case_id": "RC0210",
+  "text": "我休息时收到工友QQ发来的消息，对方称急需借3万元周转，并发来一个支付宝账户让我转账。目前我没有通过电话或当面方式确认是工友本人，也没有核验收款账户关系。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "工友QQ发来的消息",
+    "借3万元周转",
+    "支付宝账户",
+    "没有通过电话或当面方式确认",
+    "没有核验收款账户关系"
+  ],
+  "source_id": "SRC0031",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

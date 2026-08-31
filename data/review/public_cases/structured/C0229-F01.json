@@ -1,0 +1,18 @@
+{
+  "case_id": "C0229-F01",
+  "real_case_id": "RC0229",
+  "text": "我接触到一个通过会员网络推广的“基金返现”项目。项目要求每份缴纳600元，并宣称六天后，每投入600元每天都可返还50元，组织人员正在向会员收取费用。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "基金返现",
+    "每份缴纳600元",
+    "六天后",
+    "每天都可返还50元",
+    "向会员收取费用"
+  ],
+  "source_id": "SRC0034",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

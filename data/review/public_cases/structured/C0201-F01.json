@@ -1,0 +1,16 @@
+{
+  "case_id": "C0201-F01",
+  "real_case_id": "RC0201",
+  "text": "我接到陌生视频电话，对方自称网络公司人员，称我妻子的手机卡涉嫌诈骗，随后把电话转给一名自称公安人员的人。该人又称我名下银行卡涉案，要求把卡内资金转到“安全账户”核查。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "自称公安人员",
+    "银行卡涉案",
+    "卡内资金转到“安全账户”"
+  ],
+  "source_id": "SRC0030",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

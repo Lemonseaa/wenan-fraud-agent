@@ -1,0 +1,18 @@
+{
+  "case_id": "C0097-F01",
+  "real_case_id": "RC0097",
+  "text": "我在办公室接到自称公安机关的电话，对方称我涉嫌特大洗钱案并出示网络逮捕令，又提供一个对方所称的最高人民检察院网站，要求下载资金清算软件。软件要求输入公司账户账号和支付密码、插入对公账户U盾，并以保密为由关闭屏幕。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "涉嫌特大洗钱案",
+    "网络逮捕令",
+    "对方所称的最高人民检察院网站",
+    "输入公司账户账号和支付密码",
+    "插入对公账户U盾"
+  ],
+  "source_id": "SRC0021",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

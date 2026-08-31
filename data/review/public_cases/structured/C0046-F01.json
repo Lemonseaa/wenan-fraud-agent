@@ -1,0 +1,12 @@
+{
+  "case_id": "C0046-F01",
+  "real_case_id": "RC0046",
+  "text": "我在微信群和直播间听人讲解股票、虚拟币知识，对方推荐我到一个指定平台投资。我投入资金后成功进行了一次小额提现，对方据此推动我继续追加更多资金。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": ["微信群和直播间听人讲解股票、虚拟币知识", "推荐我到一个指定平台投资", "成功进行了一次小额提现", "推动我继续追加更多资金"],
+  "source_id": "SRC0012",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

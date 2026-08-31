@@ -1,0 +1,1 @@
+{"case_id":"C0241-F05","real_case_id":"RC0241","text":"简要情况是：在成都大学官网看到学费通知；用本人学号登录并核对收费项目和金额；在同一平台查询并下载电子票据。我想确认这是否属于正常办理方式。","label":"normal","fraud_type":"normal","evidence":["在成都大学官网看到学费通知","用本人学号登录并核对收费项目和金额","在同一平台查询并下载电子票据"],"source_id":"SRC0044","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

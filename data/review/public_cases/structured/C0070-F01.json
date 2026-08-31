@@ -1,0 +1,18 @@
+{
+  "case_id": "C0070-F01",
+  "real_case_id": "RC0070",
+  "text": "我收到一个写有本人姓名、手机号码和地址的快递，但不记得购买过对应商品，也找不到已有订单。包裹标注为足浴包，要求货到付款69元，付款后才能签收。",
+  "label": "fraud",
+  "fraud_type": "other_fraud",
+  "evidence": [
+    "写有本人姓名、手机号码和地址的快递",
+    "不记得购买过对应商品",
+    "找不到已有订单",
+    "要求货到付款69元",
+    "付款后才能签收"
+  ],
+  "source_id": "SRC0017",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0175-F01",
+  "real_case_id": "RC0175",
+  "text": "我收到一名自称现役军人的人发来的交友短信，按其要求下载社交APP并发展为网恋。对方随后带我在一个投资平台操作，称充值要先购买USDT，还安排我用现金换取虚拟币并提供钱包地址。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称现役军人的人",
+    "发展为网恋",
+    "投资平台操作",
+    "用现金换取虚拟币",
+    "提供钱包地址"
+  ],
+  "source_id": "SRC0027",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

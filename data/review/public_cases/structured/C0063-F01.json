@@ -1,0 +1,18 @@
+{
+  "case_id": "C0063-F01",
+  "real_case_id": "RC0063",
+  "text": "我通过免费荐股内容进入一个股票群，群内有老师、助理和普通股民账号，老师授课并给出交易建议，其他账号发送盈利截图。对方还要求我发送交易截图以免会员费并了解资金量。现在老师声称一只指定股票将连续涨停，要求我在集合竞价不可撤销阶段按指定高价买入。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "群内有老师、助理和普通股民账号",
+    "其他账号发送盈利截图",
+    "要求我发送交易截图以免会员费并了解资金量",
+    "声称一只指定股票将连续涨停",
+    "在集合竞价不可撤销阶段按指定高价买入"
+  ],
+  "source_id": "SRC0016",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

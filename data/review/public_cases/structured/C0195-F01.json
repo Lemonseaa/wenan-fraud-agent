@@ -1,0 +1,18 @@
+{
+  "case_id": "C0195-F01",
+  "real_case_id": "RC0195",
+  "text": "我在快手认识一名自称部队会计的男子，对方称能带我炒黄金赚钱，并发来链接让我下载投资软件。操作过程中，对方称我出现失误，要求我取出现金交给其安排的陌生人处理。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "自称部队会计",
+    "炒黄金赚钱",
+    "下载投资软件",
+    "出现失误",
+    "取出现金交给其安排的陌生人"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

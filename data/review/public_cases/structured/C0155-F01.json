@@ -1,0 +1,18 @@
+{
+  "case_id": "C0155-F01",
+  "real_case_id": "RC0155",
+  "text": "我通过短视频平台认识一名自称张婷婷的网友，双方在线发展为恋爱关系。对方称经济困难，向我提出借款，并承诺以后会向我的银行卡转入一笔较大款项偿还。我们尚未线下见面，也没有核验其真实身份和困难证明。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "经济困难",
+    "提出借款",
+    "转入一笔较大款项偿还",
+    "尚未线下见面",
+    "没有核验其真实身份和困难证明"
+  ],
+  "source_id": "SRC0025",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

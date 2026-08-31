@@ -1,0 +1,1 @@
+{"case_id":"C0071-F02","real_case_id":"RC0071","text":"有人自称券商旗下代理，向我介绍一个高杠杆股票配资平台，并发送了行情分析和其他用户的交易记录。对方邀请我先注册查看功能。","label":"insufficient","fraud_type":"insufficient","evidence":["自称券商旗下代理","高杠杆股票配资平台","邀请我先注册查看功能"],"source_id":"SRC0017","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

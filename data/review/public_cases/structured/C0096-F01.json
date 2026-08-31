@@ -1,0 +1,18 @@
+{
+  "case_id": "C0096-F01",
+  "real_case_id": "RC0096",
+  "text": "我接到自称平台客服的陌生电话，对方能准确说出我的部分个人信息，称名下存在校园贷记录，不消除会影响征信。对方要求我从多个网贷平台借款，再把借款转到其提供的账户。",
+  "label": "fraud",
+  "fraud_type": "loan_or_credit",
+  "evidence": [
+    "能准确说出我的部分个人信息",
+    "存在校园贷记录",
+    "不消除会影响征信",
+    "从多个网贷平台借款",
+    "把借款转到其提供的账户"
+  ],
+  "source_id": "SRC0020",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

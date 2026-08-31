@@ -1,0 +1,17 @@
+{
+  "case_id": "C0238-F01",
+  "real_case_id": "RC0238",
+  "text": "我在京东消费者帮助中心核对退款说明，原订单使用储蓄卡在线支付，页面显示相应退款会退回原支付卡，并分别列出了京东退款和银行退款的一般处理周期。我准备按京东平台的退款说明办理。",
+  "label": "normal",
+  "fraud_type": "normal",
+  "evidence": [
+    "在京东消费者帮助中心核对退款说明",
+    "原订单使用储蓄卡在线支付",
+    "退款会退回原支付卡",
+    "京东退款和银行退款的一般处理周期"
+  ],
+  "source_id": "SRC0041",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

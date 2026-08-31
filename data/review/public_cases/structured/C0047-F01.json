@@ -1,0 +1,12 @@
+{
+  "case_id": "C0047-F01",
+  "real_case_id": "RC0047",
+  "text": "我通过荐股内容认识了一些人并逐步建立信任。对方把我引导到一个期货平台，多个微信账号分别以老师、助理和普通参与者身份交流，共同推动我在平台投资。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": ["通过荐股内容认识了一些人", "引导到一个期货平台", "多个微信账号分别以老师、助理和普通参与者身份交流", "共同推动我在平台投资"],
+  "source_id": "SRC0012",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

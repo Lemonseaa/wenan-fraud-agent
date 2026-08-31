@@ -1,0 +1,17 @@
+{
+  "case_id": "C0224-F01",
+  "real_case_id": "RC0224",
+  "text": "我在婚恋直播平台与一名普通用户通过文字、语音或视频交流。平台提示，多聊天、多视频、多送礼物可以提高亲密度并解锁联系方式；聊天和送礼需要充值金币。目前没有对方身份、平台匹配机制和解锁规则的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "文字、语音或视频交流",
+    "送礼物可以提高亲密度并解锁联系方式",
+    "充值金币",
+    "没有对方身份、平台匹配机制和解锁规则的核验结果"
+  ],
+  "source_id": "SRC0033",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

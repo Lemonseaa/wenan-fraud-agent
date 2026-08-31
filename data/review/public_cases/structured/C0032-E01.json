@@ -1,0 +1,1 @@
+{"case_id":"C0032-E01","real_case_id":"RC0032","text":"我通过宣传接触到一个大宗商品策略项目，随后被引导进入微信群和直播间。群里不断展示其他人的盈利截图，对方现在要求我到其推荐的期货平台开户并投入资金交易。","label":"fraud","fraud_type":"fake_investment","evidence":["大宗商品策略项目","进入微信群和直播间","展示其他人的盈利截图","推荐的期货平台开户并投入资金交易"],"source_id":"SRC0010","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

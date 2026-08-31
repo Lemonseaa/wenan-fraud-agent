@@ -1,0 +1,17 @@
+{
+  "case_id": "C0214-F01",
+  "real_case_id": "RC0214",
+  "text": "一个使用年轻女性形象的账号在社交软件添加我，聊天中讲述困难经历或兼职代购，双方逐渐建立感情。之后对方以家人生病或参加培训缺钱为由，请求我提供资金帮助。目前没有其身份、困难材料和收款关系的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "年轻女性形象的账号",
+    "逐渐建立感情",
+    "家人生病或参加培训缺钱",
+    "没有其身份、困难材料和收款关系的核验结果"
+  ],
+  "source_id": "SRC0032",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

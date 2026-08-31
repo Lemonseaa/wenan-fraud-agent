@@ -1,0 +1,17 @@
+{
+  "case_id": "C0080-F01",
+  "real_case_id": "RC0080",
+  "text": "我在网络上看到UK、宝彩等赌博网站或手机应用的推广，内容引导我访问相关网络赌博平台。现有信息没有说明平台是否要求注册、充值或投注，也没有说明运营主体、支付渠道和具体规则。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "看到UK、宝彩等赌博网站或手机应用的推广",
+    "引导我访问相关网络赌博平台",
+    "没有说明平台是否要求注册、充值或投注",
+    "没有说明运营主体、支付渠道和具体规则"
+  ],
+  "source_id": "SRC0018",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

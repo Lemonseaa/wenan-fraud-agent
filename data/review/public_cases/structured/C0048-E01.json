@@ -1,0 +1,1 @@
+{"case_id":"C0048-E01","real_case_id":"RC0048","text":"我在企业服务群中联系到一名自称贷款公司工作人员的人。对方推荐我使用指定贷款APP，并说办理网络贷款前需要先缴纳会员费或保证金，随后要求我付款。","label":"fraud","fraud_type":"loan_or_credit","evidence":["企业服务群中联系到","指定贷款APP","先缴纳会员费或保证金","要求我付款"],"source_id":"SRC0012","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

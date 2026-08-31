@@ -1,0 +1,17 @@
+{
+  "case_id": "C0018-F01",
+  "real_case_id": "RC0018",
+  "text": "我在网络或微信公众号看到一则治疗疾病或脱发的广告，留下电话或添加微信后，对方自称是名医、医疗机构专业人员的亲属或学生，通过电话或微信为我问诊。他们让我发送舌苔或手指甲照片，之后又以健康顾问的身份继续沟通，并推荐我购买一种声称有相应功效的产品。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "在网络或微信公众号看到一则治疗疾病或脱发的广告",
+    "对方自称是名医、医疗机构专业人员的亲属或学生",
+    "通过电话或微信为我问诊",
+    "推荐我购买一种声称有相应功效的产品"
+  ],
+  "source_id": "SRC0008",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

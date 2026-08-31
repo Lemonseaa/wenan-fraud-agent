@@ -1,0 +1,18 @@
+{
+  "case_id": "C0216-F01",
+  "real_case_id": "RC0216",
+  "text": "一名陌生微信好友在朋友圈发布公司开业充值返现活动，主动称我被抽为幸运客户，并展示他人返现成功截图，随后发来二维码要求我扫码转账参加。目前没有公司、活动规则和收款码归属的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "充值返现活动",
+    "幸运客户",
+    "返现成功截图",
+    "二维码要求我扫码转账",
+    "没有公司、活动规则和收款码归属的核验结果"
+  ],
+  "source_id": "SRC0032",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

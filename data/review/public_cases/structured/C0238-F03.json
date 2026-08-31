@@ -1,0 +1,1 @@
+{"case_id":"C0238-F03","real_case_id":"RC0238","text":"我准备按这个流程办理，目前已经核对：在京东消费者帮助中心核对退款说明；退款会退回原支付卡；京东退款和银行退款的一般处理周期。后续只按上述流程操作。","label":"normal","fraud_type":"normal","evidence":["在京东消费者帮助中心核对退款说明","退款会退回原支付卡","京东退款和银行退款的一般处理周期"],"source_id":"SRC0041","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

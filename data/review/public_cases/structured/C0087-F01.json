@@ -1,0 +1,18 @@
+{
+  "case_id": "C0087-F01",
+  "real_case_id": "RC0087",
+  "text": "我是公司财务，之前收到税务稽查邮件并点击过其中链接。十多天后，一个使用公司领导姓名和头像的微信账号以领导口吻联系我，要求向指定账户支付公司款项，但付款指令没有经过其他既有审批或当面确认。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "收到税务稽查邮件并点击过其中链接",
+    "使用公司领导姓名和头像的微信账号",
+    "以领导口吻联系我",
+    "向指定账户支付公司款项",
+    "没有经过其他既有审批或当面确认"
+  ],
+  "source_id": "SRC0019",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

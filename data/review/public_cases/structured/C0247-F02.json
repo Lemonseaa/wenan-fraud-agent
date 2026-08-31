@@ -1,0 +1,1 @@
+{"case_id":"C0247-F02","real_case_id":"RC0247","text":"办理前，我确认了三点：本人登录“交管12123”APP；从业务中心进入“驾驶证补换领”；从首页的“网办进度”查询办理状态。我准备按这些信息继续办理。","label":"normal","fraud_type":"normal","evidence":["本人登录“交管12123”APP","从业务中心进入“驾驶证补换领”","从首页的“网办进度”查询办理状态"],"source_id":"SRC0050","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

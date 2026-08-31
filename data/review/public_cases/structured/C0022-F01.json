@@ -1,0 +1,17 @@
+{
+  "case_id": "C0022-F01",
+  "real_case_id": "RC0022",
+  "text": "有人通过微信或QQ把我拉进一个投资聊天群。群里有人自称指导老师，其他成员则以投资股民身份交流，还不断发布盈利截图，说跟随老师指导就能获利。现在，他们引导我向群内推荐的网络投资平台转账。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "自称指导老师",
+    "其他成员则以投资股民身份交流",
+    "不断发布盈利截图",
+    "引导我向群内推荐的网络投资平台转账"
+  ],
+  "source_id": "SRC0009",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

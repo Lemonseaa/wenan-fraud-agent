@@ -1,0 +1,1 @@
+{"case_id":"C0077-F02","real_case_id":"RC0077","text":"我在微信群和直播间听取股票、虚拟币知识讲解，对方推荐使用一款投资平台。我按推荐完成过小额操作，账户显示盈利并成功提取过少量资金。","label":"insufficient","fraud_type":"insufficient","evidence":["微信群和直播间听取股票、虚拟币知识讲解","推荐使用一款投资平台","账户显示盈利并成功提取过少量资金"],"source_id":"SRC0018","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

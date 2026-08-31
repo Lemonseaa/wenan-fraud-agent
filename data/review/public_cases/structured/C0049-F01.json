@@ -1,0 +1,12 @@
+{
+  "case_id": "C0049-F01",
+  "real_case_id": "RC0049",
+  "text": "我在朋友圈和微信群认识一名展示事业有成生活的男子。对方通过持续的情感交流逐步取得我的信任，之后推荐一个投资平台，并引导我在平台充值。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": ["展示事业有成生活的男子", "持续的情感交流逐步取得我的信任", "推荐一个投资平台", "引导我在平台充值"],
+  "source_id": "SRC0012",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

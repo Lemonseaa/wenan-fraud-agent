@@ -1,0 +1,1 @@
+{"case_id":"C0020-E01","real_case_id":"RC0020","text":"一名行业研究顾问向我推荐了一个电子交易平台，称可以提供内幕交易信息。我进入平台做了几次小额交易，账户上显示盈利。现在对方正在推动我追加更大金额的投资。","label":"fraud","fraud_type":"fake_investment","evidence":["一名行业研究顾问","提供内幕交易信息","账户上显示盈利","推动我追加更大金额的投资"],"source_id":"SRC0008","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

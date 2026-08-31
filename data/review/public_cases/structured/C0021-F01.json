@@ -1,0 +1,16 @@
+{
+  "case_id": "C0021-F01",
+  "real_case_id": "RC0021",
+  "text": "我在微信上和一名自称可以上门提供服务的女性聊天，对方逐渐取得了我的信任。之后又有人给我打电话，并发来一个二维码，要求我扫码转账付款。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "在微信上和一名自称可以上门提供服务的女性聊天",
+    "又有人给我打电话",
+    "发来一个二维码，要求我扫码转账付款"
+  ],
+  "source_id": "SRC0008",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

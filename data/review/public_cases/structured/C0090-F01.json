@@ -1,0 +1,18 @@
+{
+  "case_id": "C0090-F01",
+  "real_case_id": "RC0090",
+  "text": "我发布出售游戏账号的视频后，一名陌生买家通过QQ与我约定1650元成交。对方发来付款截图，但我的账户没有收到款项，又要求扫描截图上的二维码联系客服。客服随后让我下载会议软件、开启屏幕共享并使用银行卡进行资金查验。",
+  "label": "fraud",
+  "fraud_type": "ticket_game_virtual_goods",
+  "evidence": [
+    "发来付款截图，但我的账户没有收到款项",
+    "扫描截图上的二维码联系客服",
+    "下载会议软件",
+    "开启屏幕共享",
+    "使用银行卡进行资金查验"
+  ],
+  "source_id": "SRC0019",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

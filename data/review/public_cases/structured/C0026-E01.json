@@ -1,0 +1,1 @@
+{"case_id":"C0026-E01","real_case_id":"RC0026","text":"我在网上看到一家公司提供企业和个人融资预审服务。对方宣称与银行有合作关系，只要开通指定APP的会员，就能快速办理无抵押、无担保信用贷款或提高额度，现在要求我先缴纳会员费。","label":"fraud","fraud_type":"loan_or_credit","evidence":["企业和个人融资预审服务","与银行有合作关系","开通指定APP的会员","先缴纳会员费"],"source_id":"SRC0009","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

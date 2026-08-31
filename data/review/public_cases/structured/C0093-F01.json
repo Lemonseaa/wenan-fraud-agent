@@ -1,0 +1,18 @@
+{
+  "case_id": "C0093-F01",
+  "real_case_id": "RC0093",
+  "text": "我接到一个075开头的陌生电话，对方自称电商客服，并能说出我买过的尿不湿。对方称商品存在质量问题可以退款，但没有让我通过订单原支付渠道处理，而是指导我进行转账操作。",
+  "label": "fraud",
+  "fraud_type": "impersonated_customer_service",
+  "evidence": [
+    "075开头的陌生电话",
+    "自称电商客服",
+    "能说出我买过的尿不湿",
+    "没有让我通过订单原支付渠道处理",
+    "指导我进行转账操作"
+  ],
+  "source_id": "SRC0020",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

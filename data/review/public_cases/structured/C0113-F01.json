@@ -1,0 +1,17 @@
+{
+  "case_id": "C0113-F01",
+  "real_case_id": "RC0113",
+  "text": "我接到一个00开头的境外陌生来电，对方自称平台客服，称我误开了每月自动扣费2000元的会员。询问如何取消后，对方要求我下载屏幕共享软件，并以注销会员、解除扣费为由进行刷脸认证和银行卡核验。",
+  "label": "fraud",
+  "fraud_type": "impersonated_customer_service",
+  "evidence": [
+    "00开头的境外陌生来电",
+    "每月自动扣费2000元的会员",
+    "下载屏幕共享软件",
+    "刷脸认证和银行卡核验"
+  ],
+  "source_id": "SRC0022",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

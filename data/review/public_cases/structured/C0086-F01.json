@@ -1,0 +1,18 @@
+{
+  "case_id": "C0086-F01",
+  "real_case_id": "RC0086",
+  "text": "我在短视频平台看到约会视频，扫码下载一款约会APP并注册。客服让我挑选心仪对象，选择后把我拉入群聊，现在要求先扫码支付30元会员费。现有信息没有说明平台主体、服务协议、收款方或退款规则。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "扫码下载一款约会APP",
+    "客服让我挑选心仪对象",
+    "把我拉入群聊",
+    "先扫码支付30元会员费",
+    "没有说明平台主体、服务协议、收款方或退款规则"
+  ],
+  "source_id": "SRC0019",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

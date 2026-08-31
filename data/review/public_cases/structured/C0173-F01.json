@@ -1,0 +1,16 @@
+{
+  "case_id": "C0173-F01",
+  "real_case_id": "RC0173",
+  "text": "我在抖音认识一名经常聊天的好友，对方讲述困难经历，后来以生病、离婚为由向我借款，并承诺以后会向我的银行卡转入一笔较大资金还款。现在没有其真实身份、借款材料和收款账户关系的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "以生病、离婚为由向我借款",
+    "承诺以后会向我的银行卡转入一笔较大资金还款",
+    "没有其真实身份、借款材料和收款账户关系的核验结果"
+  ],
+  "source_id": "SRC0027",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

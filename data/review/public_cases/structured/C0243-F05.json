@@ -1,0 +1,1 @@
+{"case_id":"C0243-F05","real_case_id":"RC0243","text":"简要情况是：官方个人所得税年度汇算；在申报表中勾选“申请退税”；税务机关和国库按规定审核。我想确认这是否属于正常办理方式。","label":"normal","fraud_type":"normal","evidence":["官方个人所得税年度汇算","在申报表中勾选“申请退税”","税务机关和国库按规定审核"],"source_id":"SRC0046","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

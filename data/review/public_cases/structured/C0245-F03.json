@@ -1,0 +1,1 @@
+{"case_id":"C0245-F03","real_case_id":"RC0245","text":"我准备按这个流程办理，目前已经核对：通过国家移民管理局政务服务平台预约申请护照；完成指纹采集、照相和缴费；在官方平台查询本人证件办理进度。后续只按上述流程操作。","label":"normal","fraud_type":"normal","evidence":["通过国家移民管理局政务服务平台预约申请护照","完成指纹采集、照相和缴费","在官方平台查询本人证件办理进度"],"source_id":"SRC0048","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

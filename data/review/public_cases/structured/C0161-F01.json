@@ -1,0 +1,18 @@
+{
+  "case_id": "C0161-F01",
+  "real_case_id": "RC0161",
+  "text": "我在社交APP出售游戏卡片，买家称已经线上付款，但我没有收到款项。买家发来一个链接让我联系客服，客服称系统出错需要解绑并添加好友，随后要求通过视频指导我操作家长的银行卡。",
+  "label": "fraud",
+  "fraud_type": "phishing_or_account_takeover",
+  "evidence": [
+    "买家称已经线上付款",
+    "没有收到款项",
+    "发来一个链接让我联系客服",
+    "系统出错需要解绑",
+    "视频指导我操作家长的银行卡"
+  ],
+  "source_id": "SRC0025",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0001-N01",
+  "real_case_id": "RC0001",
+  "text": "我在财经直播间了解股票知识，并加入了直播间的学员交流群。群里有人多次提到一款证券APP，我随后从监管机构公示名单核对了机构名称和业务资质，并通过该证券公司的官方网站下载安装同名APP，使用本人身份完成开户。合同、费用和风险揭示都在APP内展示，我准备通过本人证券账户买入一只公开交易的基金。",
+  "label": "normal",
+  "fraud_type": "normal",
+  "evidence": [
+    "从监管机构公示名单核对了机构名称和业务资质",
+    "通过该证券公司的官方网站下载安装同名APP",
+    "使用本人身份完成开户",
+    "合同、费用和风险揭示都在APP内展示",
+    "通过本人证券账户买入一只公开交易的基金"
+  ],
+  "source_id": "SRC0001",
+  "construction_type": "normal_counterfactual",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

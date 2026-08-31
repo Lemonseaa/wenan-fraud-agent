@@ -1,0 +1,17 @@
+{
+  "case_id": "C0068-F01",
+  "real_case_id": "RC0068",
+  "text": "一名自称某科技公司财务的人打到公司财务座机，称将有业务款转入，转到QQ沟通后发来跨行转账凭证，并解释款项会延时到账。随后一个使用本公司负责人姓名的QQ账号加入聊天，确认前述业务，询问公司余额，并要求立即向指定账户支付另一笔业务款。",
+  "label": "fraud",
+  "fraud_type": "impersonated_acquaintance_or_leader",
+  "evidence": [
+    "发来跨行转账凭证，并解释款项会延时到账",
+    "使用本公司负责人姓名的QQ账号加入聊天",
+    "询问公司余额",
+    "要求立即向指定账户支付另一笔业务款"
+  ],
+  "source_id": "SRC0017",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

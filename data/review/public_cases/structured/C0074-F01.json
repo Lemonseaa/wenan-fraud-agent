@@ -1,0 +1,18 @@
+{
+  "case_id": "C0074-F01",
+  "real_case_id": "RC0074",
+  "text": "我收到一条带有贷款APP下载链接的短信。下载后有人通过QQ语音联系，自称贷款平台客服并表示可以协助办理贷款，但要求我先缴纳认证金或解冻费才能继续。",
+  "label": "fraud",
+  "fraud_type": "loan_or_credit",
+  "evidence": [
+    "贷款APP下载链接的短信",
+    "通过QQ语音联系",
+    "自称贷款平台客服",
+    "先缴纳认证金或解冻费",
+    "才能继续"
+  ],
+  "source_id": "SRC0018",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

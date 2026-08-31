@@ -1,0 +1,17 @@
+{
+  "case_id": "C0078-F01",
+  "real_case_id": "RC0078",
+  "text": "有人以荐股和股票交流为由联系我，持续提供建议并逐步取得信任。之后老师号、助理号和其他微信账号相互配合，推荐一个期货投资平台，要求我向平台账户投入资金交易。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "持续提供建议并逐步取得信任",
+    "老师号、助理号和其他微信账号相互配合",
+    "推荐一个期货投资平台",
+    "向平台账户投入资金交易"
+  ],
+  "source_id": "SRC0018",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

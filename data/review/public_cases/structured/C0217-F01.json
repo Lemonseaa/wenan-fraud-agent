@@ -1,0 +1,17 @@
+{
+  "case_id": "C0217-F01",
+  "real_case_id": "RC0217",
+  "text": "我加入一个约200人的微信卖鞋群，群主称可以从美国直接代购名牌鞋，并长期在朋友圈发布海外代购信息，报价每双1400至2500元。目前没有店铺主体、商品来源、鉴定凭证和售后规则的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "约200人的微信卖鞋群",
+    "从美国直接代购名牌鞋",
+    "每双1400至2500元",
+    "没有店铺主体、商品来源、鉴定凭证和售后规则的核验结果"
+  ],
+  "source_id": "SRC0032",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

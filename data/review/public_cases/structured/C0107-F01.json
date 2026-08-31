@@ -1,0 +1,18 @@
+{
+  "case_id": "C0107-F01",
+  "real_case_id": "RC0107",
+  "text": "一名陌生网友私信9岁儿童，称可免费赠送游戏礼包。得知孩子使用家长手机后，对方要求下载远程控制APP、开启屏幕共享验证身份，反复叮嘱不要告诉父母，并索要家长银行账号和支付密码。",
+  "label": "fraud",
+  "fraud_type": "phishing_or_account_takeover",
+  "evidence": [
+    "免费赠送游戏礼包",
+    "下载远程控制APP",
+    "开启屏幕共享验证身份",
+    "不要告诉父母",
+    "索要家长银行账号和支付密码"
+  ],
+  "source_id": "SRC0022",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

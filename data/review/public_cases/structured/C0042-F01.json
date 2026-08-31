@@ -1,0 +1,16 @@
+{
+  "case_id": "C0042-F01",
+  "real_case_id": "RC0042",
+  "text": "我接到一个陌生电话，对方没有直接说明身份，而是让我猜他是谁。我猜测可能是某位熟人后，对方便顺着这个身份继续和我交流，随后提出一个理由，要求我转账。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "对方没有直接说明身份，而是让我猜他是谁",
+    "对方便顺着这个身份继续和我交流",
+    "随后提出一个理由，要求我转账"
+  ],
+  "source_id": "SRC0011",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

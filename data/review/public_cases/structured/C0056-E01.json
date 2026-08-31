@@ -1,0 +1,1 @@
+{"case_id":"C0056-E01","real_case_id":"RC0056","text":"一名自称经营跨境业务的单身人士在社交平台添加我，并通过持续聊天逐步取得信任。之后他让我下载一款投资平台，我小额投入后看到盈利并成功提现。现在对方不断推动我继续充值并加大投入。","label":"fraud","fraud_type":"romance_or_trust_fraud","evidence":["经营跨境业务的单身人士","小额投入后看到盈利并成功提现","不断推动我继续充值并加大投入"],"source_id":"SRC0015","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

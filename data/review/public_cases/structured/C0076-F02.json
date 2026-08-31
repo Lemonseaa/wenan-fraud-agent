@@ -1,0 +1,1 @@
+{"case_id":"C0076-F02","real_case_id":"RC0076","text":"一名陌生人通过微信添加我，以固定人设持续聊天并逐步建立感情和信任。最近对方向我介绍了一个投资APP，称可以了解新的理财项目。","label":"insufficient","fraud_type":"insufficient","evidence":["持续聊天并逐步建立感情和信任","介绍了一个投资APP"],"source_id":"SRC0018","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

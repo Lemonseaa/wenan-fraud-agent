@@ -1,0 +1,17 @@
+{
+  "case_id": "C0025-F01",
+  "real_case_id": "RC0025",
+  "text": "我通过电话或电子邮件接触到一名自称国家扶贫办、财政部或某组织工作人员的人。对方说可以发放扶贫款或民族资产解冻资金，但领取资金需要达到一定人员规模，要求有意参加的人先组成团队，并支付办证费或转账费。",
+  "label": "fraud",
+  "fraud_type": "other_fraud",
+  "evidence": [
+    "自称国家扶贫办、财政部或某组织工作人员",
+    "可以发放扶贫款或民族资产解冻资金",
+    "要求有意参加的人先组成团队",
+    "支付办证费或转账费"
+  ],
+  "source_id": "SRC0009",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

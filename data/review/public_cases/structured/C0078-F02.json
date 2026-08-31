@@ -1,0 +1,1 @@
+{"case_id":"C0078-F02","real_case_id":"RC0078","text":"有人以荐股和股票交流为由联系我，持续提供建议。之后多个老师号、助理号和群友账号相互配合，推荐了一个期货投资平台。","label":"insufficient","fraud_type":"insufficient","evidence":["持续提供建议","老师号、助理号和群友账号相互配合","推荐了一个期货投资平台"],"source_id":"SRC0018","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

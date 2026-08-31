@@ -1,0 +1,1 @@
+{"case_id":"C0054-E01","real_case_id":"RC0054","text":"销售人员以免费吃饭和赠送礼品邀请老人参加活动，并安排专车接到饭店。现场讲师讲解案例，经销商参与砍价并带动气氛，宣称一种保健产品能够修复细胞、逆转多种慢性病，随后推动老人现场购买。","label":"fraud","fraud_type":"other_fraud","evidence":["免费吃饭和赠送礼品","安排专车接到饭店","修复细胞、逆转多种慢性病","推动老人现场购买"],"source_id":"SRC0014","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

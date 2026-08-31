@@ -1,0 +1,18 @@
+{
+  "case_id": "C0156-F01",
+  "real_case_id": "RC0156",
+  "text": "我刷视频时看到炒股直播间，客服称可免费领取炒股教学资料并添加好友。随后对方引导我下载一款聊天软件和某证券APP并注册，要求我在证券APP内买股票涨跌并向指定方式转账。题面没有提供平台运营主体、证券资质或资金托管信息。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "炒股直播间",
+    "免费领取炒股教学资料",
+    "下载一款聊天软件和某证券APP",
+    "买股票涨跌并向指定方式转账",
+    "没有提供平台运营主体、证券资质或资金托管信息"
+  ],
+  "source_id": "SRC0025",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

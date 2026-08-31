@@ -1,0 +1,18 @@
+{
+  "case_id": "C0069-F01",
+  "real_case_id": "RC0069",
+  "text": "我在婚恋聊天软件认识一名自称事业成功的人，持续聊天后逐步建立恋爱关系和信任。对方最近推荐一个网络赌博网站，并鼓励我到网站充值投注。现有信息没有说明其真实身份、网站运营主体、充值渠道或提现规则。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称事业成功的人",
+    "逐步建立恋爱关系和信任",
+    "推荐一个网络赌博网站",
+    "鼓励我到网站充值投注",
+    "没有说明其真实身份、网站运营主体、充值渠道或提现规则"
+  ],
+  "source_id": "SRC0017",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,1 @@
+{"case_id":"C0238-F02","real_case_id":"RC0238","text":"办理前，我确认了三点：在京东消费者帮助中心核对退款说明；原订单使用储蓄卡在线支付；京东退款和银行退款的一般处理周期。我准备按这些信息继续办理。","label":"normal","fraud_type":"normal","evidence":["在京东消费者帮助中心核对退款说明","原订单使用储蓄卡在线支付","京东退款和银行退款的一般处理周期"],"source_id":"SRC0041","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

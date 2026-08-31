@@ -1,0 +1,18 @@
+{
+  "case_id": "C0036-F01",
+  "real_case_id": "RC0036",
+  "text": "我在微商群接触到一个产品代理机会。随后有人以买家身份向我咨询购买，还有人承诺成为我的下一级销售代理，这些互动让产品看起来销售活跃。现在对方邀请我代理产品或升级代理等级，并要求支付费用。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "接触到一个产品代理机会",
+    "有人以买家身份向我咨询购买",
+    "有人承诺成为我的下一级销售代理",
+    "邀请我代理产品或升级代理等级",
+    "要求支付费用"
+  ],
+  "source_id": "SRC0010",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

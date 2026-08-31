@@ -1,0 +1,17 @@
+{
+  "case_id": "C0174-F01",
+  "real_case_id": "RC0174",
+  "text": "我通过手机浏览器下载了一款不知名APP。APP内有人介绍刷单返利任务，称参与前需要先转账。题面没有说明任务金额、返利规则、收款主体或提现条件。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "不知名APP",
+    "刷单返利任务",
+    "参与前需要先转账",
+    "没有说明任务金额、返利规则、收款主体或提现条件"
+  ],
+  "source_id": "SRC0027",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

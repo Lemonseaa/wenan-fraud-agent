@@ -1,0 +1,18 @@
+{
+  "case_id": "C0109-F01",
+  "real_case_id": "RC0109",
+  "text": "学院群聊中出现一个头像、昵称都与老师一致的账号，通知班级统一购买教材，要求学生通过支付宝缴纳99元，并让付款者在群内接龙。通知没有附学校财务平台订单或其他正式收费凭证。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "头像、昵称都与老师一致的账号",
+    "统一购买教材",
+    "通过支付宝缴纳99元",
+    "在群内接龙",
+    "没有附学校财务平台订单或其他正式收费凭证"
+  ],
+  "source_id": "SRC0022",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

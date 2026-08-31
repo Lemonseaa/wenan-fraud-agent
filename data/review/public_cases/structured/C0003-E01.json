@@ -1,0 +1,17 @@
+{
+  "case_id": "C0003-E01",
+  "real_case_id": "RC0003",
+  "text": "我接到一个自称商家售后人员的电话，对方能说出我购买商品的大致时间和品类，并称商品存在质量问题，需要办理退款。对方发来售后工单编号和一个带有购物平台标识的退款页面，说原支付渠道结算失败，需要我绑定收款银行卡并完成一笔1元验证。页面随后要求填写银行短信验证码，我准备继续操作。",
+  "label": "fraud",
+  "fraud_type": "phishing_or_account_takeover",
+  "evidence": [
+    "接到一个自称商家售后人员的电话",
+    "一个带有购物平台标识的退款页面",
+    "需要我绑定收款银行卡并完成一笔1元验证",
+    "页面随后要求填写银行短信验证码"
+  ],
+  "source_id": "SRC0003",
+  "construction_type": "controlled_synthetic",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

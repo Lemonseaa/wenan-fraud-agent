@@ -1,0 +1,18 @@
+{
+  "case_id": "C0208-F01",
+  "real_case_id": "RC0208",
+  "text": "我在社交软件认识一名男子，很快确立恋爱关系。对方称可以带我赚钱，发来投资页面二维码并指导我注册操作，前两次投资都获得了收益。目前没有对方身份、平台资质、交易通道和资金托管的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "很快确立恋爱关系",
+    "带我赚钱",
+    "投资页面二维码",
+    "前两次投资都获得了收益",
+    "没有对方身份、平台资质、交易通道和资金托管的核验结果"
+  ],
+  "source_id": "SRC0031",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

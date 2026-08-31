@@ -1,0 +1,17 @@
+{
+  "case_id": "C0219-F01",
+  "real_case_id": "RC0219",
+  "text": "我加入一个投资微信群，群内有自称炒股老师、助理和普通投资者的多个账号。他们称在指定平台交易WSCT数字货币可以快速获利，并要求我注册账户充值。目前没有这些账号身份、平台资质和资金托管的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "炒股老师、助理和普通投资者",
+    "WSCT数字货币可以快速获利",
+    "注册账户充值",
+    "没有这些账号身份、平台资质和资金托管的核验结果"
+  ],
+  "source_id": "SRC0032",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

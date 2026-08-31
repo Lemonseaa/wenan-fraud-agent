@@ -1,0 +1,1 @@
+{"case_id":"C0245-F02","real_case_id":"RC0245","text":"办理前，我确认了三点：通过国家移民管理局政务服务平台预约申请护照；在线填写申请表并选择办证时间和地点；在官方平台查询本人证件办理进度。我准备按这些信息继续办理。","label":"normal","fraud_type":"normal","evidence":["通过国家移民管理局政务服务平台预约申请护照","在线填写申请表并选择办证时间和地点","在官方平台查询本人证件办理进度"],"source_id":"SRC0048","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

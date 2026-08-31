@@ -1,0 +1,18 @@
+{
+  "case_id": "C0183-F01",
+  "real_case_id": "RC0183",
+  "text": "一名抖音好友称自己在摩洛哥，受外汇限制无法订机票，让我联系其推荐的“南航李经理”代订。对方发来一张转账成功截图，但对应款项尚未到账。我正在考虑是否先替其垫付机票款。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "外汇限制无法订机票",
+    "南航李经理",
+    "转账成功截图",
+    "对应款项尚未到账",
+    "先替其垫付机票款"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

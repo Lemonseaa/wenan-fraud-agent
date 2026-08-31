@@ -1,0 +1,18 @@
+{
+  "case_id": "C0089-F01",
+  "real_case_id": "RC0089",
+  "text": "我在短视频平台添加一名陌生女子，认识不久便确定恋爱关系。对方发来拼单链接请求帮忙，称只需先垫付订单金额，完成后即可获得盈利并提现，现在让我扫码付款。",
+  "label": "fraud",
+  "fraud_type": "romance_or_trust_fraud",
+  "evidence": [
+    "认识不久便确定恋爱关系",
+    "发来拼单链接",
+    "只需先垫付订单金额",
+    "完成后即可获得盈利并提现",
+    "让我扫码付款"
+  ],
+  "source_id": "SRC0019",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

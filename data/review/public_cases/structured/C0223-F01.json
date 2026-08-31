@@ -1,0 +1,17 @@
+{
+  "case_id": "C0223-F01",
+  "real_case_id": "RC0223",
+  "text": "一家教育科技公司根据学员信息主动联系我，称与短视频平台官方合作，可以提供流量扶持、快速涨粉和变现服务，并推荐短视频制作、账号涨粉或流量变现课程。目前没有官方合作关系、课程内容和效果承诺的独立核验。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "教育科技公司",
+    "与短视频平台官方合作",
+    "流量扶持、快速涨粉和变现服务",
+    "没有官方合作关系、课程内容和效果承诺的独立核验"
+  ],
+  "source_id": "SRC0033",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "C0176-F01",
+  "real_case_id": "RC0176",
+  "text": "我在抖音看到经营海外平台的教程，按指引下载TKMUD APP。运营客服指导我上货和购买订单，随后要求我到京东购买E卡，并把卡密发送给客服用于处理订单。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "下载TKMUD APP",
+    "指导我上货和购买订单",
+    "购买E卡",
+    "把卡密发送给客服"
+  ],
+  "source_id": "SRC0027",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

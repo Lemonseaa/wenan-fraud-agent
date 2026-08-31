@@ -1,0 +1,1 @@
+{"case_id":"C0247-F05","real_case_id":"RC0247","text":"简要情况是：本人登录“交管12123”APP；阅读业务须知后选择取件方式并填写信息；从首页的“网办进度”查询办理状态。我想确认这是否属于正常办理方式。","label":"normal","fraud_type":"normal","evidence":["本人登录“交管12123”APP","阅读业务须知后选择取件方式并填写信息","从首页的“网办进度”查询办理状态"],"source_id":"SRC0050","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

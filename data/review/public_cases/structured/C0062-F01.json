@@ -1,0 +1,18 @@
+{
+  "case_id": "C0062-F01",
+  "real_case_id": "RC0062",
+  "text": "一名以成功投资者形象出现的微信联系人向我推荐外汇平台，称有专业人员指导和内部消息，还发送盈利截图。平台内的所谓投资老师指导我操作，前期账户显示少量盈利，现在对方推动我追加更大金额。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "以成功投资者形象出现的微信联系人",
+    "称有专业人员指导和内部消息",
+    "发送盈利截图",
+    "所谓投资老师指导我操作",
+    "推动我追加更大金额"
+  ],
+  "source_id": "SRC0016",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

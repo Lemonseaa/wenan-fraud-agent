@@ -1,0 +1,18 @@
+{
+  "case_id": "C0185-F01",
+  "real_case_id": "RC0185",
+  "text": "我通过相亲短信认识一名自称军官的人，并按其推荐下载丝瓜APP持续联系。对方称部队里不便操作，让我登录其提供的网站代操作股票，页面多次显示盈利，之后邀请我一起投资。目前没有其身份、网站资质、交易通道和资金托管的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称军官",
+    "代操作股票",
+    "页面多次显示盈利",
+    "邀请我一起投资",
+    "没有其身份、网站资质、交易通道和资金托管的核验结果"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

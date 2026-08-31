@@ -1,0 +1,1 @@
+{"case_id":"C0245-F05","real_case_id":"RC0245","text":"简要情况是：通过国家移民管理局政务服务平台预约申请护照；到受理大厅提交材料；在官方平台查询本人证件办理进度。我想确认这是否属于正常办理方式。","label":"normal","fraud_type":"normal","evidence":["通过国家移民管理局政务服务平台预约申请护照","到受理大厅提交材料","在官方平台查询本人证件办理进度"],"source_id":"SRC0048","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

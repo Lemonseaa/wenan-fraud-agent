@@ -1,0 +1,17 @@
+{
+  "case_id": "C0038-F01",
+  "real_case_id": "RC0038",
+  "text": "我被拉入一个股票交流群，群内还开设直播间讲解股票和期货投资课程。经过一段时间听课和交流，我逐渐信任了讲课的人。对方以某公司名义推荐期货投资，现在要求我向其推荐的交易平台汇入资金。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "被拉入一个股票交流群",
+    "开设直播间讲解股票和期货投资课程",
+    "以某公司名义推荐期货投资",
+    "要求我向其推荐的交易平台汇入资金"
+  ],
+  "source_id": "SRC0011",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0098-F01",
+  "real_case_id": "RC0098",
+  "text": "我在婚恋网站认识一名自称公司高管的男子，一周内确立恋爱关系，但对方一直以过去视频导致事故为由拒绝视频核验。之后他称表兄弟是赌博网站技术工程师，发现网站漏洞，并展示账户盈利，催促我趁漏洞关闭前投资获取高额回报。",
+  "label": "fraud",
+  "fraud_type": "romance_or_trust_fraud",
+  "evidence": [
+    "一周内确立恋爱关系",
+    "拒绝视频核验",
+    "赌博网站技术工程师",
+    "发现网站漏洞",
+    "催促我趁漏洞关闭前投资获取高额回报"
+  ],
+  "source_id": "SRC0021",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

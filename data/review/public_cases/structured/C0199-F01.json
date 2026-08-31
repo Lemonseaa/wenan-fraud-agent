@@ -1,0 +1,16 @@
+{
+  "case_id": "C0199-F01",
+  "real_case_id": "RC0199",
+  "text": "我在一款交友APP群里看到消息，称平台关闭后可以申请退费。我联系对方提供的客服后，客服说办理退费必须先交3000元保证金。",
+  "label": "fraud",
+  "fraud_type": "other_fraud",
+  "evidence": [
+    "平台关闭后可以申请退费",
+    "办理退费",
+    "先交3000元保证金"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "C0019-F01",
+  "real_case_id": "RC0019",
+  "text": "我在一个微信群里接触到所谓的民族资产解冻项目。群内有人发送任命书、委托书以及声称来自国家机关的文件，项目组织者说自己受中央领导、军委或国务院指派。对方称，只要缴纳报名费、办证费或会员费，就能获得扶贫款或高额奖励，现在要求我先交几十元或几百元。",
+  "label": "fraud",
+  "fraud_type": "other_fraud",
+  "evidence": [
+    "所谓的民族资产解冻项目",
+    "声称来自国家机关的文件",
+    "只要缴纳报名费、办证费或会员费，就能获得扶贫款或高额奖励",
+    "要求我先交几十元或几百元"
+  ],
+  "source_id": "SRC0008",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,1 @@
+{"case_id":"C0011-E01","real_case_id":"RC0011","text":"我收到一条手机短信，称可以通过内部复核渠道优化考试成绩，并留下了联系电话。我主动联系后，对方说需要先支付定金，要求我把钱汇到一个指定的银行账户。","label":"fraud","fraud_type":"other_fraud","evidence":["内部复核渠道优化考试成绩","需要先支付定金","把钱汇到一个指定的银行账户"],"source_id":"SRC0007","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

@@ -1,0 +1,17 @@
+{
+  "case_id": "C0212-F01",
+  "real_case_id": "RC0212",
+  "text": "我接到自称银监会工作人员的电话，对方称可以消除以前的不良贷款记录、恢复征信，并让我添加一名“注销专员”的QQ。添加后，该专员通过语音指导我向指定方式转款。",
+  "label": "fraud",
+  "fraud_type": "loan_or_credit",
+  "evidence": [
+    "自称银监会工作人员",
+    "消除以前的不良贷款记录",
+    "注销专员",
+    "语音指导我向指定方式转款"
+  ],
+  "source_id": "SRC0031",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

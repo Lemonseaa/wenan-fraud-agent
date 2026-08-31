@@ -1,0 +1,17 @@
+{
+  "case_id": "C0177-F01",
+  "real_case_id": "RC0177",
+  "text": "我把游戏账号挂在平台出售，一名陌生买家发来付款截图并称已经下单，随后又发来一个客服链接。链接中的客服称，必须先缴保证金才能完成交易，否则账号可能被冻结。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "陌生买家发来付款截图",
+    "发来一个客服链接",
+    "先缴保证金才能完成交易",
+    "否则账号可能被冻结"
+  ],
+  "source_id": "SRC0028",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

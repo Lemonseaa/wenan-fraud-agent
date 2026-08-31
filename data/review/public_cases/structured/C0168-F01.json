@@ -1,0 +1,18 @@
+{
+  "case_id": "C0168-F01",
+  "real_case_id": "RC0168",
+  "text": "一个微博账号的头像和姓名都与我姐姐一致，对方称手机号注销，无法登录其他软件，请我联系其提供的名牌包客服。客服随后要求我先垫付第一只包的尾款。题面没有我通过原联系方式向姐姐独立核验的记录。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "头像和姓名都与我姐姐一致",
+    "手机号注销",
+    "名牌包客服",
+    "垫付第一只包的尾款",
+    "没有我通过原联系方式向姐姐独立核验的记录"
+  ],
+  "source_id": "SRC0026",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

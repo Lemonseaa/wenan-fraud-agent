@@ -1,0 +1,18 @@
+{
+  "case_id": "C0196-F01",
+  "real_case_id": "RC0196",
+  "text": "我在抖音直播中添加一名自称某公司员工的人，对方帮助我下载并注册一个APP，称国外买家下单后需要我先垫资发货，发货后货款会到账。目前没有公司主体、订单真实性、回款规则和资金托管的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "自称某公司员工",
+    "下载并注册一个APP",
+    "先垫资发货",
+    "发货后货款会到账",
+    "没有公司主体、订单真实性、回款规则和资金托管的核验结果"
+  ],
+  "source_id": "SRC0029",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

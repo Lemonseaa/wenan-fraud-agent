@@ -4,6 +4,18 @@
 
 问安智鉴面向银行交易前风险识别场景，在银行可获取信息有限的前提下，综合客户陈述、交易特征、账户关系和操作行为进行研判。信息不足时，系统不强行下结论，而是提出针对性问题，补充证据后再给出风险判断和处置建议。
 
+## 仓库导航
+
+数据按“原始来源 → 真实案件 → 审批稿 → 结构化任务”流转：
+
+- [`data/raw/public_sources/`](data/raw/public_sources/)：网页、PDF或图片原文；
+- [`data/sources/source_registry.jsonl`](data/sources/source_registry.jsonl)：来源登记与使用边界；
+- [`data/sources/real_case_registry.jsonl`](data/sources/real_case_registry.jsonl)：从来源中拆分的独立案件；
+- [`data/review/public_cases/cases/`](data/review/public_cases/cases/)：供人阅读和审批的案例稿；
+- [`data/review/public_cases/structured/`](data/review/public_cases/structured/)：供程序读取的结构化任务。
+
+新增或修改数据前，先阅读[公开案例数据加工 SOP](./公开案例数据加工%20SOP%20.md)。
+
 ## 一、核心问题
 
 传统关键词和固定规则容易被新话术绕过，大模型直接判断又可能忽略证据不足、正常业务边界和操作权限。
@@ -118,22 +130,18 @@
 
 ### 7.3 最小结构化字段
 
-每条任务至少包含：
+V1 每条任务固定包含十个字段：
 
-- `case_id`：稳定且唯一的案例编号；
-- `source_ids`：支持该任务的来源编号；
-- `construction_type`：真实改写、正常对照、人工构造或受控合成；
-- `observed_information`：银行在判断时实际可见的信息；
-- `label`：诈骗、正常或信息不足；
-- `evidence`：支持标签的证据；
-- `missing_information`：影响判断但尚未获得的信息；
-- `follow_up_questions`：需要补充核验的问题；
-- `risk_level`：交易风险等级；
-- `recommended_intervention`：建议的业务动作；
+- `case_id`、`real_case_id`、`source_id`：任务、真实案件和来源的稳定编号；
+- `text`：判断时可见的题面；
+- `label`：`fraud`、`normal` 或 `insufficient`；
+- `fraud_type`：统一主类型；
+- `evidence`：能够在题面中直接定位的证据；
+- `construction_type`：`public_case_rewritten`、`controlled_synthetic` 或 `normal_counterfactual`；
 - `review_status`：审批状态；
-- `split`：开发、验证、回归或封存测试用途。
+- `schema_version`：结构版本，V1 固定为 `1.0`。
 
-只结构化会影响研判、评估和追溯的字段，不为未来可能的需求提前堆积标签。原始来源保留后，可以在后续版本中重新提取新字段。
+V1 不提前加入追问、风险分级和干预字段。后续版本保留现有字段及含义，通过新的 `schema_version` 扩展。
 
 ### 7.4 数据加工流程
 
@@ -166,11 +174,11 @@ AI可以完成初步提取、改写和结构检查；人必须确认来源真实
 
 ### V1：基础反诈研判
 
-完成统一输入输出、诈骗/正常/信息不足三分类、证据说明、针对性追问、风险分级和人工复核建议。建立最小数据标准、测试集和可重复运行的评估流程。
+完成统一输入输出、诈骗/正常/信息不足三分类、证据说明、来源追溯和人工审批。建立最小数据标准与可重复运行的评估流程。
 
 ### V2：多源信息核验
 
-接入客户陈述、交易、账户关系、收款方、设备和操作行为等受控信号；实现信息来源标记、证据冲突检查、多轮追问和核验状态管理。
+接入客户陈述、交易、账户关系、收款方、设备和操作行为等受控信号；实现证据冲突检查、信息充分性判断、针对性追问、风险分级和处置建议。
 
 ### V3：受控 Skill 迭代
 

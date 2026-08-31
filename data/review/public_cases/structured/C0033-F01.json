@@ -1,0 +1,16 @@
+{
+  "case_id": "C0033-F01",
+  "real_case_id": "RC0033",
+  "text": "我在直播平台观看一名女主播并与她互动。经过一段时间交流，主播表达了希望和我发展男女朋友关系，我们逐步建立了好感和信任。现在她引导我在直播平台充值，购买虚拟礼物打赏。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "主播表达了希望和我发展男女朋友关系",
+    "逐步建立了好感和信任",
+    "引导我在直播平台充值，购买虚拟礼物打赏"
+  ],
+  "source_id": "SRC0010",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

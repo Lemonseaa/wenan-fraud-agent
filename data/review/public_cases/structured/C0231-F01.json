@@ -1,0 +1,18 @@
+{
+  "case_id": "C0231-F01",
+  "real_case_id": "RC0231",
+  "text": "有人通过淘宝、旺旺或千牛主动联系我的网店，称可以提供品牌授权服务，购买后既能避免平台稽查，也能防止品牌方投诉并处理售假违规，要求我支付授权服务费。目前没有品牌授权主体、授权文件和平台认可情况的核验结果。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "主动联系我的网店",
+    "提供品牌授权服务",
+    "避免平台稽查",
+    "支付授权服务费",
+    "没有品牌授权主体、授权文件和平台认可情况的核验结果"
+  ],
+  "source_id": "SRC0034",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

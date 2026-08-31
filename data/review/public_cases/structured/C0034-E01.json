@@ -1,0 +1,1 @@
+{"case_id":"C0034-E01","real_case_id":"RC0034","text":"我通过网络聊天认识了一名以恋爱为目的的对象，双方交流一段时间后逐步建立了信任。后来，对方向我推荐一个带竞赛奖励的游戏测试平台，并引导我在平台中充值参与。","label":"fraud","fraud_type":"romance_or_trust_fraud","evidence":["以恋爱为目的的对象","带竞赛奖励的游戏测试平台","引导我在平台中充值参与"],"source_id":"SRC0010","construction_type":"controlled_synthetic","review_status":"approved","schema_version":"1.0"}

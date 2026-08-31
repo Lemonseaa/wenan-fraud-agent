@@ -1,0 +1,17 @@
+{
+  "case_id": "C0213-F01",
+  "real_case_id": "RC0213",
+  "text": "我通过广告进入一个游戏账号交易平台，有买家高价求购我的账号。交易页面显示对方已转账500元，但资金无法提现；平台客服称必须再充值1000元才能解冻。",
+  "label": "fraud",
+  "fraud_type": "ticket_game_virtual_goods",
+  "evidence": [
+    "高价求购",
+    "已转账500元",
+    "资金无法提现",
+    "充值1000元才能解冻"
+  ],
+  "source_id": "SRC0031",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,1 @@
+{"case_id":"C0233-F03","real_case_id":"RC0233","text":"我准备按这个流程办理，目前已经核对：从中国工商银行官网进入手机银行贷款栏目；在网上银行或手机银行的贷款栏目查询进度；经银行审批通过后才会正式发放。后续只按上述流程操作。","label":"normal","fraud_type":"normal","evidence":["从中国工商银行官网进入手机银行贷款栏目","在网上银行或手机银行的贷款栏目查询进度","经银行审批通过后才会正式发放"],"source_id":"SRC0036","construction_type":"public_case_rewritten","review_status":"approved","schema_version":"1.0"}

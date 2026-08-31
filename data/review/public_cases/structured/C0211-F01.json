@@ -1,0 +1,17 @@
+{
+  "case_id": "C0211-F01",
+  "real_case_id": "RC0211",
+  "text": "我在短视频平台认识一名陌生人，对方邀请我参加抽奖，随后称我已经中奖，还可以参加“按转账金额倍数返现”活动。对方发来微信收款二维码，要求我先转700元。",
+  "label": "fraud",
+  "fraud_type": "task_rebate",
+  "evidence": [
+    "已经中奖",
+    "按转账金额倍数返现",
+    "微信收款二维码",
+    "先转700元"
+  ],
+  "source_id": "SRC0031",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

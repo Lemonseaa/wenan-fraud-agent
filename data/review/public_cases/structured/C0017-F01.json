@@ -1,0 +1,16 @@
+{
+  "case_id": "C0017-F01",
+  "real_case_id": "RC0017",
+  "text": "我通过婚恋交友网站认识了一名自称单身女性的人，后来添加微信或QQ聊天。经过一段时间交流，我们逐渐建立了信任。现在对方以路费、电话费或疾病救治费等生活支出为由，希望我转一笔钱。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "通过婚恋交友网站认识了一名自称单身女性的人",
+    "经过一段时间交流，我们逐渐建立了信任",
+    "以路费、电话费或疾病救治费等生活支出为由，希望我转一笔钱"
+  ],
+  "source_id": "SRC0008",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "C0072-F01",
+  "real_case_id": "RC0072",
+  "text": "我接到自动语音电话询问贷款需求，表达意愿后有人添加微信并发来贷款APP链接。申请贷款过程中，APP自动出现办理会员、缴纳账户解冻费或验证还款能力的收费链接，要求先付款。",
+  "label": "fraud",
+  "fraud_type": "loan_or_credit",
+  "evidence": [
+    "自动语音电话询问贷款需求",
+    "有人添加微信并发来贷款APP链接",
+    "办理会员",
+    "缴纳账户解冻费",
+    "验证还款能力的收费链接"
+  ],
+  "source_id": "SRC0017",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

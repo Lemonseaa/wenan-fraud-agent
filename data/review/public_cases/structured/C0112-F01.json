@@ -1,0 +1,18 @@
+{
+  "case_id": "C0112-F01",
+  "real_case_id": "RC0112",
+  "text": "我在游戏公屏看到陌生人称可以组队并免费送皮肤。对方得知我是未成年人后，称领取皮肤必须先用家长手机解绑，要求我开着QQ视频拍摄家长手机操作，并打开微信、支付宝和手机网银APP扫码，输入密码和短信验证码。",
+  "label": "fraud",
+  "fraud_type": "phishing_or_account_takeover",
+  "evidence": [
+    "免费送皮肤",
+    "必须先用家长手机解绑",
+    "开着QQ视频拍摄家长手机操作",
+    "打开微信、支付宝和手机网银APP扫码",
+    "输入密码和短信验证码"
+  ],
+  "source_id": "SRC0022",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

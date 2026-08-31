@@ -1,0 +1,17 @@
+{
+  "case_id": "C0202-F01",
+  "real_case_id": "RC0202",
+  "text": "我接到自称机票保险理赔人员的电话，对方知道我购买了下周的机票，称航班取消可退300元保险费，并让我点击2513452.cc链接。打开后页面显示“中国民航”，客服要求我继续操作，但题面没有说明后续需要提供什么信息。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "购买了下周的机票",
+    "航班取消可退300元保险费",
+    "2513452.cc链接",
+    "没有说明后续需要提供什么信息"
+  ],
+  "source_id": "SRC0030",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

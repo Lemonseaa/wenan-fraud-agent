@@ -1,0 +1,18 @@
+{
+  "case_id": "C0117-F01",
+  "real_case_id": "RC0117",
+  "text": "我在网络交友平台认识一名自称女性的账号，对方发送女性照片并邀请我进入直播间。聊天一段时间后，对方表达恋爱意愿，随后称身体不适需要看病、买药或做手术，也可能称需要交房租，请求我转账帮助。我们尚未进行视频或线下身份核验。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "网络交友平台",
+    "表达恋爱意愿",
+    "看病、买药或做手术",
+    "需要交房租",
+    "尚未进行视频或线下身份核验"
+  ],
+  "source_id": "SRC0023",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

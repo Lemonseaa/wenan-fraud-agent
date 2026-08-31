@@ -1,0 +1,18 @@
+{
+  "case_id": "C0056-F01",
+  "real_case_id": "RC0056",
+  "text": "一名展示经济条件优越的男子在社交平台添加我，并通过持续聊天逐步取得信任。之后他让我下载一款投资平台，我小额投入后看到盈利并成功提现。现在对方不断推动我继续充值并加大投入。",
+  "label": "fraud",
+  "fraud_type": "romance_or_trust_fraud",
+  "evidence": [
+    "展示经济条件优越的男子在社交平台添加我",
+    "通过持续聊天逐步取得信任",
+    "让我下载一款投资平台",
+    "小额投入后看到盈利并成功提现",
+    "不断推动我继续充值并加大投入"
+  ],
+  "source_id": "SRC0015",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

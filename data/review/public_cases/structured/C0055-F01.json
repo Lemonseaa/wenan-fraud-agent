@@ -1,0 +1,18 @@
+{
+  "case_id": "C0055-F01",
+  "real_case_id": "RC0055",
+  "text": "我在网络社交平台看到一名发布者发布马拉松报名信息。对方称通过他可以获得赛事配速员名额，或者参加耳机、跑鞋等设备测试，现在要求支付报名费或押金。页面没有提供主办方授权、官方名单或资格核验方式。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "发布者发布马拉松报名信息",
+    "可以获得赛事配速员名额",
+    "参加耳机、跑鞋等设备测试",
+    "要求支付报名费或押金",
+    "没有提供主办方授权、官方名单或资格核验方式"
+  ],
+  "source_id": "SRC0014",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

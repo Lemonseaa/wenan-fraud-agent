@@ -1,0 +1,18 @@
+{
+  "case_id": "C0075-F01",
+  "real_case_id": "RC0075",
+  "text": "我因免费炒股课程进入微信群，群内有讲师、助理和普通股民账号。讲师持续授课，其他账号互动、发布盈利截图并称跟随操作可以赚钱。现在讲师或助理推荐一个股票投资平台，要求我注册并入金。",
+  "label": "fraud",
+  "fraud_type": "fake_investment",
+  "evidence": [
+    "免费炒股课程进入微信群",
+    "讲师、助理和普通股民账号",
+    "发布盈利截图并称跟随操作可以赚钱",
+    "推荐一个股票投资平台",
+    "要求我注册并入金"
+  ],
+  "source_id": "SRC0018",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

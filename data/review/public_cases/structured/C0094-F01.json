@@ -1,0 +1,17 @@
+{
+  "case_id": "C0094-F01",
+  "real_case_id": "RC0094",
+  "text": "我接到自称派出所民警的联系，对方称我涉嫌诈骗并已被立案，还提供一个对方所称的公安局官网地址让我查看立案信息。随后对方要求我把资金转入安全账户接受核查。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "自称派出所民警",
+    "涉嫌诈骗并已被立案",
+    "对方所称的公安局官网地址",
+    "把资金转入安全账户接受核查"
+  ],
+  "source_id": "SRC0020",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

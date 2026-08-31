@@ -1,0 +1,18 @@
+{
+  "case_id": "C0169-F01",
+  "real_case_id": "RC0169",
+  "text": "一名穿制服的人通过视频来电，自称公安民警，称我的银行卡涉嫌洗钱。对方要求我下载会议软件并开启屏幕共享，又要求把银行卡资金和银行贷款全部转入对方所称的安全账户接受核查。",
+  "label": "fraud",
+  "fraud_type": "impersonated_law_enforcement",
+  "evidence": [
+    "穿制服的人通过视频来电",
+    "自称公安民警",
+    "银行卡涉嫌洗钱",
+    "下载会议软件并开启屏幕共享",
+    "银行卡资金和银行贷款全部转入对方所称的安全账户"
+  ],
+  "source_id": "SRC0026",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}

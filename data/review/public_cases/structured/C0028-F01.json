@@ -1,0 +1,18 @@
+{
+  "case_id": "C0028-F01",
+  "real_case_id": "RC0028",
+  "text": "微信上有人请我帮忙在朋友圈发布一款产品的广告，之后陆续有人来咨询购买，对方还展示了付款凭证和发货单据，看起来产品很畅销、代理回报也不错。现在有人邀请我做产品代理或升级代理，并要求支付相应费用。",
+  "label": "insufficient",
+  "fraud_type": "insufficient",
+  "evidence": [
+    "请我帮忙在朋友圈发布一款产品的广告",
+    "陆续有人来咨询购买",
+    "展示了付款凭证和发货单据",
+    "邀请我做产品代理或升级代理",
+    "要求支付相应费用"
+  ],
+  "source_id": "SRC0009",
+  "construction_type": "public_case_rewritten",
+  "review_status": "approved",
+  "schema_version": "1.0"
+}
