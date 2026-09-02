@@ -1,0 +1,77 @@
+{
+  "data_version": "v1",
+  "seed": 20260901,
+  "total_cases": 350,
+  "total_groups": 54,
+  "splits": {
+    "development": {
+      "case_count": 208,
+      "group_count": 34,
+      "label_distribution": {
+        "fraud": 84,
+        "insufficient": 62,
+        "normal": 62
+      },
+      "fraud_type_distribution": {
+        "fake_investment": 21,
+        "impersonated_acquaintance_or_leader": 1,
+        "impersonated_customer_service": 8,
+        "impersonated_law_enforcement": 8,
+        "loan_or_credit": 15,
+        "other_fraud": 8,
+        "phishing_or_account_takeover": 5,
+        "romance_or_trust_fraud": 5,
+        "task_rebate": 9,
+        "ticket_game_virtual_goods": 4
+      }
+    },
+    "validation": {
+      "case_count": 73,
+      "group_count": 11,
+      "label_distribution": {
+        "fraud": 30,
+        "insufficient": 21,
+        "normal": 22
+      },
+      "fraud_type_distribution": {
+        "fake_investment": 6,
+        "impersonated_customer_service": 4,
+        "impersonated_law_enforcement": 2,
+        "loan_or_credit": 2,
+        "other_fraud": 3,
+        "phishing_or_account_takeover": 4,
+        "romance_or_trust_fraud": 2,
+        "task_rebate": 5,
+        "ticket_game_virtual_goods": 2
+      }
+    },
+    "test": {
+      "case_count": 69,
+      "group_count": 9,
+      "label_distribution": {
+        "fraud": 36,
+        "insufficient": 17,
+        "normal": 16
+      },
+      "fraud_type_distribution": {
+        "fake_investment": 7,
+        "impersonated_acquaintance_or_leader": 2,
+        "impersonated_customer_service": 3,
+        "impersonated_law_enforcement": 4,
+        "loan_or_credit": 3,
+        "other_fraud": 10,
+        "phishing_or_account_takeover": 3,
+        "romance_or_trust_fraud": 1,
+        "task_rebate": 1,
+        "ticket_game_virtual_goods": 2
+      }
+    }
+  },
+  "checks": {
+    "duplicate_case_id_count": 0,
+    "missing_case_count": 0,
+    "unknown_case_count": 0,
+    "source_leakage_count": 0,
+    "family_leakage_count": 0
+  }
+}
